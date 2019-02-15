@@ -1,0 +1,1494 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module type="Clarifier">
+  <items>
+    <item>
+      <name>Design Flow</name>
+      <value>4000</value>
+      <units>gallons per minute</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Typical Flow</name>
+      <value>1500</value>
+      <units>gallons per minute</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Aluminum</name>
+      <value>1</value>
+      <units>milligrams per liter</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Ferrous Iron</name>
+      <value>0</value>
+      <units>milligrams per liter</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Ferric Iron</name>
+      <value>100</value>
+      <units>milligrams per liter</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Manganese</name>
+      <value>1</value>
+      <units>milligrams per liter</units>
+      <description></description>
+    </item>  
+    <item>
+      <name>Clarifier Flow Per Area Conventional</name>
+      <value>0.55</value>
+      <units>gpm per square feet</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Clarifier Flow Per Area Solids Contact</name>
+      <value>1.5</value>
+      <units>gpm per square feet</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Clarifier Internals Cost Factor Conventional</name>
+      <value>55000</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Clarifier Internals Cost Factor Solids Contact</name>
+      <value>75000</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Clarifier Construction Material Name Concrete</name>
+      <value>Concrete</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Clarifier Construction Material Name Bolted Steel</name>
+      <value>Bolted Steel</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Clarifier Construction Material Name Welded Steel</name>
+      <value>Welded Steel</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Clarifier Construction Material Cost Factor Concrete</name>
+      <value>0.525</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Clarifier Construction Material Cost Factor Bolted Steel</name>
+      <value>0.4</value>
+      <units></units>
+      <description></description>
+    </item> 
+    <item>
+      <name>Clarifier Construction Material Cost Factor Welded Steel</name>
+      <value>0.425</value>
+      <units></units>
+      <description></description>
+    </item>  
+    <item>
+      <name>Clarifier Quantity</name>
+      <value>1</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Clarifier Water Height</name>
+      <value>20</value>
+      <units>ft</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Clarifier Freeboard</name>
+      <value>1.5</value>
+      <units>ft</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Sludge Blanket Depth</name>
+      <value>3</value>
+      <units>ft</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Overflow Weir Unit Cost</name>
+      <value>125</value>
+      <units>$/ft</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Catwalk Unit Cost</name>
+      <value>450</value>
+      <units>$/ft</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Density Current Baffle Unit Cost</name>
+      <value>280</value>
+      <units>$/ft</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Tank Protective Coating Name Alkyd</name>
+      <value>Alkyd/Alkyd/Alkyd</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Tank Protective Coating Name Epoxy</name>
+      <value>Epoxy/Epoxy/Epoxy</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Tank Protective Coating Name Zinc Urethane</name>
+      <value>Zinc/Urethane</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Tank Protective Coating Name None</name>
+      <value>None</value>
+      <units></units>
+      <description></description>
+    </item>      
+    <item>
+      <name>Tank Protective Coating Unit Cost Alkyd</name>
+      <value>9.75</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Tank Protective Coating Unit Cost Epoxy</name>
+      <value>10.50</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Tank Protective Coating Unit Cost Zinc Urethane</name>
+      <value>19.25</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Tank Protective Coating Unit Cost None</name>
+      <value>0</value>
+      <units></units>
+      <description></description>
+    </item>      
+    <item>
+      <name>Clarifier Motor Operational Time Hours Per Day</name>
+      <value>24</value>
+      <units>hours per day</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Clarifier Motor Operational Time Days Per Year</name>
+      <value>365</value>
+      <units>days per year</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Impeller Motor Power User Specified</name>
+      <value>0</value>
+      <units>horsepower</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Rake Drive Motor Power</name>
+      <value>3</value>
+      <units>horsepower</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Sludge Recirculation Pump Flow User Specified</name>
+      <value>0</value>
+      <units>gpm</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Sludge Disposal Horizontal Centrifugal Pump Quantity</name>
+      <value>2</value>
+      <units>each</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Sludge Disposal Pump Flow User Specified</name>
+      <value>0</value>
+      <units>gpm</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Sludge Volume</name>
+      <value>4</value>
+      <units>percent by volume</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Sludge Disposal Pump Efficiency</name>
+      <value>0.75</value>
+      <units>unitless</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Sludge Disposal Pump Sizing Safety Factor</name>
+      <value>0.15</value>
+      <units>unitless</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Aluminum Specific Gravity</name>
+      <value>2.42</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Ferrous Iron Specific Gravity</name>
+      <value>3.4</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Ferric Iron Specific Gravity</name>
+      <value>4.25</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Manganese Specific Gravity</name>
+      <value>3.258</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Calcite Specific Gravity</name>
+      <value>2.71</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Foundation Concrete Material And Placement Cost</name>
+      <value>450</value>
+      <units>dollar per cubic yard</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Foundation Site Soil Load Bearing 1500 Name</name>
+      <value>Load Bearing 1500</value>
+      <units>pounds per square feet</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Foundation Site Soil Load Bearing 3000 Name</name>
+      <value>Load Bearing 3000</value>
+      <units>pounds per square feet</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Foundation Site Soil Load Bearing 4500 Name</name>
+      <value>Load Bearing 4500</value>
+      <units>pounds per square feet</units>
+      <description></description>
+    </item>      
+    <item>
+      <name>Foundation Site Soil Load Bearing 1500 Multiplier</name>
+      <value>1.5</value>
+      <units>unitless</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Foundation Site Soil Load Bearing 3000 Multiplier</name>
+      <value>1.0</value>
+      <units>unitless</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Foundation Site Soil Load Bearing 4500 Multiplier</name>
+      <value>0.75</value>
+      <units>unitless</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Foundation Site Soil Load Bearing 1500 Quantity</name>
+      <value>1500</value>
+      <units>pounds per square feet</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Foundation Site Soil Load Bearing 3000 Quantity</name>
+      <value>3000</value>
+      <units>pounds per square feet</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Foundation Site Soil Load Bearing 4500 Quantity</name>
+      <value>4500</value>
+      <units>pounds per square feet</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Foundation Site Soil Load Bearing 1500 Rating</name>
+      <value>POOR</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Foundation Site Soil Load Bearing 3000 Rating</name>
+      <value>AVERAGE</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Foundation Site Soil Load Bearing 4500 Rating</name>
+      <value>EXCELLENT</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Nominal Pipe Outside Diameter Inches Name 15</name>
+      <value>1.5</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Nominal Pipe Outside Diameter Inches Name 2</name>
+      <value>2</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Nominal Pipe Outside Diameter Inches Name 3</name>
+      <value>3</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Nominal Pipe Outside Diameter Inches Name 4</name>
+      <value>4</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Nominal Pipe Outside Diameter Inches Name 6</name>
+      <value>6</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Nominal Pipe Outside Diameter Inches 15</name>
+      <value>1.5</value>
+      <units></units>
+      <description></description>
+    </item>       
+    <item>
+      <name>Nominal Pipe Outside Diameter Inches 2</name>
+      <value>2</value>
+      <units></units>
+      <description></description>
+    </item>          
+    <item>
+      <name>Nominal Pipe Outside Diameter Inches 3</name>
+      <value>3</value>
+      <units></units>
+      <description></description>
+    </item> 
+    <item>
+      <name>Nominal Pipe Outside Diameter Inches 4</name>
+      <value>4</value>
+      <units></units>
+      <description></description>
+    </item>           
+    <item>
+      <name>Nominal Pipe Outside Diameter Inches 6</name>
+      <value>6</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Estimated Iron Pipe Size Standard Diameter Ratio Number Name 7</name>
+      <value>7</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Estimated Iron Pipe Size Standard Diameter Ratio Number Name 9</name>
+      <value>9</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Estimated Iron Pipe Size Standard Diameter Ratio Number Name 11</name>
+      <value>11</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Estimated Iron Pipe Size Standard Diameter Ratio Number Name 135</name>
+      <value>135</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Estimated Iron Pipe Size Standard Diameter Ratio Number Name 17</name>
+      <value>17</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Estimated Iron Pipe Size Standard Diameter Ratio Number 7</name>
+      <value>7</value>
+      <units></units>
+      <description></description>
+    </item>       
+    <item>
+      <name>Estimated Iron Pipe Size Standard Diameter Ratio Number 9</name>
+      <value>9</value>
+      <units></units>
+      <description></description>
+    </item>       
+    <item>
+      <name>Estimated Iron Pipe Size Standard Diameter Ratio Number 11</name>
+      <value>11</value>
+      <units></units>
+      <description></description>
+    </item>  
+    <item>
+      <name>Estimated Iron Pipe Size Standard Diameter Ratio Number 135</name>
+      <value>13.5</value>
+      <units></units>
+      <description></description>
+    </item>  
+    <item>
+      <name>Estimated Iron Pipe Size Standard Diameter Ratio Number 17</name>
+      <value>17</value>
+      <units></units>
+      <description></description>
+    </item>        
+    <item>
+      <name>Total Static Head</name>
+      <value>150</value>
+      <units></units>
+      <description></description>
+    </item>  
+    <item>
+      <name>Pipeline Length</name>
+      <value>10000</value>
+      <units></units>
+      <description></description>
+    </item>        
+    <item>
+      <name>Incidental Head Losses</name>
+      <value>10</value>
+      <units></units>
+      <description></description>
+    </item>  
+    <item>
+      <name>Excavation Unit Cost</name>
+      <value>12.5</value>
+      <units></units>
+      <description></description>
+    </item> 
+    <item>
+      <name>Backfill And Compaction Unit Cost</name>
+      <value>8.5</value>
+      <units></units>
+      <description></description>
+    </item> 
+    <item>
+      <name>Pipe Bedding Aggregate Thickness</name>
+      <value>1.5</value>
+      <units></units>
+      <description></description>
+    </item>        
+    <item>
+      <name>Aggregate Unit Cost</name>
+      <value>25</value>
+      <units></units>
+      <description></description>
+    </item> 
+    <item>
+      <name>Air Vacuum Release Assemblies Quantity</name>
+      <value>1</value>
+      <units></units>
+      <description></description>
+    </item> 
+    <item>
+      <name>Air Vacuum Release Assemblies Unit Cost</name>
+      <value>5600</value>
+      <units></units>
+      <description></description>
+    </item>       
+    <item>
+      <name>Pig Launchers Receivers Assemblies Quantity</name>
+      <value>1</value>
+      <units></units>
+      <description></description>
+    </item>       
+    <item>
+      <name>Pig Launchers Receivers Assemblies Unit Cost</name>
+      <value>14000</value>
+      <units></units>
+      <description></description>
+    </item>       
+    <item>
+      <name>Pipeline Maintenance Factor</name>
+      <value>3.5</value>
+      <units></units>
+      <description></description>
+    </item>       
+    <item>
+      <name>Pump Maintenance Factor</name>
+      <value>10</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pressure Rating PSI 335</name>
+      <value>335</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pressure Rating PSI 250</name>
+      <value>250</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pressure Rating PSI 200</name>
+      <value>200</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pressure Rating PSI 160</name>
+      <value>160</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pressure Rating PSI 125</name>
+      <value>125</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 7 NOD 15</name>
+      <value>1.325</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 9 NOD 15</name>
+      <value>1.453</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 11 NOD 15</name>
+      <value>1.533</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 135 NOD 15</name>
+      <value>1.601</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 17 NOD 15</name>
+      <value>-999</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 7 NOD 2</name>
+      <value>1.656</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 9 NOD 2</name>
+      <value>1.815</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 11 NOD 2</name>
+      <value>1.917</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 135 NOD 2</name>
+      <value>2.002</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 17 NOD 2</name>
+      <value>2.078</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 7 NOD 3</name>
+      <value>2.44</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 9 NOD 3</name>
+      <value>2.675</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 11 NOD 3</name>
+      <value>2.826</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 135 NOD 3</name>
+      <value>2.951</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 17 NOD 3</name>
+      <value>3.063</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 7 NOD 4</name>
+      <value>3.137</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 9 NOD 4</name>
+      <value>3.44</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 11 NOD 4</name>
+      <value>3.633</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 135 NOD 4</name>
+      <value>3.794</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 17 NOD 4</name>
+      <value>3.938</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 7 NOD 6</name>
+      <value>4.62</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 9 NOD 6</name>
+      <value>5.07</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 11 NOD 6</name>
+      <value>5.35</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 135 NOD 6</name>
+      <value>5.58</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Inside Diameter Inches SDR 17 NOD 6</name>
+      <value>5.8</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Fusion Cost NOD 15</name>
+      <value>1.5</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Fusion Cost NOD 2</name>
+      <value>1.75</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Fusion Cost NOD 3</name>
+      <value>1.75</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Fusion Cost NOD 4</name>
+      <value>2.5</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Pipe Fusion Cost NOD 6</name>
+      <value>2.5</value>
+      <units></units>
+      <description></description>
+    </item>      
+    <item>
+      <name>Other Capital Item Description 1</name>
+      <value></value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Other Capital Item Description 2</name>
+      <value></value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Other Capital Item Description 3</name>
+      <value></value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Other Capital Item Description 4</name>
+      <value></value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Other Capital Item Description 5</name>
+      <value></value>
+      <units></units>
+      <description></description>
+    </item>      
+    <item>
+      <name>Other Capital Item Quantity 1</name>
+      <value>0</value>
+      <units>each</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Other Capital Item Quantity 2</name>
+      <value>0</value>
+      <units>each</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Other Capital Item Quantity 3</name>
+      <value>0</value>
+      <units>each</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Other Capital Item Quantity 4</name>
+      <value>0</value>
+      <units>each</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Other Capital Item Quantity 5</name>
+      <value>0</value>
+      <units>each</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Electric Unit Cost</name>
+      <value>0.15</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Sludge Solids Percentage</name>
+      <value>20</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Calcite</name>
+      <value>0</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Miscellaneous Solids</name>
+      <value>0</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Miscellaneous Solids Density</name>
+      <value>22</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 1 Inside Diameter Name 6</name>
+      <value>6</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 1 Inside Diameter Name 8</name>
+      <value>8</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 1 Inside Diameter 6</name>
+      <value>6</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 1 Inside Diameter 8</name>
+      <value>8</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 1 Sizing Multiplier</name>
+      <value>1.5</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 1 Drilling Depth</name>
+      <value>80</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 1 Drilling And Casting Installation Unit Cost 6</name>
+      <value>100</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 1 Drilling And Casting Installation Unit Cost 8</name>
+      <value>125</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 2 Inside Diameter Name 6</name>
+      <value>6</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 2 Inside Diameter Name 8</name>
+      <value>8</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 2 Inside Diameter 6</name>
+      <value>6</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 2 Inside Diameter 8</name>
+      <value>8</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 2 Sizing Multiplier</name>
+      <value>1.5</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 2 Drilling Depth</name>
+      <value>100</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 2 Drilling And Casting Installation Unit Cost 6</name>
+      <value>100</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 2 Drilling And Casting Installation Unit Cost 8</name>
+      <value>125</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 3 Inside Diameter Name 6</name>
+      <value>6</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 3 Inside Diameter Name 8</name>
+      <value>8</value>
+      <units></units>
+      <description></description>
+    </item>      
+    <item>
+      <name>Borehole 3 Inside Diameter 6</name>
+      <value>6</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 3 Inside Diameter 8</name>
+      <value>8</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 3 Sizing Multiplier</name>
+      <value>1.5</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 3 Drilling Depth</name>
+      <value>300</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 3 Drilling And Casting Installation Unit Cost 6</name>
+      <value>100</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Borehole 3 Drilling And Casting Installation Unit Cost 8</name>
+      <value>125</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Fill Capacity</name>
+      <value>70</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Dewatered Solids Percentage</name>
+      <value>40</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Size Name 22_5x22</name>
+      <value>22.5' x 22'</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Size Name 30x50</name>
+      <value>30' x 50'</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Size Name 45x57</name>
+      <value>45' x 57'</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Size Name 45x100</name>
+      <value>45' x 100'</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Size Name 60x100</name>
+      <value>60' x 100'</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Size Name 60x200</name>
+      <value>60' x 200'</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Size Name 120x100</name>
+      <value>120' x 100'</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Capacity 22_5x22</name>
+      <value>25</value>
+      <units>cubic yards</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Capacity 30x50</name>
+      <value>85</value>
+      <units>cubic yards</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Capacity 45x57</name>
+      <value>175</value>
+      <units>cubic yards</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Capacity 45x100</name>
+      <value>310</value>
+      <units>cubic yards</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Capacity 60x100</name>
+      <value>465</value>
+      <units>cubic yards</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Capacity 60x200</name>
+      <value>950</value>
+      <units>cubic yards</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Capacity 120x100</name>
+      <value>1185</value>
+      <units>cubic yards</units>
+      <description></description>
+    </item>      
+    <item>
+      <name>Geotube Unit Cost 22_5x22</name>
+      <value>940</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Unit Cost 30x50</name>
+      <value>1020</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Unit Cost 45x57</name>
+      <value>1855</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Unit Cost 45x100</name>
+      <value>3050</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Unit Cost 60x100</name>
+      <value>3855</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Unit Cost 60x200</name>
+      <value>7395</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Geotube Unit Cost 120x100</name>
+      <value>7075</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Polymer Name Emulsion</name>
+      <value>Emulsion</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Polymer Name Dry</name>
+      <value>Dry</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Polymer Unit Cost Emulsion</name>
+      <value>15</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Polymer Unit Cost Dry</name>
+      <value>1.5</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Emulsion Polymer Density</name>
+      <value>8.5</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Polymer Active Percentage Emulsion</name>
+      <value>30</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Polymer Active Percentage Dry</name>
+      <value>90</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Polymer Solution Strength Emulsion</name>
+      <value>0.5</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Polymer Solution Strength Dry</name>
+      <value>0.2</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Polymer Target Dose</name>
+      <value>30</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Polymer Pump Power</name>
+      <value>130</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Landfill Tipping Fee</name>
+      <value>40</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Truck Volume</name>
+      <value>16</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Excavation Haul Dispose Time</name>
+      <value>60</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Excavator Unit Cost</name>
+      <value>120</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Roundtrip Distance</name>
+      <value>50</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Hauling Transportation Unit Cost</name>
+      <value>2.25</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Other Annual Item Description 1</name>
+      <value></value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Other Annual Item Description 2</name>
+      <value></value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Other Annual Item Description 3</name>
+      <value></value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Other Annual Item Description 4</name>
+      <value></value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Other Annual Item Description 5</name>
+      <value></value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Other Annual Item Quantity 1</name>
+      <value>0</value>
+      <units>each</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Other Annual Item Quantity 2</name>
+      <value>0</value>
+      <units>each</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Other Annual Item Quantity 3</name>
+      <value>0</value>
+      <units>each</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Other Annual Item Quantity 4</name>
+      <value>0</value>
+      <units>each</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Other Annual Item Quantity 5</name>
+      <value>0</value>
+      <units>each</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Capital Cost System Installation Multiplier</name>
+      <value>40</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Capital Cost System Installation User Specified</name>
+      <value>0</value>
+      <units></units>
+      <description></description>
+    </item>      
+    <item>
+      <name>Annual Cost Operation And Maintenance Multiplier</name>
+      <value>3.5</value>
+      <units>percent</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Annual Cost Operation And Maintenance User Specified</name>
+      <value>0</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Annual Cost Electric User Specified</name>
+      <value>0</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Annual Cost Geotube Sludge Disposal User Specified</name>
+      <value>0</value>
+      <units></units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Life Cycle Tank Concrete With Coating</name>
+      <value>75</value>
+      <units>years</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Life Cycle Tank Concrete Without Coating</name>
+      <value>35</value>
+      <units>years</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Life Cycle Tank Steel With Coating</name>
+      <value>35</value>
+      <units>years</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Life Cycle Tank Steel Without Coating</name>
+      <value>15</value>
+      <units>years</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Life Cycle Tank Protective Coating Alkyd</name>
+      <value>5</value>
+      <units>years</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Life Cycle Tank Protective Coating Epoxy</name>
+      <value>14</value>
+      <units>years</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Life Cycle Tank Protective Coating Zinc Urethane</name>
+      <value>22</value>
+      <units>years</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Life Cycle Tank Protective Coating None</name>
+      <value>1</value>
+      <units>years</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Life Cycle Catwalk</name>
+      <value>20</value>
+      <units>years</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Life Cycle Overflow Weir</name>
+      <value>20</value>
+      <units>years</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Life Cycle Sludge Pump Rebuild</name>
+      <value>5</value>
+      <units>years</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Life Cycle Sludge Pump Replacement</name>
+      <value>20</value>
+      <units>years</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Life Cycle Sludge Disposal Borehole</name>
+      <value>15</value>
+      <units>years</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Life Cycle Clarifier Cleanout</name>
+      <value>4</value>
+      <units>years</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Life Cycle Sludge Recirculation Pump Rebuild</name>
+      <value>5</value>
+      <units>years</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Life Cycle Sludge Recirculation Pump Replacement</name>
+      <value>20</value>
+      <units>years</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Percent Replacement Clarifier Tank Internals</name>
+      <value>100</value>
+      <units>percent</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Percent Replacement Tank Protective Coating</name>
+      <value>100</value>
+      <units>percent</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Percent Replacement Catwalk</name>
+      <value>100</value>
+      <units>percent</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Percent Replacement Overflow Weir</name>
+      <value>100</value>
+      <units>percent</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Percent Replacement Sludge Pump Rebuild</name>
+      <value>17</value>
+      <units>percent</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Percent Replacement Sludge Pump Replacement</name>
+      <value>100</value>
+      <units>percent</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Percent Replacement Sludge Disposal Borehole</name>
+      <value>100</value>
+      <units>percent</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Percent Replacement Clarifier Cleanout</name>
+      <value>100</value>
+      <units>percent</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Percent Replacement Sludge Recirculation Pump Rebuild</name>
+      <value>17</value>
+      <units>percent</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Percent Replacement Sludge Recirculation Pump Replacement</name>
+      <value>100</value>
+      <units>percent</units>
+      <description></description>
+    </item>
+</items>
+</module>
+

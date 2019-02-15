@@ -1,0 +1,2062 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="errorPondCaustic" xml:space="preserve">
+    <value />
+  </data>
+  <data name="errorPondMajorCaustic" xml:space="preserve">
+    <value />
+  </data>
+  <data name="errorPondLS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="errorPondMajorLS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="errorPondLSB" xml:space="preserve">
+    <value>The calculated limstone layer bottom width is less than 10 ft.
+
+The combination of the pond length and width, layer depths, pond side slope, and/or bottom length to width ratio is causing the error.
+
+All output values are invalid and should not be used.
+
+To resolve, change the pond length and width, layer depths, pond side slope, and/or bottom length.  
+
+Note, the current depth of the pond should be less than the maximum allowable depth of the pond.</value>
+  </data>
+  <data name="errorPondMajorLSB" xml:space="preserve">
+    <value>The calculated limstone layer bottom width is 0 ft or less than 0 ft.
+
+The combination of the pond length and width, layer depths, pond side slope, and/or bottom length to width ratio is causing a major error.
+
+All output values are invalid.
+
+To resolve, change the pond length and width, layer depths, pond side slope, and/or bottom length.  
+
+Note, the current depth of the pond should be less than the maximum allowable depth of the pond.</value>
+  </data>
+  <data name="errorPondMajorMRB" xml:space="preserve">
+    <value>The calculated limstone layer bottom width is 0 ft or less than 0 ft.
+
+The combination of the pond length and width, layer depths, pond side slope, and/or bottom length to width ratio is causing a major error.
+
+All output values are invalid.
+
+To resolve, change the pond length and width, layer depths, pond side slope, and/or bottom length.  
+
+Note, the current depth of the pond should be less than the maximum allowable depth of the pond.</value>
+  </data>
+  <data name="errorPondMajorVFP" xml:space="preserve">
+    <value>The calculated limstone layer bottom width is 0 ft or less than 0 ft.
+
+The combination of the pond length and width, layer depths, pond side slope, and/or bottom length to width ratio is causing a major error.
+
+All output values are invalid.
+
+To resolve, change the pond length and width, layer depths, pond side slope, and/or bottom length.  
+
+Note, the current depth of the pond should be less than the maximum allowable depth of the pond.</value>
+  </data>
+  <data name="errorPondMRB" xml:space="preserve">
+    <value>The calculated limstone layer bottom width is less than 10 ft.
+
+The combination of the pond length and width, layer depths, pond side slope, and/or bottom length to width ratio is causing the error.
+
+All output values are invalid and should not be used.
+
+To resolve, change the pond length and width, layer depths, pond side slope, and/or bottom length.  
+
+Note, the current depth of the pond should be less than the maximum allowable depth of the pond.</value>
+  </data>
+  <data name="errorPondVFP" xml:space="preserve">
+    <value>The calculated limstone layer bottom width is less than 10 ft.
+
+The combination of the pond length and width, layer depths, pond side slope, and/or bottom length to width ratio is causing the error.
+
+All output values are invalid and should not be used.
+
+To resolve, change the pond length and width, layer depths, pond side slope, and/or bottom length.  
+
+Note, the current depth of the pond should be less than the maximum allowable depth of the pond.</value>
+  </data>
+  <data name="infoAmdtreatVFP" xml:space="preserve">
+    <value>AMDTreat, a member of OSMRE's Technical Innovation and Professional Services (TIPS) suite of software, is a computer application for estimating abatement costs for pollutional mine drainage, commonly referred to as Acid Mine Drainage or AMD.</value>
+  </data>
+  <data name="infoAnnualCostCaustic" xml:space="preserve">
+    <value />
+  </data>
+  <data name="infoAnnualCostLS" xml:space="preserve">
+    <value>User-Specified Annual Chemical Cost - This  method allows users to specify the annual  chemical cost. This method is commonly used by users who know their annual chemical cost and do not require an estimate. 
+
+Percentage of Capital Cost - The default method for estimating operation and mainteance costs is to assume the annual cost is a percentage of the capital cost to purchase and install the sysetm.  
+
+Estimate Electrical Cost - AMDTreat estimates the annual electrical cost by using the power requirements for each motor or electrical component in the treatment system and the user-specified operational time to calculate the annual electrical demand. The demand is multiplied by the unit cost of electricity to estimate the annual electrical cost.</value>
+  </data>
+  <data name="infoAnnualCostLSB" xml:space="preserve">
+    <value>Annual Costs for Limestone Beds include routine maintenance such as cleaning debris from inlet and outlet, mowing, flushing, and adjusting the water level. Estimating the annual costs for passive treatment systems are difficult so a portion of the annual costs is not tagged for a specific use but may accumulate for contingencies.  There are two methods to estimate annual treatment costs for a Limestone Bed in AMDTreat. For the first method, users enter a percentage which is multiplied by the Limestone Bed capital cost to estimate the annual operations and maintenance cost. The second method allows users to enter an expected annual cost. 
+
+Percentage of Capital Cost is the user-specified percentage used to estimate the annual operation and maintenance cost.
+
+Annual Cost Flat Fee allows users to enter a custom calculated or known annual cost for operation and maintenance.</value>
+  </data>
+  <data name="infoAnnualCostMRB" xml:space="preserve">
+    <value>Annual Costs for Manganese Removal Beds include routine maintenance such as cleaning debris from inlet and outlet, mowing, flushing, and adjusting the water level. Estimating the annual costs for passive treatment systems are difficult so a portion of the annual costs is not tagged for a specific use but may accumulate for contingencies.  There are two methods to estimate annual treatment costs for a Manganese Removal Bed in AMDTreat. For the first method, users enter a percentage which is multiplied by the Manganese Removal Bed capital cost to estimate the annual operations and maintenance cost. The second method allows users to enter an expected annual cost (flat fee).
+
+Percentage of Capital Cost is the user-specified percentage used to estimate the annual operation and maintenance cost.
+
+Annual Cost Flat Fee allows users to enter a custom calculated or known annual cost for operation and maintenance.</value>
+  </data>
+  <data name="infoAnnualCostVFP" xml:space="preserve">
+    <value>Annual Costs for VFP include routine maintenance such as cleaning debris from inlet and outlet, mowing, and adjusting the water level. Estimating the annual costs for passive treatment systems are difficult so a portion of the annual costs is not tagged for a specific use but may accumulate for contingencies.  There are two methods to estimate annual treatment costs for a VFP in AMDTreat. For the first method, users enter a percentage which is multiplied by the VFP capital cost to estimate the annual operations and maintenance cost. The second method allows users to enter an annual cost.
+
+Percentage of Capital Cost is the user-specified percentage used to estimate the annual operation and maintenance cost.
+
+Annual Cost Flat Fee allows users can enter a custom calculated or known annual cost for operation and maintenance.</value>
+  </data>
+  <data name="infoCapitalCostCaustic" xml:space="preserve">
+    <value>Capital costs include the cost estimates to build the treatment.</value>
+  </data>
+  <data name="infoCapitalCostLS" xml:space="preserve">
+    <value>Capital costs include the cost estimates to build the treatment.
+
+System Installation - This section develops cost estimates for installing the lime slurry system. 
+
+Cost Multiplier: The default method for estimating installtion costs is to assume the installation cost is 40% of the capital cost of the equipment. 
+
+User-specified Cost: Users specify the installation cost. 
+    </value>
+  </data>
+  <data name="infoCapitalCostLSB" xml:space="preserve">
+    <value>Capital costs include the cost estimates to build the Limestone Bed.</value>
+  </data>
+  <data name="infoCapitalCostMRB" xml:space="preserve">
+    <value>Capital costs include the cost estimates to build the Manganese Removal Bed.</value>
+  </data>
+  <data name="infoCapitalCostVFP" xml:space="preserve">
+    <value>Capital costs include the cost estimates to build the pond.</value>
+  </data>
+  <data name="infoChemicalSolutionCaustic" xml:space="preserve">
+    <value>Information about the Caustic Soda solution.
+
+Caustic Soda Solution is Sodium Hydroxide (NaOH). User selects the percentage of Caustic solution.
+
+Caustic Soda Purity is the purity of Caustic Soda.
+
+Caustic Soda Mixing Efficiency is a way to add additional caustic reagent to account for a loss of caustic due to incomplete mixing. For example, caustic dispensed into very slow-flowing water may not mix properly. 
+
+Caustic Soda Unit Cost is the unit cost to purchase and deliver the Caustic Soda.
+    </value>
+  </data>
+  <data name="infoChemicalSolutionLS" xml:space="preserve">
+    <value>Information about the Pre Manufactured Hydrated Lime Slurry.
+
+Hydrated Lime Slurry - Hydrated lime slurry is a manufactured product consisting of Ca(OH)2 particles suspended in water. Users must specify the weight percent of Ca(OH)2 particles suspended in water to accurately estimate the annual consumption. 
+
+Purity of Lime - Purity of Ca(OH)2 (Lime) used to manufacture slurry. 
+
+Dissolution Efficiency - Dissolution  Efficiency is a way to add additional slurry to account for a loss of slurry due to incomplete dissolution of lime particles. For example, extremely short mixing retention times or dispensing slurry into non turbulent water may result in incomplete dissolution of lime particles.
+
+Unit Cost of Lime Slurry Delivered - Unit cost of the purchase and delivery of lime slurry 
+    </value>
+  </data>
+  <data name="infoChemicalConsumptionCaustic" xml:space="preserve">
+    <value>Methods to estimate chemical consumption.
+
+Stoichiometric - estimates caustic consumption by multiplying the acidity as CaCO3 by flow (gpm) and using stoichiometric conversions to calculate the amount of caustic soda.
+
+Titration - users can input the results of performing a bench scale titration of mine drainage to determine the gallons of caustic required to treat each gallon of mine drainage. 
+
+User-Specified Quantity - allows users to specify the annual amount of chemical consumed at a treatment system. This method is commonly used by users who know their chemical consumption.
+    </value>
+  </data>
+  <data name="infoChemicalConsumptionLS" xml:space="preserve">
+    <value>Methods to estimate chemical consumption.
+
+Stoichiometric - Estimates caustic consumption by multiplying the acidity as CaCO3 by flow (gpm) and using stoichiometric conversions to calculate the amount of  hydrated lime slurry. 
+
+Titration - Users can input the results of performing a bench scale titration of mine drainage to determine the gallons of caustic required to treat each gallon of mine drainage. 
+
+User-Specified Dry Ton Equivalent - This  method allows users to specify the annual amount of chemical consumed at a treatment system. This method is commonly used by users who know their chemical consumption. 
+    </value>
+  </data>
+  <data name="infoEquipmentCaustic" xml:space="preserve">
+    <value>Information about the equipment used.  If Automated System not selected, a manual drip system using valve(s) is assumed treatment setup. 
+
+Automated system is used to automate dispensing of caustic soda.  
+
+Proportional Integral Derivative (PID) pH Controller is an electronic control system that coornidates dispensing rate of caustic soda based on pH reading.
+
+pH Probe Cost is the cost of the pH Probe.
+
+Chemical Metering Pump Electric Rate is the rate for all costs associated with electric bill (i.e. fees, taxes, etc.).
+    </value>
+  </data>
+  <data name="infoEquipmentLS" xml:space="preserve">
+    <value>Information about the equipment used.  
+
+STORAGE AND DISPENSING SYSTEM
+This section allows users to develop cost estimates for the lime slurry storage and dispensing equipment. 
+
+Electric Rate: This rate should reflect all costs associated with electric bill (i.e. fees, taxes, etc.).
+
+Slurry Storage Tank: A 15 ft (height) by 10 ft diameter,  8,800 gallon  fiberglass tank is used in the cost model. This tank capacity is commonly used in the Eastern U.S. coal fields to take advantage of builk delivery and pricing of slurry. 
+
+Slurry Refill Volume: Users select the  slurry delivery  volume which is used to estimate the refill frequency and  reserve capacity of the slurry system  (shown under Sizing Summary)
+
+EPDM Rubber Tubing to Dispense Slurry: Users specifiy the distance between the slurry storage tank and the slurry dosing location to estimate the amount of ethylene propylene diene monomer (EPDM) tubing is required to dispense slurry. 
+
+Stainless Slurry Agitator: A stainless steel mechnical agitator is fixed to the top of the slurry storage tank and used to keep slurry mixed and prevents solid/liquid separation.  Users specify how often the agitator operates and the power of the motor to estimtae the annual electrical consumption and cost. 
+
+Chemical Metering Pump: Most slurry systems use two peristaltic pumps, a continiously dispensing and an emergency backup. Users specify how often the pumps operate and the power of the motor to estimtae the annual electrical consumption and cost.  
+
+Hach se 200 pH-based Dispensing Controller: Users can include the cost of using a dispensing controller and pH  probe to automate  slurry  dosing using a  pH set point. 
+
+Cellular Telemetry and Monthly Fee:  Users have the option to include the cost of adding telemetry for remote monitoring of the slurry treatment sysetm. 
+
+Silicone Rubber Heat Blanket: SRP heat blankets are attached to the fiberglass tank and controlled by a themostat to prevent freezing of slurry. Four 2x3 ft SRP blankets are required to prevent slurry freezing in the  8,800 gallon fiberglass tank in Northern climates of the U.S.  Users must specify how many hours per day the heating blanket will operate during the winter months (Temp less than 40 degrees) for estimating annual electric costs. 
+
+Tubing Heat Trace: The EPDM rubber tubing must be heat traced to prevent the slurry from freezing during winter months. Typically, the length of heat tape required is equal to the length of EPDM rubber tubing used to dispense slurry. Users must specify how many hours per day the heat trace will operate during the winter months (Temp less thann 40 degrees) for estimating annual electric costs. 
+
+
+TANK FOUNDATION AND PUMP HOUSING
+This section allows users to develop cost estimates of the concrete foundation for the slurry tank and for the shed that protects the electric panel, pumps, and controllers. 
+
+Slurry Tank Foundation and Foundation Area: Users have the option of specifying the size of the slurry tank foundation or have AMDTreat estimate the foundation area.  The foundation size and cost estimates are provided in the "Sizing Summary" section. The default size for the fiberglass slurry tank is 15 ft height by 10 ft diameter tank. AMDTreat assumes the foundation is square shaped with a width and length that is 2 ft more than the diameter of the tank. The area is multiplied by the user-specified slab thickness to calculate the foundation volume. 
+
+Pump and Electrical  Control Panel Housing: Typically, pumps and controllers are housed in an inexpensive pre-fabricated wooden garden shed with a pressure-treated 4x4 base.
+
+Pre fab wooden shed on skids (no foundation) to house pumps and electrical control panel. 
+    </value>
+  </data>
+  <data name="infoLayerMaterialsLSB" xml:space="preserve">
+    <value>The various layers of a pond are contained within this section.  Each layer contains corresponding dimensions/properties and/or costs.
+
+FREEBOARD
+The depth of the Freeboard layer is defined as the difference between the top elevation of the berm and the design water surface elevation or top of limestone elevation, whichever is higher.  The purpose of the Freeboard layer is to accommodate a rising water surface elevation caused by increased flow or plugging in the limestone. 
+
+
+WATER
+The depth of the Water layer is defined as the difference between the bottom elevation of the Freeboard layer and the top elevation of the Limestone layer. The purpose of the water layer is to act as a barrier, but is typically not recommended in limestone beds.
+
+
+LIMESTONE 
+Upstream Depth is the depth of Limestone at the upstream or influent end of the Limestone Bed.  
+Downstream Depth is the depth of Limestone at the downstream stream or effluent end of the Limestone Bed.
+
+Purity represents the percentage of carbonate minerals by weight contained in limestone. It represents the portion of the limestone that will participate in reactions to increase pH and alkalinity. 
+
+Dissolution Efficiency is a way to add additional limestone to a treatment system to help address a reduction in the rate of dissolution cause by a loss of reactive surface area as the limestone weathers over time. The mass of limestone will be divided by the dissolution efficiency to increase the mass of limestone. A dissolution factor of 85% will increase the mass of limestone by 17.6%.  A dissolution efficiency of 100% assumes 100% of the limestone will dissolve and will not alter the original mass of limestone. This factor can be considered a design safety factor.  
+
+Limestone Porosity represents the percentage of void space compared to the total volume of the limestone layer. It also represents the portion of the limestone layer that will be occupied by water and not the limestone. This value affects retention time.
+
+Limestone Unit Cost represents the cost to purchase and transport limestone to the mine drainage treatment site.
+
+Limestone Placement Unit Cost represents the cost to install the limestone in the system.
+
+PIPE
+AMDTreat’s piping routine estimates the cost of the influent, limestone collection, and effluent piping network. AMDTreat calculates the cost of the influent and effluent pipe based on user entered length and unit cost, which is designed to convey water into and out of the treatment pond. The limestone collection piping network is installed at the base of the limestone layer and is designed to evenly direct water downward and/or horizontally throughout the limestone bed.  The limestone collection piping layout consists of a perforated “Header” pipe installed along the width at the downstream or effluent end of the limestone layer. The user can specifiy multiple Header pipes as desired to improve flow distribution and flushing and a perforated header pipe may also be specified for distributing the water from the influent pipe onto the limestone bed.  Conceptually, water flows towards and into the Header pipes and is conveyed to the effluent pipe for discharge to the water level control/flushing structure through the embankment. The routine calculates the number and cost of couplers used to connect segments of header pipes together and tees to connect influent and effluent pipes to the header pipe(s).  For more information on AMDTreat’s piping routine, including pictures, please refer to help. 
+Influent/effluent Pipe Length represents the total amount of pipe required to deliver water into the treatment system and from the limestone collection system to the discharge point.  
+
+Influent/effluent Install Rate is multiplied by the Influent/Effluent Pipe Length to estimate the amount of time required to install the pipe. Installation time is multiplied by the Labor Rate to estimate the installation cost. 
+
+Header Pipe Segment Length represents the length of each segment of perforated header pipe. 
+
+Header Pipe Quantity represents the number of perforated header pipes used in the system. Header pipes may be specified for both the influent to distribute flow into the limestone bed and the effluent to distribute flows throughout the width of the limestone bed moving in a horizontal- like flow pattern.
+
+Header Pipe Install Rate is the rate that is multiplied by the Header Pipe Length to estimate the amount of time required to install the pipe. Installation time is multiplied by the Labor Rate to estimate the installation cost.
+
+Labor Rate represents the unit cost of Labor. 
+
+Influent/Effluent Pipe Unit Cost represents the cost of each linear foot of influent/effluent pipe.
+
+Header Pipe Segment Unit Cost represents the cost of each linear foot of header pipe.
+
+Header Pipe Coupler Unit Cost represents the cost of each coupler used to connect two header pipes together.
+
+Tee Connector Unit Cost represents the cost of each Tee fitting used to connect the influent and/or effluent pipe to the perforated header pipe(s). 
+
+Custom Pipe - The User-specified piping layout is used when users decide not to use AMDTreat’s piping routine to estimate the cost of the piping network. This routine allows users to specify the length and cost for various types of pipe and connectors. This routine may be helpful if users are attempting to “reverse cost” model an existing system with known quantities of pipe.
+
+Custom Pipe Length represents the user-specified total length of pipe.
+
+Custom Pipe Unit Cost represents the purchase and installation cost of each linear foot of pipe.
+
+LINER
+The liner routine allows users to estimate the cost of installing a Clay, Synthetic, or Geosynthetic Clay liner.
+
+Clay Liner Unit Cost is the cost of purchasing, transporting, excavation, placing, and compacting the clay. In many cases, the only cost is the cost of excavating, placing, and compacting the clay.
+
+Clay Liner Thickness is the desired thickness of the clay liner.
+
+Synthetic Liner Unit Cost is the cost to purchase and install a synthetic liner. If using geotextile in conjunction with a clay liner, enter the unit cost for the geotextile here. If using synthetic liner with geotextile, add both unit costs and enter here.
+
+Geosynthetic Clay Liner Unit Cost is the to purchase and install the geosynthetic clay liner.
+
+Geosynthetic Clay Soil Cover Unit Cost is the cost to excavate and place the soil cover over the geosynthetic clay liner. 
+
+Geosynthetic Clay Liner Soil Cover Thickness is the thickness of the protective soil cover over the geosynthetic clay liner.
+
+</value>
+  </data>
+  <data name="infoLayerMaterialsMRB" xml:space="preserve">
+    <value>The various layers of a pond are contained within this section.  Each layer contains corresponding dimensions/properties and/or costs.
+
+FREEBOARD
+The depth of the Freeboard layer is defined as the difference between the top elevation of the berm and the design water surface elevation or top of limestone elevation, whichever is higher.  The purpose of the Freeboard layer is to accommodate a rising water surface elevation caused by increased flow or plugging in the limestone. 
+
+Depth of Freeboard Layer is from the top of berm/embankment to bottom of freeboard layer/top of limestone.
+
+LIMESTONE 
+The purpose of the Limestone layer in a Manganese Removal bed is to increase pH and alkalinity through the dissolution of limestone (calcite) and provide sufficient surface area for the establishment of biological organisms that oxidize the dissolved Manganese. 
+
+Limestone Depth is the total depth of the Limestone layer making up the Manganese Removal Bed.
+This depth is normally not as deep as the actual limestone bed to allow an interface between the air and water within the limestone bed for the biological organisms that perform the manganese oxidation.
+
+Limestone Porosity represents the percentage of void space compared to the total volume of the limestone layer. It also represents the portion of the limestone layer that will be occupied by water and not the limestone. This value affects retention time.
+
+Stone gradation allows the user to select the size range of limestone used in the layer based on four commonly used AASHTO sizes.  Porosity (void space) is assumed to be similar for the four sizes.
+
+Limestone Unit Cost represents the cost to purchase and transport limestone to the mine drainage treatment site.
+
+Limestone Placement Unit Cost represents the cost to place the limestone in the treatment pond to the desired bed depth. 
+
+PIPE
+AMDTreat’s piping routine estimates the cost of the influent, limestone collection, and effluent piping network. AMDTreat calculates the cost of the influent and effluent pipe based on user entered length and unit cost, which is designed to convey water into and out of the treatment pond. The limestone collection piping network is installed at the base of the limestone layer and is designed to evenly direct water downward and/or horizontally throughout the limestone bed.  The limestone collection piping layout consists of a perforated “Header” pipe installed along the width at the downstream or effluent end of the limestone layer. The user can specifiy multiple Header pipes as desired to improve flow distribution and flushing and a perforated header pipe may also be specified for distributing the water from the influent pipe onto the limestone bed.  Conceptually, water flows towards and into the Header pipes and is conveyed to the effluent pipe for discharge to the water level control/flushing structure through the embankment. The routine calculates the number and cost of couplers used to connect segments of header pipes together and tees to connect influent and effluent pipes to the header pipe(s).  For more information on AMDTreat’s piping routine, including pictures, please refer to help. 
+
+Influent/effluent Pipe Length represents the total amount of pipe required to deliver water into the treatment system and from the limestone collection system to the discharge point.  
+
+Influent/effluent Install Rate is multiplied by the Influent/Effluent Pipe Length to estimate the amount of time required to install the pipe. Installation time is multiplied by the Labor Rate to estimate the installation cost. 
+
+Header Pipe Segment Length represents the length of each segment of perforated header pipe. 
+
+Header Pipe Quantity represents the number of perforated header pipes used in the system. Header pipes may be specified for both the influent to distribute flow into the Mn Removal bed and the effluent to distribute flows throughout the width of the Mn Removal bed moving in a horizontal- like flow pattern.
+
+Header Pipe Install Rate is the rate that is multiplied by the Header Pipe Length to estimate the amount of time required to install the pipe. Installation time is multiplied by the Labor Rate to estimate the installation cost.
+
+Labor Rate represents the unit cost of Labor. 
+
+Influent/Effluent Pipe Unit Cost represents the cost of each linear foot of influent/effluent pipe.
+
+Header Pipe Segment Unit Cost represents the cost of each linear foot of header pipe.
+
+Header Pipe Coupler Unit Cost represents the cost of each coupler used to connect two header pipes together.
+
+Tee Connector Unit Cost represents the cost of each Tee fitting used to connect the influent and/or effluent pipe to the perforated header pipe(s). 
+
+Custom Pipe - The User-specified piping layout is used when users decide not to use AMDTreat’s piping routine to estimate the cost of the piping network. This routine allows users to specify the length and cost for various types of pipe and connectors. This routine may be helpful if users are attempting to “reverse cost” model an existing system with known quantities of pipe.
+
+Custom Pipe Length represents the user-specified total length of pipe.
+
+Custom Pipe Unit Cost represents the purchase and installation cost of each linear foot of pipe.
+
+LINER
+The liner routine allows users to estimate the cost of installing a Clay, Synthetic, or Geosynthetic Clay liner.
+
+Clay Liner Unit Cost is the cost of purchasing, transporting, excavation, placing, and compacting the clay. In many cases, the only cost is the cost of excavating, placing, and compacting the clay.
+
+Clay Liner Thickness is the desired thickness of the clay liner.
+
+Synthetic Liner Unit Cost is the cost to purchase and install a synthetic liner. If using geotextile in conjunction with a clay liner, enter the unit cost for the geotextile here. If using synthetic liner with geotextile, add both unit costs and enter here.
+
+Geosynthetic Clay Liner Unit Cost is the to purchase and install the geosynthetic clay liner.
+
+Geosynthetic Clay Soil Cover Unit Cost is the cost to excavate and place the soil cover over the geosynthetic clay liner. 
+
+Geosynthetic Clay Liner Soil Cover Thickness is the thickness of the protective soil cover over the geosynthetic clay liner.
+
+</value>
+  </data>
+  <data name="infoLayerMaterialsVFP" xml:space="preserve">
+    <value>The various layers of a pond are contained within this section.  Each layer contains corresponding dimensions/properties and/or costs.
+
+FREEBOARD
+The depth of the Freeboard layer is defined as the difference between the top elevation of the VFP and the design water surface elevation.  The purpose of the Freeboard layer is to accommodate a rising water surface elevation caused by increased flow or plugging in the limestone and compost layers of the VFP.  
+
+
+WATER
+The depth of the Water layer is defined as the difference between the bottom elevation of the Freeboard layer and the top elevation of the Compost Mix layer in the VFP. The purpose of the water layer is to act as a barrier between the atmosphere and the Compost Mix layer to help preserve chemically-reducing conditions.
+
+COMPOST MIX 
+The thickness of the compost layer in the VFP. The purpose of the Compost Mix layer is to create a chemically-reducing condition to promote reduction of dissolved ferric iron and other processes, such as, sulfate reduction and metal sulfide precipitation.  Some designers add limestone fines to the Compost Mix to improve system performance. Adding limestone fines will help increase the pH of the raw water to promote effective sulfate reduction in the Compost Mix layer and will promote precipitation of aluminum in the Compost Mix layer and minimize precipitation in the Limestone Layer. Percent by volume. 
+
+Compost Mix Unit Cost represents the cost to purchase and transport the compost matter to the treatment site.  
+
+Compost Mix Placement Cost represents the cost to mix the limestone fines with the compost material and place the material in the bed. 
+
+Compost Mix Limestone Fines Unit Cost represents the cost to purchase and transport the limestone fines to the treatment site.
+
+LIMESTONE 
+The thickness of the Limestone layer in the VFP. The purpose of the Limestone layer is to increase pH and alkalinity through the dissolution of limestone (calcite).  
+
+Purity represents the percentage of carbonate minerals by weight contained in limestone. It represents the portion of the limestone that will participate in reactions to increase pH and alkalinity. 
+
+Dissolution Efficiency is a way to add additional limestone to a treatment system to help address a reduction in the rate of dissolution cause by a loss of reactive surface area as the limestone weathers over time. The mass of limestone will be divided by the dissolution efficiency to increase the mass of limestone. A dissolution factor of 85% will increase the mass of limestone by 17.6%.  A dissolution efficiency of 100% assumes 100% of the limestone will dissolve and will not alter the original mass of limestone. This factor can be considered a design safety factor.  
+
+Limestone Porosity represents the percentage of void space compared to the total volume of the limestone layer. It also represents the portion of the limestone layer that will be occupied by water and not the limestone. This value affects retention time.
+
+Limestone Unit Cost represents the cost to purchase and transport limestone to the mine drainage treatment site.
+
+Limestone Placement Unit Cost represents the cost to install the limestone in the system.
+
+PIPE
+AMDTreat’s piping routine estimates the cost of the influent, limestone collection, and effluent piping network. AMDTreat estimtates the cost of the influent and effluent pipe, designed to convey water into and out of the treatment system. The limestone collection piping network is installed at the base of the limestone layer and is designed to evenly direct water downward throughout the system.  The limestone collection piping layout consists of a “Trunk” pipe installed along the length of the center of the limestone layer. Every twenty feet, smaller-diameter “spur” pipes extend outwards perpendicular from the Truck pipe towards the sides of the bed.  Conceptually, water flows towards and into the spur pipes and is conveyed to the trunk pipe for discharge to the effluent pipe through the embankment. The routine calculates the number and cost of couplers used to connect sections of trunk and spur pipes together and tees to connect spur pipes to the trunk pipe.  For more information AMDTreat’s piping routine, including pictures, please refer to help.
+
+Influent/effluent Pipe Length represents the total amount of pipe required to deliver water into the treatment system and from the limestone collection system to the discharge point.  
+
+Influent/effluent Install Rate is multiplied by the Influent/Effluent Pipe Length to estimate the amount of time required to install the pipe. Installation time is multiplied by the Labor Rate to estimate the installation cost. 
+
+Trunk Pipe Segment Length represents the length of each segment of trunk pipe.
+
+Spur Pipe Segment Length represents the length of each segment of spur pipe.
+
+Spur Pipe Spacing represents the desired distance between each spur pipe and is used to determine the number of spurs by dividing the bottom length of the limestone layer by the spur piping spacing.
+
+Labor Rate represents the unit cost of Labor. 
+
+Trunk Pipe Segment Unit Cost represents the cost of each section of trunk pipe.
+
+Trunk Pipe Coupler Unit Cost represents the cost of each coupler used to connect two trunk pipes together.
+
+Spur Pipe Segment Unit Cost represents the cost of each section of spur pipe.
+
+Spur Pipe Coupler Unit Cost represents the cost of each coupler used to connect two spur pipes together.
+
+Tee Connector Unit Cost represents the cost of each Tee connector used to connect the smaller diameter spur pipe to the larger-diameter Trunk pipe.
+
+Custom Pipe - The User-specified piping layout is used when users decide not to use AMDTreat’s piping routine to estimate the cost of the piping network. This routine allows users to specify the length and cost for various types of pipe and connectors. This routine may be helpful if users are attempting to “reverse cost” model an existing system with known quantities of pipe.
+
+Custom Pipe Length represents the user-specified total length of pipe.
+
+Custom Pipe Unit Cost represents the purchase and installation cost of each linear foot of pipe.
+
+LINER
+The liner routine allows users to estimate the cost of installing a Clay, Synthetic, or Geosynthetic Clay liner.
+
+Clay Liner Unit Cost is the cost of purchasing, transporting, excavation, placing, and compacting the clay. In many cases, the only cost is the cost of excavating, placing, and compacting the clay.
+
+Clay Liner Thickness is the desired thickness of the clay liner.
+
+Synthetic Liner Unit Cost is the cost to purchase and install a synthetic liner. If using geotextile in conjunction with a clay liner, enter the unit cost for the geotextile here. If using synthetic liner with geotextile, add both unit costs and enter here.
+
+Geosynthetic Clay Liner Unit Cost is the to purchase and install the geosynthetic clay liner.
+
+Geosynthetic Clay Soil Cover Unit Cost is the cost to excavate and place the soil cover over the geosynthetic clay liner. 
+
+Geosynthetic Clay Liner Soil Cover Thickness is the thickness of the protective soil cover over the geosynthetic clay liner.
+
+</value>
+  </data>
+  <data name="infoLimestoneBedLSB" xml:space="preserve">
+    <value>A Limestone Bed is</value>
+  </data>
+  <data name="infoManganeseRemovalBedMRB" xml:space="preserve">
+    <value>A Manganese Removal Bed is</value>
+  </data>
+  <data name="infoOtherItemsLSB" xml:space="preserve">
+    <value>Other items is a cost category that contains a variety of commonly used items used in passive treatment systems. Users can set the unit cost to $0.0 to prevent AMDTreat from considering an item in the total cost.
+
+Valves Quantity represents the number of values in the influent and effluent piping network.
+
+Valves Unit Cost is the unit cost to purchase and install each valve. Default cost includes purchase, man hole, valve, housing, and installation.
+
+Intake Structure Quantity represents the number of intake structures used to collect and direct flow to the influent piping network of the VFP.  
+
+Intake Structure Unit Cost is the cost of purchasing and installing each Intake Structure.
+
+Flow Distribution Structure Quantity represents the number of Flow Distribution Structures used to distribute influent or effluent flow. A Flow Distribution Structure can be used to distribute flow to multiple VFPs organized in parallel and used to bypass flows larger than the design flow rate.  
+
+Flow Distribution Structure Unit Cost is the cost of purchasing and installing each Flow Distribution Structure.
+
+Water Level Control Structure Quantity represents the number of water level control structures used in the VFP. Water control structures are used to manipulate the water elevation within the VFP.
+
+Water Level Control Structure Unit Cost represents the cost to purchase and install each water control structure.
+
+Outlet Protection Structure Quantity represents the number of Outlet Protection Structures used to prevent erosion and scouring as the water exits the VFP and discharged into a pond, ditch, or receiving stream. In many cases, outlet Protection Structures consist of a unwoven geofabric overlain by aggregate.    
+
+Outlet Protection Structure Unit Cost represents the cost to purchase and install the materials to install the outlet protection structure. 
+
+</value>
+  </data>
+  <data name="infoOtherItemsCapitalCaustic" xml:space="preserve">
+    <value>Information about the other capital cost items used.  This cost category that allows users to specify equipment and capital costs not otherwise covered in this module. 
+    </value>
+  </data>
+  <data name="infoOtherItemsAnnualCaustic" xml:space="preserve">
+    <value>Information about the other annual cost items used.  This cost category that allows users to specify equipment and annual costs not otherwise covered in this module. 
+    </value>
+  </data>
+  <data name="infoOtherItemsCapitalLS" xml:space="preserve">
+    <value>Information about the other capital cost items used.  This cost category that allows users to specify equipment and capital costs not otherwise covered in this module. 
+    </value>
+  </data>
+  <data name="infoOtherItemsAnnualLS" xml:space="preserve">
+    <value>Information about the other annual cost items used.  This cost category that allows users to specify equipment and annual costs not otherwise covered in this module. 
+    </value>
+  </data>
+  <data name="infoOtherItemsMRB" xml:space="preserve">
+    <value>Other items is a cost category that contains a variety of commonly used items in passive treatment systems. Users can set the unit cost to $0.0 or set the quantity to zero (0) to prevent AMDTreat from considering an item in the total cost.
+
+Valves Quantity represents the number of values in the influent and effluent piping network.
+
+Valves Unit Cost is the unit cost to purchase and install each valve. Default cost includes purchase, man hole, valve, housing, and installation.
+
+Flow Distribution Structure Quantity represents the number of Flow Distribution Structures used to distribute influent or effluent flow. A Flow Distribution Structure can be used to distribute flow to multiple Mn Removal beds organized in parallel and used to bypass flows larger than the design flow rate.  
+
+Flow Distribution Structure Unit Cost is the cost of purchasing and installing each Flow Distribution Structure.
+
+Water Level Control Structure Quantity represents the number of water level control and/or flushing structures used in the treatment pond. Water control structures are used to manipulate the water elevation within the treatment pond and/or allow flushing of the accumulated solids in the limestone layer. 
+
+Water Level Control Structure Unit Cost represents the cost to purchase and install each water control structure.
+
+Outlet Protection Structure Quantity represents the number of Outlet Protection Structures used to prevent erosion and scouring as the water exits the treatment pond and discharged into a pond, ditch, or receiving stream. In many cases, Outlet Protection Structures consist of a unwoven geotextile overlain by appropriately sized aggregate.   
+
+Outlet Protection Structure Unit Cost represents the cost to purchase and install the materials to install the outlet protection structure. 
+
+</value>
+  </data>
+  <data name="infoOtherItemsVFP" xml:space="preserve">
+    <value>Other items is a cost category that contains a variety of commonly used items used in passive treatment systems. Users can set the unit cost to $0.0 to prevent AMDTreat from considering an item in the total cost.
+
+Valves Quantity represents the number of values in the influent and effluent piping network.
+
+Valves Unit Cost is the unit cost to purchase and install each valve. Default cost includes purchase, man hole, valve, housing, and installation.
+
+Intake Structure Quantity represents the number of intake structures used to collect and direct flow to the influent piping network of the VFP.  
+
+Intake Structure Unit Cost is the cost of purchasing and installing each Intake Structure.
+
+Flow Distribution Structure Quantity represents the number of Flow Distribution Structures used to distribute influent or effluent flow. A Flow Distribution Structure can be used to distribute flow to multiple VFPs organized in parallel and used to bypass flows larger than the design flow rate.  
+
+Flow Distribution Structure Unit Cost is the cost of purchasing and installing each Flow Distribution Structure.
+
+Water Level Control Structure Quantity represents the number of water level control structures used in the VFP. Water control structures are used to manipulate the water elevation within the VFP.
+
+Water Level Control Structure Unit Cost represents the cost to purchase and install each water control structure.
+
+Outlet Protection Structure Quantity represents the number of Outlet Protection Structures used to prevent erosion and scouring as the water exits the VFP and discharged into a pond, ditch, or receiving stream. In many cases, outlet Protection Structures consist of a unwoven geofabric overlain by aggregate.    
+
+Outlet Protection Structure Unit Cost represents the cost to purchase and install the materials to install the outlet protection structure. 
+
+</value>
+  </data>
+  <data name="infoRecapitalizationCostCaustic" xml:space="preserve">
+    <value>Recapitalization costs, the net present value of replacement and annual costs, is the amount of money required today to pay for all future annual and replacement costs for a given rate of return, inflation rate, and calculation period.  The recapitalization cost represents the total cost of operating the pond, in "today's dollars", over a specified time frame.
+
+Life Cycle represents the time interval for expected replacement
+
+Replacement % represents the expected percentage of replacement of the item each replacement cycle.
+
+Default Cost represents the capital cost value that was calculated by the program based on user inputs.
+
+Custom Cost represents the user input custom cost for any desired item.</value>
+  </data>
+  <data name="infoRecapitalizationCostLSB" xml:space="preserve">
+    <value>Recapitalization costs, the net present value of replacement and annual costs, is the amount of money required today to pay for all future annual and replacement costs for a given rate of return, inflation rate, and calculation period.  The recapitalization cost represents the total cost of operating the pond, in "today's dollars", over a specified time frame.
+
+Life Cycle represents the time interval for expected replacement
+
+Replacement % represents the expected percentage of replacement of the item each replacement cycle.
+
+Default Cost represents the capital cost value that was calculated by the program based on user inputs.
+
+Custom Cost represents the user input custom cost for any desired item.</value>
+  </data>
+  <data name="infoRecapitalizationCostMRB" xml:space="preserve">
+    <value>Recapitalization costs, the net present value of replacement and annual costs, is the amount of money required today to pay for all future annual and replacement costs for a given rate of return, inflation rate, and calculation period.  The recapitalization cost represents the total cost of operating the pond, in "today's dollars", over a specified time frame.
+
+Life Cycle represents the time interval for expected replacement
+
+Replacement % represents the expected percentage of replacement of the item each replacement cycle.
+
+Default Cost represents the capital cost value that was calculated by the program based on user inputs.
+
+Custom Cost represents the user input custom cost for any desired item.</value>
+  </data>
+  <data name="infoRecapitalizationCostVFP" xml:space="preserve">
+    <value>Recapitalization costs, the net present value of replacement and annual costs, is the amount of money required today to pay for all future annual and replacement costs for a given rate of return, inflation rate, and calculation period.  The recapitalization cost represents the total cost of operating the pond, in "today's dollars", over a specified time frame.
+
+Life Cycle represents the time interval for expected replacement
+
+Replacement % represents the expected percentage of replacement of the item each replacement cycle.
+
+Default Cost represents the capital cost value that was calculated by the program based on user inputs.
+
+Custom Cost represents the user input custom cost for any desired item.</value>
+  </data>
+  <data name="infoSizingMethodsLSB" xml:space="preserve">
+    <value>RETENTION TIME
+This sizing method uses Design Flow, user-specified retention time, and limestone porosity to calculate the volume of limestone required to retain the water for the specified retention time.  This tool tip should appear right next to the sizing method itself.
+
+Retention Time is the desired retention time within limestone layer.
+
+BUREAU Of MINES (BOM)
+This sizing method performs two calculations to determine the mass of limestone. First, the mass of limestone needed to achieve the user-defined retention time is calculated. Next, the mass of limestone needed to neutralize the acidity load for the user-defined neutralization time period is calculated. These two masses are added together to calculate the total tons of limestone. This method ensures that the retention time in the limestone is always greater than the user-specified retention time, even at the very end of the neutralization time frame. 
+
+System Life is the neutralization period is used to calculate the mass of limestone needed to neutralize the acidity load for the specified period of time.
+
+ALKALINITY GENERATION RATE 
+Calculates the mass of limestone needed in two steps. First, the surface area of limestone is calculated by dividing the alkalinity generation rate by the daily acidity load. Then the surface area is multiplied by the user-defined thickness of the limestone layer to calculate the volume of limestone, which is converted to mass. 
+
+Alkalinity Generation Rate is the amount of acidity that will be loaded onto each m2 of limestone per day.
+
+USER-SPECIFIED LIMESTONE
+Calculates material quantities, volumes, and dimensions based on the user-specified Quantity of limestone the pond contains.
+
+DIMENSIONS
+Calculates material quantities and volumes based on user defined dimensions of length and width.  The length and width of the pond correspond to the length and width of the top of the freeboard layer.  Note that the length must be greater than or equal to the width.</value>
+  </data>
+  <data name="infoSizingMethodsMRB" xml:space="preserve">
+    <value>RETENTION TIME
+This sizing method uses Design Flow, user-specified retention time, and limestone porosity to calculate the volume of limestone required to retain the water for the specified retention time.  This tool tip should appear right next to the sizing method itself.
+
+Retention Time is the desired retention time within limestone layer.
+
+KINETICS
+This method calculates the mass of limestone needed based on user selected rate constant (k), desired Mn effluent concentration, stone gradation, void space, and the total and saturated limestone depths. Average surface area and volume values in the database are used for each stone gradation. 
+
+Rate Constant (k1) is used in the kinetics equation for sizing Mn removal beds A=-0.276*Q*Log([Mn]/[Mno])/(k1*SD). A value of 10^-3.35 hr-1(m^2/m^3)^-1 was determined by Means &amp; Rose (2005) based on Mn vs. Retention time data for 6 treatment sites in PA based on the surface area of limestone per cubic meter of bed (S).
+
+Effluent Manganese Concentration is the amount of dissolved manganese not removed and that will be allowed to discharge from the Mn Removal Bed.  The Mn Removal Bed is sized to remove the difference between the dissolved Mn concentration in the raw water and the effluent.
+
+USER-SPECIFIED LIMESTONE
+Calculates material quantities, volumes, and dimensions based on the user-specified Quantity of limestone the pond contains.
+
+DIMENSIONS
+Calculates material quantities and volumes based on user defined dimensions of length and width.  The length and width of the pond correspond to the length and width of the top of the freeboard layer.  Note that the length must be greater than or equal to the width.</value>
+  </data>
+  <data name="infoSizingMethodsVFP" xml:space="preserve">
+    <value>RETENTION TIME
+This sizing method uses Design Flow, user-specified retention time, and limestone porosity to calculate the volume of limestone required to retain the water for the specified retention time.  This tool tip should appear right next to the sizing method itself.
+
+Retention Time is the desired retention time within limestone layer.
+
+BUREAU Of MINES (BOM)
+This sizing method performs two calculations to determine the mass of limestone. First, the mass of limestone needed to achieve the user-defined retention time is calculated. Next, the mass of limestone needed to neutralize the acidity load for the user-defined neutralization time period is calculated. These two masses are added together to calculate the total tons of limestone. This method ensures that the retention time in the limestone is always greater than the user-specified retention time, even at the very end of the neutralization time frame. 
+
+System Life is the neutralization period is used to calculate the mass of limestone needed to neutralize the acidity load for the specified period of time.
+
+ALKALINITY GENERATION RATE 
+Calculates the mass of limestone needed in two steps. First, the surface area of limestone is calculated by dividing the alkalinity generation rate by the daily acidity load. Then the surface area is multiplied by the user-defined thickness of the limestone layer to calculate the volume of limestone, which is converted to mass. 
+
+Alkalinity Generation Rate is the amount of acidity that will be loaded onto each m2 of limestone per day.
+
+USER-SPECIFIED LIMESTONE
+Calculates material quantities, volumes, and dimensions based on the user-specified Quantity of limestone the pond contains.
+
+DIMENSIONS
+Calculates material quantities and volumes based on user defined dimensions of length and width.  The length and width of the pond correspond to the length and width of the top of the freeboard layer.  Note that the length must be greater than or equal to the width.</value>
+  </data>
+  <data name="infoSizingSummaryCaustic" xml:space="preserve">
+    <value>Sizing summary includes the sizes and amounts of materials to build the treatment.</value>
+  </data>
+  <data name="infoSizingSummaryLSB" xml:space="preserve">
+    <value>Sizing summary includes the sizes and amounts of materials to build the pond.</value>
+  </data>
+  <data name="infoSizingSummaryMRB" xml:space="preserve">
+    <value>Sizing summary includes the sizes and amounts of materials to build the pond.</value>
+  </data>
+  <data name="infoSizingSummaryVFP" xml:space="preserve">
+    <value>Sizing summary includes the sizes and amounts of materials to build the pond.</value>
+  </data>
+  <data name="infoSystemPropertiesLSB" xml:space="preserve">
+    <value>Pond Inside Slope - the horizontal to vertical ratio of the inside slope of the treatment system.  Note, a value of 2 means that for every 1 foot of depth the slope extends 2 feet horizontally.
+
+Bottom Layer Length to Width Ratio - this ratio represents the relationship between the bottom length and bottom width of the limestone layer. A ratio of 2 means the bottom length is twice the bottom width. Users can define the ratio for all sizing methods except for the Dimensions method. The ratio is required to calculate the bottom and top dimensions of the trapezoidal-shaped limestone layer when only the limestone volume, pond inside slope, and limestone layer depth is known.
+
+Excavation Unit Cost - this value represents the cost to excavate and place soil at the project site in compacted lifts.</value>
+  </data>
+  <data name="infoSystemPropertiesMRB" xml:space="preserve">
+    <value>Pond Inside Slope - the horizontal to vertical ratio of the inside slope of the treatment system.  Note, a value of 2 means that for every 1 foot of depth the slope extends 2 feet horizontally.
+
+Bottom Layer Length to Width Ratio - this ratio represents the relationship between the bottom length and bottom width of the limestone layer. A ratio of 2 means the bottom length is twice the bottom width. Users can define the ratio for all sizing methods except for the Dimensions method. The ratio is required to calculate the bottom and top dimensions of the trapezoidal-shaped limestone layer when only the limestone volume, pond inside slope, and limestone layer depth is known.
+
+Excavation Unit Cost - this value represents the cost to excavate and place soil at the project site in compacted lifts.</value>
+  </data>
+  <data name="infoSystemPropertiesVFP" xml:space="preserve">
+    <value>Pond Inside Slope - the horizontal to vertical ratio of the inside slope of the treatment system.  Note, a value of 2 means that for every 1 foot of depth the slope extends 2 feet horizontally.
+
+Bottom Layer Length to Width Ratio - this ratio represents the relationship between the bottom length and bottom width of the limestone layer. A ratio of 2 means the bottom length is twice the bottom width. Users can define the ratio for all sizing methods except for the Dimensions method. The ratio is required to calculate the bottom and top dimensions of the trapezoidal-shaped limestone layer when only the limestone volume, pond inside slope, and limestone layer depth is known.
+
+Excavation Unit Cost - this value represents the cost to excavate and place soil at the project site in compacted lifts.</value>
+  </data>
+  <data name="infoVerticalFlowPondVFP" xml:space="preserve">
+    <value>A Vertical Flow Pond (VFP) is an acid mine treatment system where acidic water flows through multiple treament layers to neutralize the water.  The water first flows through an organic mix layer where oxygen in the water is removed.  The water then moves through a limestone layer which neutralizes the acidity of the water.</value>
+  </data>
+  <data name="infoCaustic" xml:space="preserve">
+    <value>A Caustic Soda treatment is ...</value>
+  </data>
+  <data name="infoWaterQualityCaustic" xml:space="preserve">
+    <value>Typical Flow - flow rate in gallons per minute.
+
+Net Acidity - acidity used to estimate chemical consumption.</value>
+  </data>
+  <data name="infoWaterQualityLSB" xml:space="preserve">
+    <value>Design Flow - flow rate used to size passive treatment systems, influent pumps, clarifiers, and reaction tanks.
+
+Net Acidity - acidity used to estimate chemical consumption.</value>
+  </data>
+  <data name="infoWaterQualityMRB" xml:space="preserve">
+    <value>Design Flow - flow rate used to size passive treatment systems, influent pumps, clarifiers, and reaction tanks.
+
+Dissolved Manganese - amount of dissolved manganese.</value>
+  </data>
+  <data name="infoWaterQualityVFP" xml:space="preserve">
+    <value>Design Flow - flow rate used to size passive treatment systems, influent pumps, clarifiers, and reaction tanks.
+
+Net Acidity - acidity used to estimate chemical consumption.</value>
+  </data>
+  <data name="errorPondMajorWetland" xml:space="preserve">
+    <value>The calculated wetland bottom width is 0 ft or less than 0 ft.
+
+The combination of the pond length and width, layer depths, pond side slope, and/or bottom length to width ratio is causing a major error.
+
+All output values are invalid.
+
+To resolve, change the pond length and width, layer depths, pond side slope, and/or bottom length.  
+
+Note, the current depth of the pond should be less than the maximum allowable depth of the pond.</value>
+  </data>
+  <data name="errorPondWetland" xml:space="preserve">
+    <value>The calculated wetland bottom width is less than 10 ft.
+
+The combination of the pond length and width, layer depths, pond side slope, and/or bottom length to width ratio is causing the error.
+
+All output values are invalid and should not be used.
+
+To resolve, change the pond length and width, layer depths, pond side slope, and/or bottom length.  
+
+Note, the current depth of the pond should be less than the maximum allowable depth of the pond.</value>
+  </data>
+  <data name="infoAnnualCostWetland" xml:space="preserve">
+    <value>Annual Costs for Wetlands include routine maintenance such as cleaning debris from inlet and outlet, mowing, cleaning the rock baffles, and adjusting the water level. Estimating the annual costs for passive treatment systems are difficult so a portion of the annual costs is not tagged for a specific use but may accumulate for contingencies.  There are two methods to estimate annual treatment costs for a Wetland in AMDTreat. For the first method, users enter a percentage which is multiplied by the Wetland capital cost to estimate the annual operations and maintenance cost. The second method allows users to enter an expected annual cost (flat fee). 
+
+Percentage of Capital Cost is the user-specified percentage used to estimate the annual operation and maintenance cost.
+
+Annual Cost Flat Fee allows users can enter a custom calculated or known annual cost for operation and maintenance.</value>
+  </data>
+  <data name="infoCapitalCostWetland" xml:space="preserve">
+    <value>Capital costs include the cost estimates to build the pond.</value>
+  </data>
+  <data name="infoLayerMaterialsWetland" xml:space="preserve">
+    <value>The various layers of a pond are contained within this section.  Each layer contains corresponding dimensions/properties and/or costs.
+
+FREEBOARD
+The freeboard layer is defined as the layer between the top elevation of the berm and the design water surface elevation.  The purpose of the Freeboard layer is to accommodate a rising water surface elevation caused by increased flow and/or accumulation of wetland vegetation.
+
+WATER
+The water layer is defined as the layer between the top of the compost mix layer and bottom of the freeboard layer. The purpose of the water layer is to provide retention time for the water to obtain treatment through contact with the wetland vegetation.
+
+COMPOST MIX 
+The thickness of the compost layer in the VFP. The purpose of the Compost Mix layer is to create a chemically-reducing condition to promote reduction of dissolved ferric iron and other processes, such as, sulfate reduction and metal sulfide precipitation.  Some designers add limestone fines to the Compost Mix to improve system performance. Adding limestone fines will help increase the pH of the raw water to promote effective sulfate reduction in the Compost Mix layer and will promote precipitation of aluminum in the Compost Mix layer and minimize precipitation in the Limestone Layer. Percent by volume. 
+
+Compost Mix Depth represents the defined depth of the compost mix layer that provides the medium for the wetland vegetation.
+
+Limestone Fines Percentage represents the user specified percentage by volume of limestone fines contained in the compost mixture.
+
+Compost Mix Unit Cost represents the cost to purchase and transport the compost matter to the treatment site.  
+
+Compost Mix Placement Unit Cost represents the cost to mix the limestone fines with the compost material and place the material in the bed. 
+
+Compost Mix Limestone Fines Unit Cost represents the cost to purchase and transport the limestone fines to the treatment site.
+
+Wetland Planting Unit Cost is the unit cost to plant a pre-determined mixture of wetland plant species per acre of compost mix in the bottom of the wetland.
+
+WETLAND ROCK BAFFLES
+Optional item for user to include in wetland are rock baffles to provide both flow distrbution throughout the width to prevent channelized flow patterns and allow access for maintenance, Rock baffles have an assumed top width of 8 feet and the bottom width is calculated based on the user specified height and assuming 2:1 side slopes.
+
+Spacing is the user specified spacing from center to center of each rock baffle. Typically one baffle is specified at the beginning and end of the wetland especially if an inlet pool and outlet pool are used on either end of the wetland.
+
+Baffle Height is the height of the rock baffles is the vertical height from the bottom of the baffle, which is normally located on top of the compost mix layer to the top of the baffle at least equal to the surface of the free-standing water layer or higher. 
+
+Limestone Void Space is the void space of the limestone material used to construct the rock baffles. AASHTO #1 size limestone is commonly used for rock baffles.
+
+Limestone Unit Cost is the unit cost of delivered limestone material for use in constructing the rock baffles in wetland.
+
+Limestone Placement Unit Cost is the unit cost to place the limestone material to form each rock baffle based on 2:1 side slopes and user specified height and spacing within the wetland.
+
+PIPE
+AMDTreat’s piping routine estimates the cost of the influent, limestone collection, and effluent piping network. AMDTreat estimtates the cost of the influent and effluent pipe, designed to convey water into and out of the treatment system. The limestone collection piping network is installed at the base of the limestone layer and is designed to evenly direct water downward throughout the system.  The limestone collection piping layout consists of a “Trunk” pipe installed along the length of the center of the limestone layer. Every twenty feet, smaller-diameter “spur” pipes extend outwards perpendicular from the Truck pipe towards the sides of the bed.  Conceptually, water flows towards and into the spur pipes and is conveyed to the trunk pipe for discharge to the effluent pipe through the embankment. The routine calculates the number and cost of couplers used to connect sections of trunk and spur pipes together and tees to connect spur pipes to the trunk pipe.  For more information AMDTreat’s piping routine, including pictures, please refer to help.
+
+Influent/effluent Pipe Length represents the total amount of pipe required to deliver water into the treatment system and from the limestone collection system to the discharge point.  
+
+Influent/effluent Install Rate is multiplied by the Influent/Effluent Pipe Length to estimate the amount of time required to install the pipe. Installation time is multiplied by the Labor Rate to estimate the installation cost. 
+
+Header Pipe Segment Length represents the length of each segment of perforated header pipe. 
+
+Header Pipe Quantity represents the number of perforated header pipes used in the system. Header pipes may be specified for both the influent to distribute flow into the limestone bed and the effluent to distribute flows throughout the width of the limestone bed moving in a horizontal- like flow pattern.
+
+Header Pipe Install Rate is the rate that is multiplied by the Header Pipe Length to estimate the amount of time required to install the pipe. Installation time is multiplied by the Labor Rate to estimate the installation cost.
+
+Labor Rate represents the unit cost of Labor. 
+
+Influent/Effluent Pipe Unit Cost represents the cost of each linear foot of influent/effluent pipe.
+
+Header Pipe Segment Unit Cost represents the cost of each linear foot of header pipe.
+
+Header Pipe Coupler Unit Cost represents the cost of each coupler used to connect two header pipes together.
+
+Tee Connector Unit Cost represents the cost of each Tee fitting used to connect the influent and/or effluent pipe to the perforated header pipe(s). 
+
+
+Custom Pipe - The User-specified piping layout is used when users decide not to use AMDTreat’s piping routine to estimate the cost of the piping network. This routine allows users to specify the length and cost for various types of pipe and connectors. This routine may be helpful if users are attempting to “reverse cost” model an existing system with known quantities of pipe.
+
+Custom Pipe Length represents the user-specified total length of pipe.
+
+Custom Pipe Unit Cost represents the purchase and installation cost of each linear foot of pipe.
+
+LINER
+The liner routine allows users to estimate the cost of installing a Clay, Synthetic, or Geosynthetic Clay liner.
+
+Clay Liner Unit Cost is the cost of purchasing, transporting, excavation, placing, and compacting the clay. In many cases, the only cost is the cost of excavating, placing, and compacting the clay.
+
+Clay Liner Thickness is the desired thickness of the clay liner.
+
+Synthetic Liner Unit Cost is the cost to purchase and install a synthetic liner. If using geotextile in conjunction with a clay liner, enter the unit cost for the geotextile here. If using synthetic liner with geotextile, add both unit costs and enter here.
+
+Geosynthetic Clay Liner Unit Cost is the to purchase and install the geosynthetic clay liner.
+
+Geosynthetic Clay Soil Cover Unit Cost is the cost to excavate and place the soil cover over the geosynthetic clay liner. 
+
+Geosynthetic Clay Liner Soil Cover Thickness is the thickness of the protective soil cover over the geosynthetic clay liner.
+
+</value>
+  </data>
+  <data name="infoWetland" xml:space="preserve">
+    <value>A Wetland is</value>
+  </data>
+  <data name="errorPondWetlandMetalRemovalRate" xml:space="preserve">
+    <value>Aerobic Wetlands are not intented to remove acidity. Alkalinity addition is needed.</value>
+  </data>
+  <data name="errorPoolWetlandBottomLength" xml:space="preserve">
+    <value>Increase the inlet or outlet pool lengths or decrease the inlet or outlet depths.</value>
+  </data>
+  <data name="infoOtherItemsWetland" xml:space="preserve">
+    <value>Other items is a cost category that contains a variety of commonly used items used in passive treatment systems. Users can set the unit cost to $0.0 to prevent AMDTreat from considering an item in the total cost.
+
+Flow Distribution Structure Quantity represents the number of Flow Distribution Structures used to distribute influent or effluent flow. A Flow Distribution Structure can be used to distribute flow to multiple VFPs organized in parallel and used to bypass flows larger than the design flow rate.  
+
+Flow Distribution Structure Unit Cost is the cost of purchasing and installing each Flow Distribution Structure.
+
+Water Level Control Structure Quantity represents the number of water level control structures used in the VFP. Water control structures are used to manipulate the water elevation within the VFP.
+
+Water Level Control Structure Unit Cost represents the cost to purchase and install each water control structure.
+
+Outlet Protection Structure Quantity represents the number of Outlet Protection Structures used to prevent erosion and scouring as the water exits the VFP and discharged into a pond, ditch, or receiving stream. In many cases, outlet Protection Structures consist of a unwoven geofabric overlain by aggregate.    
+
+Outlet Protection Structure Unit Cost represents the cost to purchase and install the materials to install the outlet protection structure. 
+
+</value>
+  </data>
+  <data name="infoRecapitalizationCostWetland" xml:space="preserve">
+    <value>Recapitalization costs, the net present value of replacement and annual costs, is the amount of money required today to pay for all future annual and replacement costs for a given rate of return, inflation rate, and calculation period.  The recapitalization cost represents the total cost of operating the pond, in "today's dollars", over a specified time frame.
+
+Life Cycle represents the time interval for expected replacement
+
+Replacement % represents the expected percentage of replacement of the item each replacement cycle.
+
+Default Cost represents the capital cost value that was calculated by the program based on user inputs.
+
+Custom Cost represents the user input custom cost for any desired item.</value>
+  </data>
+  <data name="infoSizingMethodsWetland" xml:space="preserve">
+    <value>RETENTION TIME
+This sizing method uses Design Flow and user-specified retention time to calculate the area of the water surface within the vegetated wetland (excludes inlet and outlet pool areas).
+
+Retention Time is the desired retention time within the water layer of the wetland (excludes inlet and outlet pools).
+
+METAL REMOVAL RATES
+This method uses the user specified mass loading rate of both iron and manganese to determine the necessary water surface to remove the iron and manganese concentrations.   
+
+Iron Removal Rate is the removal rate of iron in grams based on an areal loading rate in square meters per day. Conventional sizing values for compliance (NPDES) are 10 g/m^2/day and 20 g/m^2/day for AML.
+
+Manganese Removal Rate is the removal rate of manganese in grams based on an areal loading rate in square meters per day. Conventional sizing values for compliance (NPDES) are 0.5 g/m^2/day and 1.0 g/m^2/day for AML.
+
+DIMENSIONS
+This sizing method allows users to specify the length and width of the entire wetland system and the program uses other user-defined variables to calculate the surface area of the water layer in the wetland (surface area excludes inlet and outlet pools).
+
+Freeboard Length is the length of the treatment pond at the Top of the Freeboard. This value must be equal to or greater than the Width at the Top of the Freeboard.
+
+Freeboard Width is the width of the treatment pond at the top of the freeboard. This value must be equal to or less than the Length at the Top of the Freeboard.</value>
+  </data>
+  <data name="infoSizingSummaryWetland" xml:space="preserve">
+    <value>Sizing summary includes the sizes and amounts of materials to build the pond.</value>
+  </data>
+  <data name="infoSystemPropertiesWetland" xml:space="preserve">
+    <value>Pond Inside Slope - the horizontal to vertical ratio of the inside slope of the treatment system.  Note, a value of 2 means that for every 1 foot of depth the slope extends 2 feet horizontally.
+
+Bottom Layer Length to Width Ratio - this ratio represents the relationship between the bottom length and bottom width of the vegetated wetland (excludes inlet and outlet pool). A ratio of 2 means the bottom length is twice the bottom width. Users can define the ratio for all sizing methods except for the Dimensions method. The ratio is required to calculate the bottom and top dimensions of the trapezoidal-shaped layers when only the water surface area, pond inside slope, and depth of each layer (organic mixture, water, and freeboard) is known.
+
+Excavation Unit Cost - the cost to excavate and place soil at the project site in compacted lifts.
+
+Inlet Pool Length - the distance from the most upstream end of the entire wetland basin to the start of the shallower and vegetated wetland. The optional inlet pool is normally a deeper water layer that provides for particulate settling and flow distribution as water enters the basin prior to entering the vegetated wetland.
+
+Inlet Pool Water Depth - the depth of water within the optional inlet pool feature. The inlet pool is normally a deeper water layer without vegetation that provides for particulate settling and flow distribution as water enters the basin prior to entering the vegetated wetland.
+
+Outlet Pool Length - the distance from the most downstream end of the vegetated wetland segment to the downstream end of the entire wetland basin. The optional outlet pool is normally a deeper water layer that provides for particulate settling and flow distribution as water flows from the vegetated wetland to the outlet/water level control structure.
+
+Outlet Pool Water Depth - the depth of water within the optional outlet pool feature. The outlet pool is normally a deeper water layer without vegetation that provides for particulate settling and flow distribution as water flows from the vegetated wetland to the outlet/water level control structure.</value>
+  </data>
+  <data name="infoWaterQualityWetland" xml:space="preserve">
+    <value>Design Flow - flow rate used to size passive treatment systems, influent pumps, clarifiers, and reaction tanks.
+
+Net Acidity - acidity used to estimate chemical consumption.
+
+Dissolved Iron - dissolved iron.
+
+Dissolved Manganese - dissolved manganese.
+
+pH - pH.</value>
+  </data>
+  <data name="errorPondBIO" xml:space="preserve">
+    <value>The calculated limstone layer bottom width is less than 10 ft.
+
+The combination of the pond length and width, layer depths, pond side slope, and/or bottom length to width ratio is causing the error.
+
+All output values are invalid and should not be used.
+
+To resolve, change the pond length and width, layer depths, pond side slope, and/or bottom length.  
+
+Note, the current depth of the pond should be less than the maximum allowable depth of the pond.</value>
+  </data>
+  <data name="errorPondBIOWoodChips" xml:space="preserve">
+    <value>Please adjust the Bio Mix material percentages to make sure that the Wood Chips Percentage is greater than or equal to 0%.</value>
+  </data>
+  <data name="errorPondMajorBIO" xml:space="preserve">
+    <value>The calculated limstone layer bottom width is 0 ft or less than 0 ft.
+
+The combination of the pond length and width, layer depths, pond side slope, and/or bottom length to width ratio is causing a major error.
+
+All output values are invalid.
+
+To resolve, change the pond length and width, layer depths, pond side slope, and/or bottom length.  
+
+Note, the current depth of the pond should be less than the maximum allowable depth of the pond.</value>
+  </data>
+  <data name="infoAnnualCostBIO" xml:space="preserve">
+    <value>Annual Costs for Bioreactors include routine maintenance such as cleaning debris from inlet and outlet, mowing, and adjusting the water level. Estimating the annual costs for passive treatment systems are difficult so a portion of the annual costs is not tagged for a specific use but may accumulate for contingencies.  There are two methods to estimate annual treatment costs for a Bioreactor in AMDTreat. For the first method, users enter a percentage which is multiplied by the Bioreactor capital cost to estimate the annual operations and maintenance cost. The second method allows users to enter an expected annual cost.
+
+Percentage of Capital Cost is the user-specified percentage used to estimate the annual operation and maintenance cost.
+
+Annual Cost Flat Fee allows users to enter a custom calculated or known annual cost for operation and maintenance.</value>
+  </data>
+  <data name="infoBIO" xml:space="preserve">
+    <value>A Bio Reactor  is</value>
+  </data>
+  <data name="infoCapitalCostBIO" xml:space="preserve">
+    <value>Capital costs include the cost estimates to build the pond.</value>
+  </data>
+  <data name="infoLayerMaterialsBIO" xml:space="preserve">
+    <value>The various layers of a pond are contained within this section.  Each layer contains corresponding dimensions/properties and/or costs.
+
+FREEBOARD
+The freeboard layer is defined as the volume within the constructed basin between the top elevation of the berm and the design water surface or top of bioreactor mixture elevation, whichever is higher.  The purpose of the Freeboard layer is to accommodate a rising water surface elevation caused by increased flow or plugging in the bioreactor mixture.  
+
+Freeboard Depth - depth of Freeboard Layer from pond crest to bottom of freeboard layer.
+
+WATER
+The Water layer is defined as the volume between the bottom elevation of the Freeboard layer and the top elevation of the bioreactor mixture layer. The purpose of the water layer is to act as a barrier and to provide hydraulic head to vertically convey water through the treatment materials and out of the piping network.
+
+Water Depth - user specified water depth used to calculate the volume of water contained in this layer between the freeboard and bioreactor mixture layers.
+
+BIO MIX 
+The bioreactor mixture is defined as the volume, depth, and proportion of user specified materials
+(maure, hay, limestone fines, wood chips, and other) that uses sulfate reduction to treat the mine water as it flows through the materials. This layer is situated between the water and drainage aggregate layers.
+
+Bio Mix Depth - User specified depth of the bioreactor mixture.
+
+Shrinkage - User specified shrinkage factor for the total volume of the bioreactor mixture.  As the mixture materials become saturated the entire layer or bed will compact/shrink and this factor accounts for the shrinkage by increasing the total volume to maintain the calculated  
+bed volume.
+
+Manure - manure from horses or cows is a common component of bioreactor mixtures since they provide the initial source of sulfate reducing bacteria that use the other materials as part of the sulfate reduction process.
+
+Hay - hay is a common component of bioreactor mixtures and serves as a food source for the sulfate reducing bacteria during the sulfate reduction process.
+
+Limestone Fines - limestone fines are a common component of bioreactor mixtures since it provides a readily dissolved source of alkalinity that can quickly raise the pH of mine water allowing the sulfate reduction process to occur.
+
+Wood Chips - wood chips (mulch) are a common component of bioreactor mixtures that provide a long-term food source for the sulfate reducing bacteria during the sulfate reduction process.
+
+Other - other allows users to enter a specific material (experimental or other known bioreactor mix material) as part of the bioreactor mixture.
+
+Manure Unit Cost - user adjustable delivered unit cost per ton for the manure component of the bioreactor mixture.
+
+Hay Unit Cost - user adjustable delivered unit cost per ton for the hay component of the bioreactor mixture.
+
+Limestone Fines Unit Cost - user adjustable delivered unit cost per ton for the limestone fines component of the bioreactor mixture.
+
+Wood Chips Unit Cost - user adjustable delivered unit cost per ton for the wood chips component of the bioreactor mixture.
+
+Other Unit Cost - user adjustable delivered unit cost per ton for the user specified 'other' component of the bioreactor mixture.
+
+Bio Mix Placement Unit Cost - user specified unit cost to mix and place the bioreactor mixture within the excavated pond/basin.
+
+DRAINAGE AGGREGATE
+The drainage aggregate is a layer of stone immediately below the bioreactor mixture layer that contains the piping network to direct the mine water through the treatment materials and out of the bioreactor.  AASHTO #1 is a reasonable size stone for use as drainage aggregate.
+
+Drainage Aggregate Depth - user defined depth of the drainage aggregate layer. User should make sure the depth of the aggregate layer is greater than the diameter of pipe used.
+
+	infoLayerMaterialsBIO	The various layers of a pond are contained within this section.  Each layer contains corresponding dimensions/properties and/or costs.
+
+FREEBOARD
+The freeboard layer is defined as the volume within the constructed basin between the top elevation of the berm and the design water surface or top of bioreactor mixture elevation, whichever is higher.  The purpose of the Freeboard layer is to accommodate a rising water surface elevation caused by increased flow or plugging in the bioreactor mixture.  
+
+Freeboard Depth - depth of Freeboard Layer from pond crest to bottom of freeboard layer.
+
+WATER
+The Water layer is defined as the volume between the bottom elevation of the Freeboard layer and the top elevation of the bioreactor mixture layer. The purpose of the water layer is to act as a barrier and to provide hydraulic head to vertically convey water through the treatment materials and out of the piping network.
+
+Water Depth - user specified water depth used to calculate the volume of water contained in this layer between the freeboard and bioreactor mixture layers.
+
+BIO MIX 
+The bioreactor mixture is defined as the volume, depth, and proportion of user specified materials
+(maure, hay, limestone fines, wood chips, and other) that uses sulfate reduction to treat the mine water as it flows through the materials. This layer is situated between the water and drainage aggregate layers.
+
+Bio Mix Depth - User specified depth of the bioreactor mixture.
+
+Shrinkage - User specified shrinkage factor for the total volume of the bioreactor mixture.  As the mixture materials become saturated the entire layer or bed will compact/shrink and this factor accounts for the shrinkage by increasing the total volume to maintain the calculated  
+bed volume.
+
+Manure - manure from horses or cows is a common component of bioreactor mixtures since they provide the initial source of sulfate reducing bacteria that use the other materials as part of the sulfate reduction process.
+
+Hay - hay is a common component of bioreactor mixtures and serves as a food source for the sulfate reducing bacteria during the sulfate reduction process.
+
+Limestone Fines - limestone fines are a common component of bioreactor mixtures since it provides a readily dissolved source of alkalinity that can quickly raise the pH of mine water allowing the sulfate reduction process to occur.
+
+Wood Chips - wood chips (mulch) are a common component of bioreactor mixtures that provide a long-term food source for the sulfate reducing bacteria during the sulfate reduction process.
+
+Other - other allows users to enter a specific material (experimental or other known bioreactor mix material) as part of the bioreactor mixture.
+
+Manure Unit Cost - user adjustable delivered unit cost per ton for the manure component of the bioreactor mixture.
+
+Hay Unit Cost - user adjustable delivered unit cost per ton for the hay component of the bioreactor mixture.
+
+Limestone Fines Unit Cost - user adjustable delivered unit cost per ton for the limestone fines component of the bioreactor mixture.
+
+Wood Chips Unit Cost - user adjustable delivered unit cost per ton for the wood chips component of the bioreactor mixture.
+
+Other Unit Cost - user adjustable delivered unit cost per ton for the user specified 'other' component of the bioreactor mixture.
+
+Bio Mix Placement Unit Cost - user specified unit cost to mix and place the bioreactor mixture within the excavated pond/basin.
+
+DRAINAGE AGGREGATE
+The drainage aggregate is a layer of stone immediately below the bioreactor mixture layer that contains the piping network to direct the mine water through the treatment materials and out of the bioreactor.  AASHTO #1 is a reasonable size stone for use as drainage aggregate.
+
+Drainage Aggregate Depth - user defined depth of the drainage aggregate layer. User should make sure the depth of the aggregate layer is greater than the diameter of pipe used.
+
+Drainage Aggregate Bulk Density - defines the bulk density of the aggregate material used for the drainage aggregate such as an AASHTO #1 size stone.
+
+Drainage Aggregate Unit Cost - the unit cost of aggregate represents the cost to purchase and deliver aggregate to the mine water treatment site. 
+
+Drainage Aggregate Placement Unit Cost - the placement cost represents the cost to place the aggregate in the excavated treatment pond around the piping network. 
+
+PIPE
+AMDTreat’s piping routine estimates the cost of the influent, limestone collection, and effluent piping network. AMDTreat estimtates the cost of the influent and effluent pipe, designed to convey water into and out of the treatment system. The limestone collection piping network is installed at the base of the limestone layer and is designed to evenly direct water downward throughout the system.  The limestone collection piping layout consists of a “Trunk” pipe installed along the length of the center of the limestone layer. Every twenty feet, smaller-diameter “spur” pipes extend outwards perpendicular from the Truck pipe towards the sides of the bed.  Conceptually, water flows towards and into the spur pipes and is conveyed to the trunk pipe for discharge to the effluent pipe through the embankment. The routine calculates the number and cost of couplers used to connect sections of trunk and spur pipes together and tees to connect spur pipes to the trunk pipe.  For more information AMDTreat’s piping routine, including pictures, please refer to help.
+
+Influent/effluent Pipe Length represents the total amount of pipe required to deliver water into the treatment system and from the limestone collection system to the discharge point.  
+
+Influent/effluent Install Rate is multiplied by the Influent/Effluent Pipe Length to estimate the amount of time required to install the pipe. Installation time is multiplied by the Labor Rate to estimate the installation cost. 
+
+Trunk Pipe Segment Length represents the length of each segment of trunk pipe.
+
+Spur Pipe Segment Length represents the length of each segment of spur pipe.
+
+Spur Pipe Spacing represents the desired distance between each spur pipe and is used to determine the number of spurs by dividing the bottom length of the limestone layer by the spur piping spacing.
+
+Labor Rate represents the unit cost of Labor. 
+
+Trunk Pipe Segment Unit Cost represents the cost of each section of trunk pipe.
+
+Trunk Pipe Coupler Unit Cost represents the cost of each coupler used to connect two trunk pipes together.
+
+Spur Pipe Segment Unit Cost represents the cost of each section of spur pipe.
+
+Spur Pipe Coupler Unit Cost represents the cost of each coupler used to connect two spur pipes together.
+
+Tee Connector Unit Cost represents the cost of each Tee connector used to connect the smaller diameter spur pipe to the larger-diameter Trunk pipe.
+
+Custom Pipe - The User-specified piping layout is used when users decide not to use AMDTreat’s piping routine to estimate the cost of the piping network. This routine allows users to specify the length and cost for various types of pipe and connectors. This routine may be helpful if users are attempting to “reverse cost” model an existing system with known quantities of pipe.
+
+Custom Pipe Length represents the user-specified total length of pipe.
+
+Custom Pipe Unit Cost represents the purchase and installation cost of each linear foot of pipe.
+
+LINER
+The liner routine allows users to estimate the cost of installing a Clay, Synthetic, or Geosynthetic Clay liner.
+
+Clay Liner Unit Cost is the cost of purchasing, transporting, excavation, placing, and compacting the clay. In many cases, the only cost is the cost of excavating, placing, and compacting the clay.
+
+Clay Liner Thickness is the desired thickness of the clay liner.
+
+Synthetic Liner Unit Cost is the cost to purchase and install a synthetic liner. If using geotextile in conjunction with a clay liner, enter the unit cost for the geotextile here. If using synthetic liner with geotextile, add both unit costs and enter here.
+
+Geosynthetic Clay Liner Unit Cost is the to purchase and install the geosynthetic clay liner.
+
+Geosynthetic Clay Soil Cover Unit Cost is the cost to excavate and place the soil cover over the geosynthetic clay liner. 
+
+Geosynthetic Clay Liner Soil Cover Thickness is the thickness of the protective soil cover over the geosynthetic clay liner.
+
+	 Bulk Density - Defines the bulk density of the aggregate material used for the drainage aggregate such as an AASHTO #1 size stone.
+
+PIPE
+AMDTreat’s piping routine estimates the cost of the influent, limestone collection, and effluent piping network. AMDTreat estimtates the cost of the influent and effluent pipe, designed to convey water into and out of the treatment system. The limestone collection piping network is installed at the base of the limestone layer and is designed to evenly direct water downward throughout the system.  The limestone collection piping layout consists of a “Trunk” pipe installed along the length of the center of the limestone layer. Every twenty feet, smaller-diameter “spur” pipes extend outwards perpendicular from the Truck pipe towards the sides of the bed.  Conceptually, water flows towards and into the spur pipes and is conveyed to the trunk pipe for discharge to the effluent pipe through the embankment. The routine calculates the number and cost of couplers used to connect sections of trunk and spur pipes together and tees to connect spur pipes to the trunk pipe.  For more information AMDTreat’s piping routine, including pictures, please refer to help.
+
+Influent/effluent Pipe Length represents the total amount of pipe required to deliver water into the treatment system and from the limestone collection system to the discharge point.  
+
+Influent/effluent Install Rate is multiplied by the Influent/Effluent Pipe Length to estimate the amount of time required to install the pipe. Installation time is multiplied by the Labor Rate to estimate the installation cost. 
+
+Trunk Pipe Segment Length represents the length of each segment of trunk pipe.
+
+Spur Pipe Segment Length represents the length of each segment of spur pipe.
+
+Spur Pipe Spacing represents the desired distance between each spur pipe and is used to determine the number of spurs by dividing the bottom length of the limestone layer by the spur piping spacing.
+
+Labor Rate represents the unit cost of Labor. 
+
+Trunk Pipe Segment Unit Cost represents the cost of each section of trunk pipe.
+
+Trunk Pipe Coupler Unit Cost represents the cost of each coupler used to connect two trunk pipes together.
+
+Spur Pipe Segment Unit Cost represents the cost of each section of spur pipe.
+
+Spur Pipe Coupler Unit Cost represents the cost of each coupler used to connect two spur pipes together.
+
+Tee Connector Unit Cost represents the cost of each Tee connector used to connect the smaller diameter spur pipe to the larger-diameter Trunk pipe.
+
+Custom Pipe - The User-specified piping layout is used when users decide not to use AMDTreat’s piping routine to estimate the cost of the piping network. This routine allows users to specify the length and cost for various types of pipe and connectors. This routine may be helpful if users are attempting to “reverse cost” model an existing system with known quantities of pipe.
+
+Custom Pipe Length represents the user-specified total length of pipe.
+
+Custom Pipe Unit Cost represents the purchase and installation cost of each linear foot of pipe.
+
+LINER
+The liner routine allows users to estimate the cost of installing a Clay, Synthetic, or Geosynthetic Clay liner.
+
+Clay Liner Unit Cost is the cost of purchasing, transporting, excavation, placing, and compacting the clay. In many cases, the only cost is the cost of excavating, placing, and compacting the clay.
+
+Clay Liner Thickness is the desired thickness of the clay liner.
+
+Synthetic Liner Unit Cost is the cost to purchase and install a synthetic liner. If using geotextile in conjunction with a clay liner, enter the unit cost for the geotextile here. If using synthetic liner with geotextile, add both unit costs and enter here.
+
+Geosynthetic Clay Liner Unit Cost is the to purchase and install the geosynthetic clay liner.
+
+Geosynthetic Clay Soil Cover Unit Cost is the cost to excavate and place the soil cover over the geosynthetic clay liner. 
+
+Geosynthetic Clay Liner Soil Cover Thickness is the thickness of the protective soil cover over the geosynthetic clay liner.
+
+</value>
+  </data>
+  <data name="infoOtherItemsBIO" xml:space="preserve">
+    <value>Other items is a cost category that contains a variety of commonly used items used in passive treatment systems. Users can set the unit cost to $0.0 to prevent AMDTreat from considering an item in the total cost.
+
+Valves Quantity represents the number of values in the influent and effluent piping network.
+
+Valves Unit Cost is the unit cost to purchase and install each valve. Default cost includes purchase, man hole, valve, housing, and installation.
+
+Intake Structure Quantity represents the number of intake structures used to collect and direct flow to the influent piping network of the VFP.  
+
+Intake Structure Unit Cost is the cost of purchasing and installing each Intake Structure.
+
+Flow Distribution Structure Quantity represents the number of Flow Distribution Structures used to distribute influent or effluent flow. A Flow Distribution Structure can be used to distribute flow to multiple VFPs organized in parallel and used to bypass flows larger than the design flow rate.  
+
+Flow Distribution Structure Unit Cost is the cost of purchasing and installing each Flow Distribution Structure.
+
+Water Level Control Structure Quantity represents the number of water level control structures used in the VFP. Water control structures are used to manipulate the water elevation within the VFP.
+
+Water Level Control Structure Unit Cost represents the cost to purchase and install each water control structure.
+
+Outlet Protection Structure Quantity represents the number of Outlet Protection Structures used to prevent erosion and scouring as the water exits the VFP and discharged into a pond, ditch, or receiving stream. In many cases, outlet Protection Structures consist of a unwoven geofabric overlain by aggregate.    
+
+Outlet Protection Structure Unit Cost represents the cost to purchase and install the materials to install the outlet protection structure. 
+
+</value>
+  </data>
+  <data name="infoRecapitalizationCostBIO" xml:space="preserve">
+    <value>Recapitalization costs, the net present value of replacement and annual costs, is the amount of money required today to pay for all future annual and replacement costs for a given rate of return, inflation rate, and calculation period.  The recapitalization cost represents the total cost of operating the bioreactor, in "today's dollars", over a specified time frame.
+
+Life Cycle represents the time interval for expected replacement
+
+Replacement % represents the expected percentage of replacement of the item each replacement cycle.
+
+Default Cost represents the capital cost value that was calculated by the program based on user inputs.
+
+Custom Cost represents the user input custom cost for any desired item.</value>
+  </data>
+  <data name="infoSizingMethodsBIO" xml:space="preserve">
+    <value>SULFATE REDUCTION
+This sizing method allows users to specify the sulfate reduction rate in moles of sulfate per cubic meter per day (literature based method) and the desired sulfate concentration reduction in mg/L for estimating the volume of bioreactor mixture needed to accomplish those endpoints.
+
+ALKALINITY GENERATION RATE 
+Calculates the mass of limestone needed in two steps. First, the surface area of limestone is calculated by dividing the alkalinity generation rate by the daily acidity load. Then the surface area is multiplied by the user-defined thickness of the limestone layer to calculate the volume of limestone, which is converted to mass. 
+
+Alkalinity Generation Rate is the amount of acidity that will be loaded onto each m2 of limestone per day.
+
+PILOT TEST RESULTS
+This sizing method utilizes a user specified volumetric loading rate in cubic feet of bioreactor mixture per gallon per minute of mine water flow and when multiplied by the user defined design flow rate estimates the volume of bioreactor mixture needed.
+
+DIMENSIONS
+Calculates material quantities and volumes based on user defined dimensions of length and width.  The length and width of the pond correspond to the length and width of the top of the freeboard layer.  Note that the length must be greater than or equal to the width.</value>
+  </data>
+  <data name="infoSizingSummaryBIO" xml:space="preserve">
+    <value>Sizing summary includes the sizes and amounts of materials to build the treatment.</value>
+  </data>
+  <data name="infoSystemPropertiesBIO" xml:space="preserve">
+    <value>Pond Inside Slope - the horizontal to vertical ratio of the inside slope of the treatment system.  Note, a value of 2 means that for every 1 foot of depth the slope extends 2 feet horizontally.
+
+Bottom Layer Length to Width Ratio - this ratio represents the relationship between the bottom length and bottom width of the Bio Mix layer. A ratio of 2 means the bottom length is twice the bottom width. Users can define the ratio for all sizing methods except for the Dimensions method. The ratio is required to calculate the bottom and top dimensions of the trapezoidal-shaped limestone layer when only the limestone volume, pond inside slope, and limestone layer depth is known.
+
+Excavation Unit Cost - this value represents the cost to excavate and place soil at the project site in compacted lifts.</value>
+  </data>
+  <data name="infoWaterQualityBIO" xml:space="preserve">
+    <value>Design Flow - flow rate used to size passive treatment systems, influent pumps, clarifiers, and reaction tanks.
+
+Net Acidity - acidity used to estimate chemical consumption.
+
+Sulfate - sulfate concentration reduction amount.</value>
+  </data>
+  <data name="errorPondALD" xml:space="preserve">
+    <value>The calculated limstone layer bottom width is less than 10 ft.
+
+The combination of the pond length and width, layer depths, pond side slope, and/or bottom length to width ratio is causing the error.
+
+All output values are invalid and should not be used.
+
+To resolve, change the pond length and width, layer depths, pond side slope, and/or bottom length.  
+
+Note, the current depth of the pond should be less than the maximum allowable depth of the pond.</value>
+  </data>
+  <data name="errorPondMajorALD" xml:space="preserve">
+    <value>The calculated limstone layer bottom width is 0 ft or less than 0 ft.
+
+The combination of the pond length and width, layer depths, pond side slope, and/or bottom length to width ratio is causing a major error.
+
+All output values are invalid.
+
+To resolve, change the pond length and width, layer depths, pond side slope, and/or bottom length.  
+
+Note, the current depth of the pond should be less than the maximum allowable depth of the pond.</value>
+  </data>
+  <data name="infoALD" xml:space="preserve">
+    <value>A Anoxic Limestone Drain  is</value>
+  </data>
+  <data name="infoAnnualCostALD" xml:space="preserve">
+    <value>Annual Costs for ALD include routine maintenance such as flushing and adjusting the water level. Estimating the annual costs for passive treatment systems are difficult so a portion of the annual costs is not tagged for a specific use but may accumulate for contingencies.  There are two methods to estimate annual treatment costs for an ALD in AMDTreat. For the first method, users enter a percentage which is multiplied by the ALD capital cost to estimate the annual operations and maintenance cost. The second method allows users to enter an expected annual cost. 
+
+Percentage of Capital Cost is the user-specified percentage used to estimate the annual operation and maintenance cost.
+
+Annual Cost Flat Fee allows users can enter a custom calculated or known annual cost for operation and maintenance.</value>
+  </data>
+  <data name="infoCapitalCostALD" xml:space="preserve">
+    <value>Capital costs include the cost estimates to build the treatment.</value>
+  </data>
+  <data name="infoLayerMaterialsALD" xml:space="preserve">
+    <value>The various layers of a pond are contained within this section.  Each layer contains corresponding dimensions/properties and/or costs.
+
+SOIL COVER
+The soil cover layer is the top layer used to serve as a barrier to keep atmospheric oxygen from the limestone layer in order to create the anoxic conditions necessary for the limestone drain to function as an ALD.
+
+Soil Cover Depth is the user specified depth of soil cover layer placed over the limestone layer.
+
+Soil Replacement Unit Cost is the unit cost to place the user specified depth of soil cover over the limestone layer.  Typically use suitable on-site topsoil material from the excavation for the ALD.
+
+LIMESTONE 
+The thickness of the Limestone layer in the VFP. The purpose of the Limestone layer is to increase pH and alkalinity through the dissolution of limestone (calcite).  
+
+Purity represents the percentage of carbonate minerals by weight contained in limestone. It represents the portion of the limestone that will participate in reactions to increase pH and alkalinity. 
+
+Dissolution Efficiency is a way to add additional limestone to a treatment system to help address a reduction in the rate of dissolution cause by a loss of reactive surface area as the limestone weathers over time. The mass of limestone will be divided by the dissolution efficiency to increase the mass of limestone. A dissolution factor of 85% will increase the mass of limestone by 17.6%.  A dissolution efficiency of 100% assumes 100% of the limestone will dissolve and will not alter the original mass of limestone. This factor can be considered a design safety factor.  
+
+Limestone Porosity represents the percentage of void space compared to the total volume of the limestone layer. It also represents the portion of the limestone layer that will be occupied by water and not the limestone. This value affects retention time.
+
+Limestone Unit Cost represents the cost to purchase and transport limestone to the mine drainage treatment site.
+
+Limestone Placement Unit Cost is the placement cost of limestone represents the cost to place the limestone in the excavated limestone drain.
+
+PIPE
+AMDTreat’s piping routine estimates the cost of the influent, limestone collection, and effluent piping network. AMDTreat calculates the cost of the influent and effluent pipe based on user entered length and unit cost, which is designed to convey water into and out of the treatment pond. The limestone collection piping network is installed at the base of the limestone layer and is designed to evenly direct water downward and/or horizontally throughout the limestone bed.  The limestone collection piping layout consists of a perforated “Header” pipe installed along the width at the downstream or effluent end of the limestone layer. The user can specifiy multiple Header pipes as desired to improve flow distribution and flushing and a perforated header pipe may also be specified for distributing the water from the influent pipe onto the limestone bed.  Conceptually, water flows towards and into the Header pipes and is conveyed to the effluent pipe for discharge to the water level control/flushing structure through the embankment. The routine calculates the number and cost of couplers used to connect segments of header pipes together and tees to connect influent and effluent pipes to the header pipe(s).  For more information on AMDTreat’s piping routine, including pictures, please refer to help. 
+
+Influent/effluent Pipe Length represents the total amount of pipe required to deliver water into the treatment system and from the limestone collection system to the discharge point.  
+
+Influent/effluent Install Rate is multiplied by the Influent/Effluent Pipe Length to estimate the amount of time required to install the pipe. Installation time is multiplied by the Labor Rate to estimate the installation cost. 
+
+Header Pipe Segment Length represents the length of each segment of perforated header pipe. 
+
+Header Pipe Quantity represents the number of perforated header pipes used in the system. Header pipes may be specified for both the influent to distribute flow into the Mn Removal bed and the effluent to distribute flows throughout the width of the Mn Removal bed moving in a horizontal- like flow pattern.
+
+Header Pipe Install Rate is the rate that is multiplied by the Header Pipe Length to estimate the amount of time required to install the pipe. Installation time is multiplied by the Labor Rate to estimate the installation cost.
+
+Labor Rate represents the unit cost of Labor. 
+
+Influent/Effluent Pipe Unit Cost represents the cost of each linear foot of influent/effluent pipe.
+
+Header Pipe Unit Cost represents the cost of each linear foot of header pipe.
+
+Header Pipe Coupler Unit Cost represents the cost of each coupler used to connect two header pipes together.
+
+Tee Connector Unit Cost represents the cost of each Tee fitting used to connect the influent and/or effluent pipe to the perforated header pipe(s). 
+
+Custom Pipe - The User-specified piping layout is used when users decide not to use AMDTreat’s piping routine to estimate the cost of the piping network. This routine allows users to specify the length and cost for various types of pipe and connectors. This routine may be helpful if users are attempting to “reverse cost” model an existing system with known quantities of pipe.
+
+Custom Pipe Length represents the user-specified total length of pipe.
+
+Custom Pipe Unit Cost represents the purchase and installation cost of each linear foot of pipe.
+
+LINER
+The liner routine allows users to estimate the cost of installing a Clay, Synthetic, or Geosynthetic Clay liner.
+
+Clay Liner Unit Cost is the cost of purchasing, transporting, excavation, placing, and compacting the clay. In many cases, the only cost is the cost of excavating, placing, and compacting the clay.
+
+Clay Liner Thickness is the desired thickness of the clay liner.
+
+Synthetic Liner Unit Cost is the cost to purchase and install a synthetic liner. If using geotextile in conjunction with a clay liner, enter the unit cost for the geotextile here. If using synthetic liner with geotextile, add both unit costs and enter here.
+
+Geosynthetic Clay Liner Unit Cost is the to purchase and install the geosynthetic clay liner.
+
+Geosynthetic Clay Soil Cover Unit Cost is the cost to excavate and place the soil cover over the geosynthetic clay liner. 
+
+Geosynthetic Clay Liner Soil Cover Thickness is the thickness of the protective soil cover over the geosynthetic clay liner.
+
+</value>
+  </data>
+  <data name="infoOtherItemsALD" xml:space="preserve">
+    <value>Other items is a cost category that contains a variety of commonly used items used in passive treatment systems. Users can set the unit cost to $0.00 to prevent AMDTreat from considering an item in the total cost.
+
+Valves Quantity represents the number of values in the influent and effluent piping network.
+
+Valves Unit Cost is the unit cost to purchase and install each valve. Default cost includes purchase, man hole, valve, housing, and installation.
+
+Intake Structure Quantity represents the number of intake structures used to collect and direct flow to the influent piping network.  
+
+Intake Structure Unit Cost is the cost of purchasing and installing each Intake Structure.
+
+Flow Distribution Structure Quantity represents the number of Flow Distribution Structures used to distribute influent or effluent flow. A Flow Distribution Structure can be used to distribute flow to multiple ALDs organized in parallel and used to bypass flows larger than the design flow rate.  
+
+Flow Distribution Structure Unit Cost is the cost of purchasing and installing each Flow Distribution Structure.
+
+Water Level Control Structure Quantity represents the number of water level control and/or flushing structures used in the treatment pond. Water control structures are used to manipulate the water elevation within the treatment pond and/or allow flushing of the accumulated solids in the limestone layer. 
+
+Water Level Control Structure Unit Cost represents the cost to purchase and install each water control structure.
+
+Outlet Protection Structure Quantity represents the number of Outlet Protection Structures used to prevent erosion and scouring as the water exits the treatment pond and discharged into a pond, ditch, or receiving stream. In many cases, Outlet Protection Structures consist of a unwoven geotextile overlain by appropriately sized aggregate.        
+
+Outlet Protection Structure Unit Cost represents the cost to purchase and install the materials to install the outlet protection structure. 
+
+</value>
+  </data>
+  <data name="infoRecapitalizationCostALD" xml:space="preserve">
+    <value>Recapitalization costs, the net present value of replacement and annual costs, is the amount of money required today to pay for all future annual and replacement costs for a given rate of return, inflation rate, and calculation period.  The recapitalization cost represents the total cost of operating the ALD, in "today's dollars", over a specified time frame.
+
+Life Cycle represents the time interval for expected replacement
+
+Replacement % represents the expected percentage of replacement of the item each replacement cycle.
+
+Default Cost represents the capital cost value that was calculated by the program based on user inputs.
+
+Custom Cost represents the user input custom cost for any desired item.</value>
+  </data>
+  <data name="infoSizingMethodsALD" xml:space="preserve">
+    <value>RETENTION TIME
+This sizing method uses Design Flow, user-specified retention time, and limestone porosity to calculate the volume of limestone required to retain the water for the specified retention time.  
+
+Retention Time is the desired retention time within limestone layer.
+
+BUREAU Of MINES (BOM)
+This sizing method performs two calculations to determine the mass of limestone. First, the mass of limestone needed to achieve the user-defined retention time is calculated. Next, the mass of limestone needed to neutralize the acidity load for the user-defined neutralization time period is calculated. These two masses are added together to calculate the total tons of limestone. This method ensures that the retention time in the limestone is always greater than the user-specified retention time, even at the very end of the neutralization time frame. 
+
+System Life is the neutralization period is used to calculate the mass of limestone needed to neutralize the acidity load for the specified period of time.
+
+ALKALINITY GENERATION RATE 
+Calculates the mass of limestone needed in two steps. First, the surface area of limestone is calculated by dividing the alkalinity generation rate by the daily acidity load. Then the surface area is multiplied by the user-defined thickness of the limestone layer to calculate the volume of limestone, which is converted to mass. 
+
+Alkalinity Generation Rate is the amount of acidity that will be loaded onto each m2 of limestone per day.
+
+USER-SPECIFIED LIMESTONE
+This sizing method allows users to specify how much limestone is needed and the program uses other user-defined variables to calculate material quantities, volumes, and dimensions. 
+
+Limestone Quantity is the user specified quantity of limestone to be used in tons.
+
+DIMENSIONS
+This sizing method allows users to specify the length and width of the treatment system and the program uses other user-defined variables to calculate material quantities and volumes.
+
+Limestone Top Length represents the Length of the top of the Limestone Layer. This value must be equal to or greater than the Width at the Top of the limestone.
+
+Limestone Top Width represents the width of the top of the limestone layer. This value must be equal to or less than the Length at the Top of the limestone.
+</value>
+  </data>
+  <data name="infoSizingSummaryALD" xml:space="preserve">
+    <value>Sizing summary includes the sizes and amounts of materials to build the treatment.</value>
+  </data>
+  <data name="infoSystemPropertiesALD" xml:space="preserve">
+    <value>Pond Inside Slope - the horizontal to vertical ratio of the inside slope of the treatment system.  Note, a value of 2 means that for every 1 foot of depth the slope extends 2 feet horizontally.
+
+Bottom Layer Length to Width Ratio - this ratio represents the relationship between the bottom length and bottom width of the anoxic limestone drain. A ratio of 2 means the bottom length is twice the bottom width. Users can define the ratio for all sizing methods except for the Dimensions method. The ratio is required to calculate the bottom and top dimensions of the trapezoidal-shaped layers when only the water surface area, pond inside slope, and depth of each layer (limestone) is known.
+
+Excavation Unit Cost - this value represents the cost to excavate and place soil at the project site in compacted lifts.</value>
+  </data>
+  <data name="infoWaterQualityALD" xml:space="preserve">
+    <value>Design Flow - flow rate used to size passive treatment systems, influent pumps, clarifiers, and reaction tanks.
+
+Net Acidity - acidity used to estimate chemical consumption.</value>
+  </data>
+  <data name="infoLS" xml:space="preserve">
+    <value>A Lime Slurry treatment is ...</value>
+  </data>
+  <data name="infoRecapitalizationCostLS" xml:space="preserve">
+    <value>Recapitalization costs, the net present value of replacement and annual costs, is the amount of money required today to pay for all future annual and replacement costs for a given rate of return, inflation rate, and calculation period.  The recapitalization cost represents the total cost of operation, in "today's dollars", over a specified time frame.
+
+Life Cycle represents the time interval for expected replacement
+
+Replacement % represents the expected percentage of replacement of the item each replacement cycle.
+
+Default Cost represents the capital cost value that was calculated by the program based on user inputs.
+
+Custom Cost represents the user input custom cost for any desired item.</value>
+  </data>
+  <data name="infoSizingSummaryLS" xml:space="preserve">
+    <value>Sizing summary includes the sizes and amounts of materials to build the treatment.</value>
+  </data>
+  <data name="infoWaterQualityLS" xml:space="preserve">
+    <value>Typical Flow - flow rate in gallons per minute.
+
+Hot Acidity - acidity used to estimate chemical consumption.</value>
+  </data>
+  <data name="errorPondDL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="errorPondMajorDL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="infoAnnualCostDL" xml:space="preserve">
+    <value>User-Specified Annual Chemical Cost - This  method allows users to specify the annual  chemical cost. This method is commonly used by users who know their annual chemical cost and do not require an estimate. 
+
+Percentage of Capital Cost - The default method for estimating operation and mainteance costs is to assume the annual cost is a percentage of the capital cost to purchase and install the sysetm.  
+
+Estimate Electrical Cost - AMDTreat estimates the annual electrical cost by using the power requirements for each motor or electrical component in the treatment system and the user-specified operational time to calculate the annual electrical demand. The demand is multiplied by the unit cost of electricity to estimate the annual electrical cost.</value>
+  </data>
+  <data name="infoCapitalCostDL" xml:space="preserve">
+    <value>Capital costs include the cost estimates to build the treatment.
+
+System Installation - This section develops cost estimates for installing the lime silo system. 
+
+Cost Multiplier: The default method for estimating installtion costs is to assume the installation cost is 40% of the capital cost of the equipment. 
+
+User-specified Cost: Users specify the installation cost. 
+    </value>
+  </data>
+  <data name="infoChemicalConsumptionDL" xml:space="preserve">
+    <value>Methods to estimate chemical consumption.
+
+Stoichiometric - Estimates the annual lime consumption by calculating the acidity loading in lbs/year as CaCO3 and using stoichiometric conversions to reexpress the loading in terms of lime or hydrated lime.  
+
+Titration - Users can input the results of performing a bench scale titration of mine drainage to determine the lbs of lime products required to treat each gallon of mine drainage. 
+
+User-Specified Dry Ton Equivalent - This  method allows users to specify the annual amount of chemical consumed at a treatment system. This method is commonly used by users who know their chemical consumption. 
+    </value>
+  </data>
+  <data name="infoChemicalSolutionDL" xml:space="preserve">
+    <value>Information about the Dry Lime Products.
+
+Lime (quicklime) (CaO): Lime is manufactured as a &gt; 90% pure powder or pebble (pebble lime) by calcining high Ca-content limestone to exsolve CO2: CaCO3 + Heat = CaO + CO2.  Pebble lime can be added directly to a waste water stream, however, this method results in incomplete dissolution due to incomplete hydration and small surface area available for reaction. In most applications, lime is mixed with water in a slaker for conversion to hydrated lime before being added to a waste stream. Lime is typically lower cost than hydrated lime so many high capacity  treatment plants opt to purchase slakers to produce onsite hydrated lime as a cost control strategy instead of paying for manufactured hydrated lime. In recent years, the price gap between hydrated lime and lime has lessened, making the financial payback for the increased capital and operational cost of a slaker less appealing. 
+
+Hydrated Lime (Ca(OH)2): Hydrated lime is a manufactured from limestone (CaCO3) as a &gt; 90% pure powder (&lt;1-45 um) in a two-step process. The first step involves calcining high Ca-content limestone in kilns at temperatures between 1,000 and 1,300 C for rapid decomposition and evolution of CO2 to produce quicklime (CaO). The second step involves hydrating, or "slaking' the quicklime to form Ca(OH)2.  Hydrated lime treatment systems can either dry feed the chemical directly into the wastewater stream or produce a slurry to facilitate pumping the chemical to a reaction tank.  Benefits of using a Ca(OH)2 slurry over dry CaO include particle deagglormeration, increased particle surface area, pumpability, and better dose control. 
+ 
+Purity: Purity of  Lime or Hydrated Lime as % CaO or % Ca(OH)2. 
+
+Dissolution Efficiency: Dissolution Efficiency is a way to account for additional CaO or Ca(OH)2 due to a loss of reactive chemical due to  incomplete dissolution of  particles typically associated with incomplete mixing.  For example, extremely short mixing retention times or dispensing slurry into non turbulent water may result in incomplete dissolution of lime particles. Dissolution efficiency is lowered when dry feeding pebble lime or applying lime products to higher pH  waste streams. 
+
+Unit Cost Delivered: Unit cost of the purchase and delivery of Lime or Hydrated Lime
+    </value>
+  </data>
+  <data name="infoDS" xml:space="preserve">
+    <value>A Dry Lime is</value>
+  </data>
+  <data name="infoEquipmentDL" xml:space="preserve">
+    <value>Equipment and System Installation
+
+1. Storage and Dispensing System - This section allows users to develop cost estimates for either a complete (turnkey) lime (CaO) slaking or hydrated lime (Ca(OH)2) system (silo, bin vibrator, dust collection, screw feeder, slaker, slurry  tank, slurry pumps, slurry lines, heater, control panel, etc.). 
+
+Electric Rate: This rate should reflect all costs associated with electric bill (i.e. fees, taxes, etc.).
+
+Dust Collector Blower: The dust collector blower is used to control lime dust when the silo is refilled with lime product. As a result, the electrical demand to operate the blower is calculated by multiplying the Silo Refill Frequency by the Time to Refill the Silo. The annual electrical cost to operate the blower is estimated using the user-specified motor horsepower and the operation period.
+
+Bin Activator/Vibrator: A bin activator/vibrator is an electrical motor used to promote the flow of lime products from the silo to the screw feeder and prevent "bridging" of lime across the silo. Typically the vibrators turn on and vibrate the silo every 5 to 10 mins for a 30 second period.  The annual electrical cost to operate the bin vibrator is estimated using the user-specified motor horsepower and the operation period.
+
+Screw Feeder: An electrical motor is used to operate an auger to volumetrically dispense lime products to the slurry tank/slaker. The screw feeder only operates when the level of the slurry in the slurry tank drops to a level that calls for lime and water to be added to the tank.   The annual electrical cost to operate the screw feeder is estimated using the user-specified motor horsepower and the operation period .
+
+Slurry Mixer: A mixer/agitator is fixed to the slurry tank to keep the slurry mixed and prevent separation.  The annual electrical cost to operate the slurry mixer is estimated using the user-specified motor horsepower and the operation period.
+
+Slurry Pump:  The slurry pump is used to pump the slurry to the dosing point. The annual electrical cost to operate the slurry pump is estimated using the user-specified motor horsepower and the operation period.
+
+Silo Exhaust Fan: An exhaust fan is used to evacuate air from inside the silo to promote a clean environment. The annual electrical cost to operate the exhaust fan is estimated using the user-specified motor horsepower and the operation period.
+
+
+Silo Space Heater: The heater is only operated during the cold months to prevent freezing conditions near the slurry tank.  The annual electrical cost to operate the heater is estimated using the user-specified power consumption of the heater and the operation period. 
+
+
+
+2. Foundation - This section allows users to estimate the cost of constructing a foundation for the Lime Silo system. 
+
+AMDTreat automatically selections the appropriate length and width of the foundation based on the size of the silo system selected. The thickness of the foundation depends on the geotechnical qualities of the soil. Excellent soils require a foundation thickness of 2.6 ft thick foundation, Average soils require 3.5 ft and Poor requires 5.25 ft. The foundation volume is multiplied by the Concrete Cost and Placement unit cost to estimate the total cost of the foundation. The Concrete Cost and Placement considers the cost of purchase, delivery, forms, rebar, placed, and finished for foundation</value>
+  </data>
+  <data name="infoOtherItemsAnnualDL" xml:space="preserve">
+    <value>Information about the other annual cost items used.  This cost category that allows users to specify equipment and annual costs not otherwise covered in this module. 
+    </value>
+  </data>
+  <data name="infoOtherItemsCapitalDL" xml:space="preserve">
+    <value>Information about the other capital cost items used.  This cost category that allows users to specify equipment and capital costs not otherwise covered in this module. 
+    </value>
+  </data>
+  <data name="infoRecapitalizationCostDL" xml:space="preserve">
+    <value>Recapitalization costs, the net present value of replacement and annual costs, is the amount of money required today to pay for all future annual and replacement costs for a given rate of return, inflation rate, and calculation period.  The recapitalization cost represents the total cost of operation, in "today's dollars", over a specified time frame.
+
+Life Cycle represents the time interval for expected replacement
+
+Replacement % represents the expected percentage of replacement of the item each replacement cycle.
+
+Default Cost represents the capital cost value that was calculated by the program based on user inputs.
+
+Custom Cost represents the user input custom cost for any desired item.</value>
+  </data>
+  <data name="infoSizingSummaryDL" xml:space="preserve">
+    <value>Sizing summary includes the sizes and amounts of materials to build the treatment.</value>
+  </data>
+  <data name="infoWaterQualityDL" xml:space="preserve">
+    <value>Typical Flow - flow rate in gallons per minute.
+
+Hot Acidity - acidity used to estimate chemical consumption.</value>
+  </data>
+  <data name="infoAnnualCostCD" xml:space="preserve">
+    <value>Annual Costs for Conveyance Ditch.
+
+Percentage of Capital Cost is the user-specified percentage used to estimate the annual operation and maintenance cost.
+
+Annual Cost Flat Fee allows users can enter a custom calculated or known annual cost for operation and maintenance.</value>
+  </data>
+  <data name="infoCapitalCostCD" xml:space="preserve">
+    <value>Capital costs include the cost estimates to build the ditch.</value>
+  </data>
+  <data name="infoCD" xml:space="preserve">
+    <value>A Conveyance Ditch  is</value>
+  </data>
+  <data name="infoRecapitalizationCostCD" xml:space="preserve">
+    <value>Recapitalization costs, the net present value of replacement and annual costs, is the amount of money required today to pay for all future annual and replacement costs for a given rate of return, inflation rate, and calculation period.  The recapitalization cost represents the total cost of operation, in "today's dollars", over a specified time frame.
+
+Life Cycle represents the time interval for expected replacement
+
+Replacement % represents the expected percentage of replacement of the item each replacement cycle.
+
+Default Cost represents the capital cost value that was calculated by the program based on user inputs.
+
+Custom Cost represents the user input custom cost for any desired item.</value>
+  </data>
+  <data name="infoSizingSummaryCD" xml:space="preserve">
+    <value>Sizing summary includes the sizes and amounts of materials to build the ditch.</value>
+  </data>
+  <data name="infoSystemPropertiesCD" xml:space="preserve">
+    <value>Aggregate Ditch Length - ?
+Grass Ditch Length is ?</value>
+  </data>
+  <data name="infoAnnualCostPumping" xml:space="preserve">
+    <value>Annual Costs for Pumping are ...</value>
+  </data>
+  <data name="infoCapitalCostPumping" xml:space="preserve">
+    <value>Capital costs include the cost estimates for all pumping.</value>
+  </data>
+  <data name="infoConveyancePipelinePumping" xml:space="preserve">
+    <value>Conveyance Pumping is</value>
+  </data>
+  <data name="infoPumping" xml:space="preserve">
+    <value>Pumping  is</value>
+  </data>
+  <data name="infoRecapitalizationCostPumping" xml:space="preserve">
+    <value>Recapitalization costs, the net present value of replacement and annual costs, is the amount of money required today to pay for all future annual and replacement costs for a given rate of return, inflation rate, and calculation period.  The recapitalization cost represents the total cost of operating the pond, in "today's dollars", over a specified time frame.
+
+Life Cycle represents the time interval for expected replacement
+
+Replacement % represents the expected percentage of replacement of the item each replacement cycle.
+
+Default Cost represents the capital cost value that was calculated by the program based on user inputs.
+
+Custom Cost represents the user input custom cost for any desired item.</value>
+  </data>
+  <data name="infoSizingSummaryPumping" xml:space="preserve">
+    <value>Sizing summary includes the sizes and amounts of materials for pumping.</value>
+  </data>
+  <data name="infoVerticalTurbinePumpBoreHolesPumping" xml:space="preserve">
+    <value>Vertical Pumping Turbine Boreholes is</value>
+  </data>
+  <data name="infoVerticalTurbinePumpsPumping" xml:space="preserve">
+    <value>Vertical Turbine Pumps are</value>
+  </data>
+  <data name="infoAnnualCostSAMPLING" xml:space="preserve">
+    <value>Annual Costs for Sampling ...
+
+</value>
+  </data>
+  <data name="infoCapitalCostSAMPLING" xml:space="preserve">
+    <value>Capital costs include the cost estimates for sampling.</value>
+  </data>
+  <data name="infoRecapitalizationCostSAMPLING" xml:space="preserve">
+    <value>Recapitalization costs, the net present value of replacement and annual costs, is the amount of money required today to pay for all future annual and replacement costs for a given rate of return, inflation rate, and calculation period.  The recapitalization cost represents the total cost of operation, in "today's dollars", over a specified time frame.
+
+Life Cycle represents the time interval for expected replacement
+
+Replacement % represents the expected percentage of replacement of the item each replacement cycle.
+
+Default Cost represents the capital cost value that was calculated by the program based on user inputs.
+
+Custom Cost represents the user input custom cost for any desired item.</value>
+  </data>
+  <data name="infoSAMPLING" xml:space="preserve">
+    <value>Sampling is ...</value>
+  </data>
+  <data name="infoSystemPropertiesSAMPLING" xml:space="preserve">
+    <value>Properties Information for Sampling ...</value>
+  </data>
+  <data name="errorPondMajorPONDS" xml:space="preserve">
+    <value>The calculated layer bottom width is 0 ft or less than 0 ft.
+
+The combination of the pond length and width, layer depths, pond side slope, and/or bottom length to width ratio is causing a major error.
+
+All output values are invalid.
+
+To resolve, change the pond length and width, layer depths, pond side slope, and/or bottom length.  
+
+Note, the current depth of the pond should be less than the maximum allowable depth of the pond.</value>
+  </data>
+  <data name="errorPondPONDS" xml:space="preserve">
+    <value>The calculated layer bottom width is less than 10 ft.
+
+The combination of the pond length and width, layer depths, pond side slope, and/or bottom length to width ratio is causing the error.
+
+All output values are invalid and should not be used.
+
+To resolve, change the pond length and width, layer depths, pond side slope, and/or bottom length.  
+
+Note, the current depth of the pond should be less than the maximum allowable depth of the pond.</value>
+  </data>
+  <data name="infoAnnualCostPONDS" xml:space="preserve">
+    <value>Annual Costs for Ponds are ...</value>
+  </data>
+  <data name="infoCapitalCostPONDS" xml:space="preserve">
+    <value>Capital costs include the cost estimates for constructing a Pond.</value>
+  </data>
+  <data name="infoLayerMaterialsPONDS" xml:space="preserve">
+    <value>The various layers of a pond are contained within this section.  Each layer contains corresponding dimensions/properties and/or costs.
+
+FREEBOARD
+The depth of the Freeboard layer is defined as the difference between the top elevation of the VFP and the design water surface elevation.  The purpose of the Freeboard layer is to accommodate a rising water surface elevation caused by increased flow or plugging in the limestone and compost layers of the VFP.  
+
+
+OXIDATION
+
+
+SETTLING / RETENTION
+
+
+SLUDGE CAPACITY
+
+
+PIPE
+AMDTreat’s piping routine estimates the cost of the influent, limestone collection, and effluent piping network. AMDTreat estimtates the cost of the influent and effluent pipe, designed to convey water into and out of the treatment system. The limestone collection piping network is installed at the base of the limestone layer and is designed to evenly direct water downward throughout the system.  The limestone collection piping layout consists of a “Trunk” pipe installed along the length of the center of the limestone layer. Every twenty feet, smaller-diameter “spur” pipes extend outwards perpendicular from the Truck pipe towards the sides of the bed.  Conceptually, water flows towards and into the spur pipes and is conveyed to the trunk pipe for discharge to the effluent pipe through the embankment. The routine calculates the number and cost of couplers used to connect sections of trunk and spur pipes together and tees to connect spur pipes to the trunk pipe.  For more information AMDTreat’s piping routine, including pictures, please refer to help.
+
+Influent/effluent Pipe Length represents the total amount of pipe required to deliver water into the treatment system and from the limestone collection system to the discharge point.  
+
+Influent/effluent Install Rate is multiplied by the Influent/Effluent Pipe Length to estimate the amount of time required to install the pipe. Installation time is multiplied by the Labor Rate to estimate the installation cost. 
+
+Labor Rate represents the unit cost of Labor. 
+
+Custom Pipe - The User-specified piping layout is used when users decide not to use AMDTreat’s piping routine to estimate the cost of the piping network. This routine allows users to specify the length and cost for various types of pipe and connectors. This routine may be helpful if users are attempting to “reverse cost” model an existing system with known quantities of pipe.
+
+Custom Pipe Length represents the user-specified total length of pipe.
+
+Custom Pipe Unit Cost represents the purchase and installation cost of each linear foot of pipe.
+
+
+BAFFLE
+
+
+LINER
+The liner routine allows users to estimate the cost of installing a Clay, Synthetic, or Geosynthetic Clay liner.
+
+Clay Liner Unit Cost is the cost of purchasing, transporting, excavation, placing, and compacting the clay. In many cases, the only cost is the cost of excavating, placing, and compacting the clay.
+
+Clay Liner Thickness is the desired thickness of the clay liner.
+
+Synthetic Liner Unit Cost is the cost to purchase and install a synthetic liner. If using geotextile in conjunction with a clay liner, enter the unit cost for the geotextile here. If using synthetic liner with geotextile, add both unit costs and enter here.
+
+Geosynthetic Clay Liner Unit Cost is the to purchase and install the geosynthetic clay liner.
+
+Geosynthetic Clay Soil Cover Unit Cost is the cost to excavate and place the soil cover over the geosynthetic clay liner. 
+
+Geosynthetic Clay Liner Soil Cover Thickness is the thickness of the protective soil cover over the geosynthetic clay liner.
+
+</value>
+  </data>
+  <data name="infoOtherItemsAnnualPONDS" xml:space="preserve">
+    <value>Information about the other annual cost items used.  This cost category that allows users to specify equipment and annual costs not otherwise covered in this module. 
+    </value>
+  </data>
+  <data name="infoOtherItemsCapitalPONDS" xml:space="preserve">
+    <value>Information about the other capital cost items used.  This cost category that allows users to specify equipment and capital costs not otherwise covered in this module. 
+    </value>
+  </data>
+  <data name="infoOtherItemsPONDS" xml:space="preserve">
+    <value>Other items is a cost category that contains a variety of commonly used items used in passive treatment systems. Users can set the unit cost to $0.0 to prevent AMDTreat from considering an item in the total cost.
+
+Valves Quantity represents the number of values in the influent and effluent piping network.
+
+Valves Unit Cost is the unit cost to purchase and install each valve. Default cost includes purchase, man hole, valve, housing, and installation.
+
+Intake Structure Quantity represents the number of intake structures used to collect and direct flow to the influent piping network of the VFP.  
+
+Intake Structure Unit Cost is the cost of purchasing and installing each Intake Structure.
+
+Flow Distribution Structure Quantity represents the number of Flow Distribution Structures used to distribute influent or effluent flow. A Flow Distribution Structure can be used to distribute flow to multiple VFPs organized in parallel and used to bypass flows larger than the design flow rate.  
+
+Flow Distribution Structure Unit Cost is the cost of purchasing and installing each Flow Distribution Structure.
+
+Water Level Control Structure Quantity represents the number of water level control structures used in the VFP. Water control structures are used to manipulate the water elevation within the VFP.
+
+Water Level Control Structure Unit Cost represents the cost to purchase and install each water control structure.
+
+Outlet Protection Structure Quantity represents the number of Outlet Protection Structures used to prevent erosion and scouring as the water exits the VFP and discharged into a pond, ditch, or receiving stream. In many cases, outlet Protection Structures consist of a unwoven geofabric overlain by aggregate.    
+
+Outlet Protection Structure Unit Cost represents the cost to purchase and install the materials to install the outlet protection structure. 
+
+</value>
+  </data>
+  <data name="infoPONDS" xml:space="preserve">
+    <value>Ponds  is</value>
+  </data>
+  <data name="infoRecapitalizationCostPONDS" xml:space="preserve">
+    <value>Recapitalization costs, the net present value of replacement and annual costs, is the amount of money required today to pay for all future annual and replacement costs for a given rate of return, inflation rate, and calculation period.  The recapitalization cost represents the total cost of operating the pond, in "today's dollars", over a specified time frame.
+
+Life Cycle represents the time interval for expected replacement
+
+Replacement % represents the expected percentage of replacement of the item each replacement cycle.
+
+Default Cost represents the capital cost value that was calculated by the program based on user inputs.
+
+Custom Cost represents the user input custom cost for any desired item.</value>
+  </data>
+  <data name="infoSizingMethodsPONDS" xml:space="preserve">
+    <value>OXIDATION / SETTLING / SLUDGE
+
+
+
+DIMENSIONS
+Calculates material quantities and volumes based on user defined dimensions of length and width.  The length and width of the pond correspond to the length and width of the top of the freeboard layer.  Note that the length must be greater than or equal to the width.</value>
+  </data>
+  <data name="infoSizingSummaryPONDS" xml:space="preserve">
+    <value>Sizing summary includes the sizes and amounts of materials to build the pond.</value>
+  </data>
+  <data name="infoSystemPropertiesPONDS" xml:space="preserve">
+    <value>Pond Inside Slope - the horizontal to vertical ratio of the inside slope of the treatment system.  Note, a value of 2 means that for every 1 foot of depth the slope extends 2 feet horizontally.
+
+Bottom Layer Length to Width Ratio - this ratio represents the relationship between the bottom length and bottom width of the settling layer. A ratio of 2 means the bottom length is twice the bottom width. Users can define the ratio for all sizing methods except for the Dimensions method. The ratio is required to calculate the bottom and top dimensions of the trapezoidal-shaped limestone layer when only the limestone volume, pond inside slope, and limestone layer depth is known.
+
+Excavation Unit Cost - this value represents the cost to excavate and place soil at the project site in compacted lifts.</value>
+  </data>
+  <data name="infoWaterQualityPONDS" xml:space="preserve">
+    <value>Design Flow - flow rate in gallons per minute.
+
+Typical Flow - flow rate in gallons per minute.
+
+</value>
+  </data>
+  <data name="infoSludgeGenerationHandlingDisposalPONDS" xml:space="preserve">
+    <value>Sludge Generation is ...
+
+Sludge Handling is ...
+
+Sludge Disposal is ...</value>
+  </data>
+  <data name="errorPondClarifier" xml:space="preserve">
+    <value />
+  </data>
+  <data name="errorPondMajorClarifier" xml:space="preserve">
+    <value />
+  </data>
+  <data name="infoAnnualCostClarifier" xml:space="preserve">
+    <value />
+  </data>
+  <data name="infoAnnualCostInputClarifier" xml:space="preserve">
+    <value>Annual Cost Inputs consists of ...</value>
+  </data>
+  <data name="infoCapitalCostClarifier" xml:space="preserve">
+    <value>Capital costs include the cost estimates to build the treatment.</value>
+  </data>
+  <data name="infoClarifier" xml:space="preserve">
+    <value>A Clarifier is ...</value>
+  </data>
+  <data name="infoClarifierDesignClarifier" xml:space="preserve">
+    <value>Clarifier design contains two options ...</value>
+  </data>
+  <data name="infoEquipmentClarifier" xml:space="preserve">
+    <value>Equipment information ...</value>
+  </data>
+  <data name="infoOtherItemsAnnualClarifier" xml:space="preserve">
+    <value>Information about the other annual cost items used.  This cost category that allows users to specify equipment and annual costs not otherwise covered in this module. 
+    </value>
+  </data>
+  <data name="infoOtherItemsCapitalClarifier" xml:space="preserve">
+    <value>Information about the other capital cost items used.  This cost category that allows users to specify equipment and capital costs not otherwise covered in this module. 
+    </value>
+  </data>
+  <data name="infoRecapitalizationCostClarifier" xml:space="preserve">
+    <value>Recapitalization costs, the net present value of replacement and annual costs, is the amount of money required today to pay for all future annual and replacement costs for a given rate of return, inflation rate, and calculation period.  The recapitalization cost represents the total cost of operation, in "today's dollars", over a specified time frame.
+
+Life Cycle represents the time interval for expected replacement
+
+Replacement % represents the expected percentage of replacement of the item each replacement cycle.
+
+Default Cost represents the capital cost value that was calculated by the program based on user inputs.
+
+Custom Cost represents the user input custom cost for any desired item.</value>
+  </data>
+  <data name="infoSizingSummaryClarifier" xml:space="preserve">
+    <value>Sizing summary includes the sizes and amounts of materials to build the clarifier.</value>
+  </data>
+  <data name="infoSludgeDisposalPipelineClarifier" xml:space="preserve">
+    <value>Sludge Disposal Pipeline is ...</value>
+  </data>
+  <data name="infoWaterQualityClarifier" xml:space="preserve">
+    <value>Design Flow - flow rate in gallons per minute.
+
+Typical Flow - flow rate in gallons per minute.
+
+Ferrous Iron - 
+
+Ferric Iron - 
+
+Manganese - 
+
+Aluminum -</value>
+  </data>
+  <data name="errorPondMajorSiteDevelopment" xml:space="preserve">
+    <value />
+  </data>
+  <data name="errorPondSiteDevelopment" xml:space="preserve">
+    <value />
+  </data>
+  <data name="infoAnnualCostInputSiteDevelopment" xml:space="preserve">
+    <value>Annual Cost Inputs consists of ...</value>
+  </data>
+  <data name="infoAnnualCostSiteDevelopment" xml:space="preserve">
+    <value />
+  </data>
+  <data name="infoCapitalCostSiteDevelopment" xml:space="preserve">
+    <value>Contingency - user may specify a contingency cost for a project based on either and pre-determined amount or allow the program to calculate it based on theproject capital costs in order to account for items/features not determined early on in the engineering design process; as the level of design progresses typically the amount of contingency is less.</value>
+  </data>
+  <data name="infoOtherItemsCapitalSiteDevelopment" xml:space="preserve">
+    <value>Information about the other capital cost items used.  This cost category that allows users to specify equipment and capital costs not otherwise covered in this module. 
+    </value>
+  </data>
+  <data name="infoRecapitalizationCostSiteDevelopment" xml:space="preserve">
+    <value>Recapitalization costs, the net present value of replacement and annual costs, is the amount of money required today to pay for all future annual and replacement costs for a given rate of return, inflation rate, and calculation period.  The recapitalization cost represents the total cost of operation, in "today's dollars", over a specified time frame.
+
+Life Cycle represents the time interval for expected replacement
+
+Replacement % represents the expected percentage of replacement of the item each replacement cycle.
+
+Default Cost represents the capital cost value that was calculated by the program based on user inputs.
+
+Custom Cost represents the user input custom cost for any desired item.</value>
+  </data>
+  <data name="infoSiteDevelopment" xml:space="preserve">
+    <value>Site development is ...</value>
+  </data>
+  <data name="infoSiteDevelopmentItemsSiteDevelopment" xml:space="preserve">
+    <value>PROPERTY ACQUISITION/ACCESS
+Land Purchase Closing Cost - Can include all costs associated with purchase of the property such as boundary survey, title search, legal fees, and easements/right-of-way issues.
+
+Annual Lease Cost - Annual cost on a per acre basis to lease any portion of the land from the property owner for either access or for any components of the treatment system.
+
+SITE WORK UNIT COST AND INFORMATION
+Construction Office Trailer Cost - Optional item, typically required on larger projects for use by contractor and construction inspectors.
+
+Average Site Slope - User estimates the approximate average slope of the existing project site prior to any work activities.
+
+Foundation Overexcavation Unit Cost - Unit cost to perform the overexcavation for the foundation based on the user specified site soils condition.
+
+ACCESS ROADS AND PARKING
+Driving Surface Aggregate Unit Cost - Assumes 4” of Driving Surface Aggregate, adjust unit cost to match other desired pavement options.
+
+Asphalt Unit Cost - Assumes 1.5” of wearing course and 4.5” of base course – adjust unit cost to match other desired pavement options.
+
+Aggregate Subbase Unit Cost - Assumes 6” of AASHTO no. 3 - adjust unit cost to match other desired subbase options.
+
+Geotextile Unit Cost - Assumes 19oz/SY non-woven geotextile, adjust unit cost to match other desired geotextile  options.
+
+Average Parking Surface Area - Average parking space is 9' x 18'. Calculate an additional 22' by 9' of space for backing out of each space. If more than one row of parking, the turnout can be shared by each row. 
+
+Parking Lot Items and Accessories - May include any accessories needed for the parking area including parking space lines and bumpers.
+
+E&amp;S CONTROLS
+Estimated (General) E&amp;S Unit Cost - this E&amp;S Control Option gives the user the option to allow the program to calculate the estimated cost based on average E&amp;S control costs ($/acre) for other AMD treatment site construction projects. It uses the program calculated Clear and Grub area and E&amp;S Unit Cost.
+
+User-Specified - option allows the software to estimate an approximate amount of silt fence or filter sock based on an assumed linear foot per acre based on similar construction projects.
+
+Silt Fence or Compost Filter Sock - user specifies the desired primary E&amp;S control, either silt fence or compost filter sock.
+
+Other E&amp;S Control - user specified cost for any additional E&amp;S controls required for a site.
+
+DIVERSION DITCHES AND CULVERTS
+Aggregate Material Unit Cost - assumes a bulk Density of 1.3 Tons per cubic yard.  
+
+Aggregate Placement Unit Cost - assumes a bulk Density of 1.3 Tons per cubic yard. 
+
+Vegetated Ditch Unit Cost - includes excavation and placement of both temporary (engineer specified, e.g., jute mat) and vegetation (engineer specified seed mixture) lining in the diversion ditch.
+
+Culvert Length - user defined combined length for all culverts required for a site that may be associated with any proposed ditches.
+
+CONTROL BUILDING
+Foundation/Slab Estimate Volume - User specifies the soil conditions on the project site in order to estimate the need for any overexcavation depth relative to any concrete foundations required for the project site; options are Poor (2), Average (1), and Excellent (0).
+
+Lab checkbox - user may choose to have a small lab counter space within the control building for any on-site water testing.
+
+Water or Sewer checkbox - user may choose to provide water (public or well) and sewer (public or septic) service for the control building.
+
+HVAC checkbox - user may chose to have heating and/or air conditioning for the control building.
+
+ELECTRICAL SERVICE/UTILITIES
+Line Extension Length - length required to extend electric service from an existing location to the project site.
+
+Stepdown Transformer - stepdown transformer may be required for connection to a nearby high power transmission line for the project site.
+
+Wiring Estimate - wiring for the entire project site is best estimated using a percentage of the equipment cost.
+
+Telecommunications - user may specify whether telecommunications service is needed for a project site such as internet or phone service.
+
+Plant Automation - user may specify for the treatment system to include an automated system to manage the operation of a treatment facility, which is relatively common for active chemical treatment plants.
+
+FENCING AND ACCESS GATES
+Estimate Fence Quantity - this option allows the user to have the program estimate the amount of fence required around the perimeter of the project site; Assumes the project is shaped like a square with 4 equal sides and uses the total clear and grub area for the entire site based on the user selected modules.
+
+CLEARING/GRUBBING/REVEGETATION
+Clear and Grub for Revegetation Percentage - allows the user to estimate the approximate percentage of clear and grub area for the entire project site that will require revegetation (seed, mulch, ag lime, and fertilizer) due to the proposed treatment components (buildings, clarifiers, ponds, etc).
+
+Revegetation Unit Cost - this unit cost includes the seeding, mulching, and application of any ag lime and/or fertlilizer needed based on the site soil conditions following the construction activities.
+
+
+</value>
+  </data>
+  <data name="infoSizingSummarySiteDevelopment" xml:space="preserve">
+    <value>Sizing summary includes the sizes and amounts of materials to build the clarifier.</value>
+  </data>
+</root>

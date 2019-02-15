@@ -1,0 +1,533 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module type="Pumping">
+  <items>
+      <item>
+        <name>Well Quantity</name>
+        <value>3</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Borehole Sizing Multiplier</name>
+        <value>1.5</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Drilling Depth To Mine Pool</name>
+        <value>250</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Drilling Borehole And Casting Installation Cost 16</name>
+        <value>75</value>
+        <units></units>
+        <description></description>
+      </item>          
+      <item>
+        <name>Drilling Borehole And Casting Installation Cost 24</name>
+        <value>100</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Drilling Borehole And Casting Installation Cost 30</name>
+        <value>150</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Drilling Borehole And Casting Installation Cost 36</name>
+        <value>250</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Flow Rate</name>
+        <value>2310</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Nominal Pipe Outside Diameter Inches 8</name>
+        <value>8</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Nominal Pipe Outside Diameter Inches 10</name>
+        <value>10</value>
+        <units></units>
+        <description></description>
+      </item>          
+      <item>
+        <name>Nominal Pipe Outside Diameter Inches 12</name>
+        <value>12</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Nominal Pipe Outside Diameter Inches 16</name>
+        <value>16</value>
+        <units></units>
+        <description></description>
+      </item>           
+      <item>
+        <name>Nominal Pipe Outside Diameter Inches 18</name>
+        <value>18</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Estimated Iron Pipe Size Standard Diameter Ratio Number 7</name>
+        <value>7</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Estimated Iron Pipe Size Standard Diameter Ratio Number 9</name>
+        <value>9</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Estimated Iron Pipe Size Standard Diameter Ratio Number 11</name>
+        <value>11</value>
+        <units></units>
+        <description></description>
+      </item>  
+      <item>
+        <name>Estimated Iron Pipe Size Standard Diameter Ratio Number 135</name>
+        <value>13.5</value>
+        <units></units>
+        <description></description>
+      </item>  
+      <item>
+        <name>Estimated Iron Pipe Size Standard Diameter Ratio Number 17</name>
+        <value>17</value>
+        <units></units>
+        <description></description>
+      </item>        
+      <item>
+        <name>Total Static Head</name>
+        <value>50</value>
+        <units></units>
+        <description></description>
+      </item>  
+      <item>
+        <name>Pipe Laying Length</name>
+        <value>1000</value>
+        <units></units>
+        <description></description>
+      </item>        
+      <item>
+        <name>Incidental Head Losses</name>
+        <value>10</value>
+        <units></units>
+        <description></description>
+      </item>  
+      <item>
+        <name>Pipe Bedding Thickness</name>
+        <value>18</value>
+        <units>inches</units>
+        <description></description>
+      </item>        
+      <item>
+        <name>Gravel For Pipe Bedding Unit Cost</name>
+        <value>25</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Excavation Unit Cost</name>
+        <value>12.5</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Backfill And Compaction Unit Cost</name>
+        <value>8.5</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Air Vacuum Release Assemblies Quantity</name>
+        <value>1</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Air Vacuum Release Assemblies Unit Cost</name>
+        <value>5600</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Pump Quantity</name>
+        <value>1</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Estimated Pump Efficiency</name>
+        <value>0.75</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Pump Sizing Safety Factor</name>
+        <value>0.15</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Soft Start VFD</name>
+        <value>Yes</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Soft Start VFD Constant</name>
+        <value>No</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Concrete Unit Cost</name>
+        <value>450</value>
+        <units></units>
+        <description></description>
+      </item> 
+       <item>
+        <name>Electrical Unit Cost</name>
+        <value>0.08</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Pumping Time Hours Per Day</name>
+        <value>24</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Pumping Time Days Per Year</name>
+        <value>365</value>
+        <units></units>
+        <description></description>
+      </item>  
+      <item>
+        <name>Pipeline Maintenance Factor</name>
+        <value>3.5</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Pump Maintenance Factor</name>
+        <value>10</value>
+        <units></units>
+        <description></description>
+      </item>  
+      <item>
+        <name>Pressure Rating PSI 335</name>
+        <value>335</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pressure Rating PSI 250</name>
+        <value>250</value>
+        <units></units>
+        <description></description>
+      </item>  
+      <item>
+        <name>Pressure Rating PSI 200</name>
+        <value>200</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pressure Rating PSI 160</name>
+        <value>160</value>
+        <units></units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Pressure Rating PSI 125</name>
+        <value>125</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 7 NOD 8</name>
+        <value>6.01</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 9 NOD 8</name>
+        <value>6.59</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 11 NOD 8</name>
+        <value>6.96</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 135 NOD 8</name>
+        <value>7.27</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 17 NOD 8</name>
+        <value>7.75</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 7 NOD 10</name>
+        <value>7.49</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 9 NOD 10</name>
+        <value>8.22</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 11 NOD 10</name>
+        <value>8.68</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 135 NOD 10</name>
+        <value>9.06</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 17 NOD 10</name>
+        <value>9.41</value>
+        <units></units>
+        <description></description>
+      </item>   
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 7 NOD 12</name>
+        <value>8.89</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 9 NOD 12</name>
+        <value>9.75</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 11 NOD 12</name>
+        <value>10.29</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 135 NOD 12</name>
+        <value>10.75</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 17 NOD 12</name>
+        <value>11.16</value>
+        <units></units>
+        <description></description>
+      </item>  
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 7 NOD 16</name>
+        <value>11.15</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 9 NOD 16</name>
+        <value>12.23</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 11 NOD 16</name>
+        <value>12.92</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 135 NOD 16</name>
+        <value>13.49</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 17 NOD 16</name>
+        <value>14.01</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 7 NOD 18</name>
+        <value>12.55</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 9 NOD 18</name>
+        <value>13.76</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 11 NOD 18</name>
+        <value>14.53</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 135 NOD 18</name>
+        <value>15.17</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Pipe Inside Diameter Inches SDR 17 NOD 18</name>
+        <value>15.76</value>
+        <units></units>
+        <description></description>
+      </item>        
+      <item>
+        <name>Pipe Fusion Cost NOD 8</name>
+        <value>1.5</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Pipe Fusion Cost NOD 10</name>
+        <value>1.75</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Pipe Fusion Cost NOD 12</name>
+        <value>1.75</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pipe Fusion Cost NOD 16</name>
+        <value>2.5</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pipe Fusion Cost NOD 18</name>
+        <value>2.5</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pipe Cost With Shipping NOD 8</name>
+        <value>9550</value>
+        <units></units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Pipe Cost With Shipping NOD 10</name>
+        <value>14550</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Pipe Cost With Shipping NOD 12</name>
+        <value>19800</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Pipe Cost With Shipping NOD 16</name>
+        <value>31350</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Pipe Cost With Shipping NOD 18</name>
+        <value>39100</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Recapitalization Cost Life Cycle Borehole</name>
+        <value>75</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Pipeline</name>
+        <value>75</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Control</name>
+        <value>10</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Pump</name>
+        <value>10</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle VFD</name>
+        <value>10</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Borehole</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Pipeline</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Control</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Pump</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement VFD</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+  </items>
+</module>

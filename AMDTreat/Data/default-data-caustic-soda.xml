@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module type="Caustic Soda">
+  <items>
+      <item>
+        <name>Typical Flow</name>
+        <value>35</value>
+        <units>gallons per minute</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Net Acidity</name>
+        <value>98</value>
+        <units>milligrams per liter</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Caustic Soda Solution Name 20</name>
+        <value>20</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Caustic Soda Solution Name 25</name>
+        <value>25</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Caustic Soda SolutionName 50</name>
+        <value>50</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Caustic Soda Solution Percentage 20</name>
+        <value>20</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Caustic Soda Solution Percentage 25</name>
+        <value>25</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Caustic Soda Solution Percentage 50</name>
+        <value>50</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Caustic Soda Solution Weight 20</name>
+        <value>2.035</value>
+        <units>pounds</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Caustic Soda Solution Weight 25</name>
+        <value>2.669</value>
+        <units>pounds</units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Caustic Soda Solution Weight 50</name>
+        <value>6.338</value>
+        <units>pounds</units>
+        <description></description>
+      </item>         
+      <item>
+        <name>Caustic Soda Purity</name>
+        <value>99</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Caustic Soda Mixing Efficiency</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Titration Quantity</name>
+        <value>0.001</value>
+        <units>gallons of caustic per gallon water treated</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Caustic Soda User Specified Quantity</name>
+        <value>0</value>
+        <units>gallons per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Chemical Metering Pump Power Requirement</name>
+        <value>40</value>
+        <units>watts</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Chemical Metering Pump Hours Per Day</name>
+        <value>24</value>
+        <units>hours per day</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Chemical Metering Pump Days Per Year</name>
+        <value>365</value>
+        <units>days per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Tank Volume</name>
+        <value>2000</value>
+        <units>gallons</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Valve Quantity</name>
+        <value>2</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Feeder Line Length</name>
+        <value>25</value>
+        <units>ft</units>
+        <description></description>
+      </item>
+      <item>
+        <name>System Install Cost Multiplier</name>
+        <value>40</value>
+        <units>percentage</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 1</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 2</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 3</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 4</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 5</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Other Capital Item Quantity 1</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 2</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 3</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 4</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 5</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 1</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 2</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 3</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 4</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 5</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 1</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 2</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 3</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 4</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 5</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Annual Cost Operation And Maintanence Multiplier</name>
+        <value>3.5</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Tank</name>
+        <value>10</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle PID pH Controller</name>
+        <value>10</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Chemical Metering Pump</name>
+        <value>5</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Tank</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement PID pH Controller</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Chemical Metering Pump</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Caustic Soda Unit Cost</name>
+        <value>0.95</value>
+        <units>dollar per gallon</units>
+        <description></description>
+      </item>
+      <item>
+        <name>PID pH Controller Cost</name>
+        <value>1500</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>pH Probe Cost</name>
+        <value>400</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Chemical Metering Pump Cost</name>
+        <value>2000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Chemical Metering Pump Electricity Unit Cost</name>
+        <value>0.2</value>
+        <units>dollar per kilowatt hour</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Tank Plastic Unit Cost</name>
+        <value>1.2</value>
+        <units>dollar per gallon</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Tank Steel Unit Cost</name>
+        <value>1.5</value>
+        <units>dollar per gallon</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Tank Cost User Specified</name>
+        <value>0</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Valve Unit Cost</name>
+        <value>25</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Feeder Line Unit Cost</name>
+        <value>0.5</value>
+        <units>dollar per foot</units>
+        <description></description>
+      </item>
+      <item>
+        <name>System Install User Specified Cost</name>
+        <value>500</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Chemical User Specified</name>
+        <value>0</value>
+        <units>dollar per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Operation And Maintanence User Specified</name>
+        <value>0</value>
+        <units>dollar per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Electric User Specified</name>
+        <value>0</value>
+        <units>dollar per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Unit Cost 1</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+            <item>
+        <name>Other Capital Item Unit Cost 2</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Unit Cost 3</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Unit Cost 4</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Unit Cost 5</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Unit Cost 1</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Unit Cost 2</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Unit Cost 3</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Unit Cost 4</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Unit Cost 5</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>      
+  </items>
+</module>

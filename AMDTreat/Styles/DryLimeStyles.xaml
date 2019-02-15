@@ -1,0 +1,1720 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                    xmlns:local="clr-namespace:AMDTreat.Styles">
+  
+    <!--#region NumericUpDown Styles -->
+    <Style x:Key="MyNumericUpDown" TargetType="Controls:NumericUpDown" >
+        <Setter Property="MinWidth" Value="120" />
+        <Setter Property="MaxWidth" Value="150" />
+        <Setter Property="MinHeight" Value="25" />
+        <Setter Property="MaxHeight" Value="25" />
+        <Setter Property="Margin" Value="4" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="StringFormat" Value="F2" />
+    </Style>
+
+    <!--#endregion-->
+
+    <!--#region Water Quality -->
+
+    <Style x:Key="MyNumericUpDownDesignFlow" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionStoichiometric}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelDesignFlowName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionStoichiometric}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelDesignFlowUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionStoichiometric}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownHotAcidity" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionStoichiometric}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="MyLabelHotAcidityName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionStoichiometric}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelHotAcidityUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionStoichiometric}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--#endregion-->
+
+    <!--#region Lime Information -->
+
+    <Style x:Key="radioButtonHydratedLime" TargetType="RadioButton">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsChecked" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsChecked" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="radioButtonDryLime" TargetType="RadioButton">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsChecked" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsChecked" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownHydratedLimePurity" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <Style x:Key="MyLabelHydratedLimePurityName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelHydratedLimePurityUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownHydratedLimeDissolutionEfficiency" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelHydratedLimeDissolutionEfficiencyName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelHydratedLimeDissolutionEfficiencyUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownHydratedLimeUnitCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelHydratedLimeUnitCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelHydratedLimeUnitCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownDryLimePurity" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelDryLimePurityName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelDryLimePurityUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownDryLimeDissolutionEfficiency" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelDryLimeDissolutionEfficiencyName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelDryLimeDissolutionEfficiencyUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownDryLimeUnitCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelDryLimeUnitCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelDryLimeUnitCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonHydratedLime}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonDryLime}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion-->
+    
+    <!--#region Chemical Consumption -->
+    
+    <Style x:Key="radioButtonChemicalConsumptionStoichiometric" TargetType="RadioButton">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionStoichiometric}" Value="True">
+                <Setter Property="IsChecked" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsChecked" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsChecked" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="radioButtonChemicalConsumptionTitration" TargetType="RadioButton">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionStoichiometric}" Value="True">
+                <Setter Property="IsChecked" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsChecked" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsChecked" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="radioButtonChemicalConsumptionUserSpecifiedQuantity" TargetType="RadioButton">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionStoichiometric}" Value="True">
+                <Setter Property="IsChecked" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsChecked" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsChecked" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownTitration" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionStoichiometric}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelTitrationName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionStoichiometric}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelTitrationUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionStoichiometric}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownUserSpecifiedQuantity" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionStoichiometric}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelUserSpecifiedQuantityName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionStoichiometric}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelUserSpecifiedQuantityUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionStoichiometric}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionTitration}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionUserSpecifiedQuantity}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <!--#endregion-->
+
+    <!--#region Equipment: Storage and Dispensing System  -->
+
+    <Style x:Key="MyLabelSiloSystemTypeName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="MyControlButtonSiloSystemType" TargetType="Controls:DropDownButton">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownSiloSystemQuantityEstimated" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloSystemQuantityEstimatedName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloSystemQuantityEstimatedUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownSiloSystemUnitCostEstimated" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloSystemUnitCostEstimatedName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloSystemUnitCostEstimatedUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownSiloSystemWeightUserSpecified" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloSystemWeightUserSpecifiedName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloSystemWeightUserSpecifiedUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="MyNumericUpDownSiloSystemQuantityUserSpecified" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloSystemQuantityUserSpecifiedName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloSystemQuantityUserSpecifiedUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownSiloSystemUnitCostUserSpecified" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloSystemUnitCostUserSpecifiedName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloSystemUnitCostUserSpecifiedUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSiloSystemUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="MyNumericUpDownDustCollectorBlowerTime" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxDustCollectorBlower}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxDustCollectorBlower}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelDustCollectorBlowerTimeName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxDustCollectorBlower}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxDustCollectorBlower}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelDustCollectorBlowerTimeUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxDustCollectorBlower}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxDustCollectorBlower}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownDustCollectorBlowerPowerRequirement" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxDustCollectorBlower}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxDustCollectorBlower}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelDustCollectorBlowerPowerRequirementName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxDustCollectorBlower}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxDustCollectorBlower}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelDustCollectorBlowerPowerRequirementUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxDustCollectorBlower}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxDustCollectorBlower}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownBinActivatorPowerRequirement" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxBinActivator}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxBinActivator}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelBinActivatorPowerRequirementName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxBinActivator}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxBinActivator}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelBinActivatorPowerRequirementUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxBinActivator}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxBinActivator}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownBinActivatorCycleFrequency" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxBinActivator}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxBinActivator}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelBinActivatorCycleFrequencyName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxBinActivator}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxBinActivator}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelBinActivatorCycleFrequencyUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxBinActivator}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxBinActivator}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownBinActivatorDaysPerYear" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxBinActivator}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxBinActivator}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelBinActivatorDaysPerYearName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxBinActivator}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxBinActivator}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelBinActivatorDaysPerYearUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxBinActivator}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxBinActivator}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <Style x:Key="MyNumericUpDownScrewFeederPowerRequirement" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxScrewFeeder}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxScrewFeeder}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelScrewFeederPowerRequirementName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxScrewFeeder}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxScrewFeeder}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelScrewFeederPowerRequirementUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxScrewFeeder}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxScrewFeeder}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownScrewFeederHoursPerDay" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxScrewFeeder}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxScrewFeeder}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelScrewFeederHoursPerDayName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxScrewFeeder}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxScrewFeeder}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelScrewFeederHoursPerDayUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxScrewFeeder}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxScrewFeeder}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownScrewFeederDaysPerYear" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxScrewFeeder}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxScrewFeeder}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelScrewFeederDaysPerYearName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxScrewFeeder}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxScrewFeeder}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelScrewFeederDaysPerYearUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxScrewFeeder}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxScrewFeeder}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownSlurryMixerPowerRequirement" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSlurryMixerPowerRequirementName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSlurryMixerPowerRequirementUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownSlurryPumpPowerRequirement" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSlurryPumpPowerRequirementName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSlurryPumpPowerRequirementUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownSlurryMixerAndPumpHoursPerDay" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSlurryMixerAndPumpHoursPerDayName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSlurryMixerAndPumpHoursPerDayUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownSlurryMixerAndPumpDaysPerYear" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSlurryMixerAndPumpDaysPerYearName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSlurryMixerAndPumpDaysPerYearUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSlurryMixerAndPump}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownSiloExhaustFanPowerRequirement" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloExhaustFan}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloExhaustFan}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloExhaustFanPowerRequirementName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloExhaustFan}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloExhaustFan}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloExhaustFanPowerRequirementUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloExhaustFan}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloExhaustFan}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownSiloExhaustFanHoursPerDay" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloExhaustFan}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloExhaustFan}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloExhaustFanHoursPerDayName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloExhaustFan}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloExhaustFan}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloExhaustFanHoursPerDayUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloExhaustFan}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloExhaustFan}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownSiloExhaustFanDaysPerYear" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloExhaustFan}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloExhaustFan}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloExhaustFanDaysPerYearName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloExhaustFan}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloExhaustFan}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloExhaustFanDaysPerYearUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloExhaustFan}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloExhaustFan}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownSiloSpaceHeaterPowerRequirement" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSpaceHeater}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSpaceHeater}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloSpaceHeaterPowerRequirementName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSpaceHeater}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSpaceHeater}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloSpaceHeaterPowerRequirementUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSpaceHeater}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSpaceHeater}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownSiloSpaceHeaterHoursPerDay" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSpaceHeater}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSpaceHeater}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloSpaceHeaterHoursPerDayName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSpaceHeater}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSpaceHeater}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloSpaceHeaterHoursPerDayUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSpaceHeater}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSpaceHeater}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownSiloSpaceHeaterDaysPerYear" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSpaceHeater}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSpaceHeater}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloSpaceHeaterDaysPerYearName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSpaceHeater}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSpaceHeater}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSiloSpaceHeaterDaysPerYearUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSpaceHeater}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSpaceHeater}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Foundation -->
+
+    <Style x:Key="MyLabelFoundationSiteSoilsLoadBearingName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyControlButtonFoundationSiteSoilsLoadBearing" TargetType="Controls:DropDownButton">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownFoundationVolumeUserSpecified" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelFoundationVolumeUserSpecifiedUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}" >
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion-->
+    
+    <!--#region Sizing Summary -->
+    <!--<Style x:Key="MyTextBlockLimeSiloRefillFrequency" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyValue}" >
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSystem}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSystem}" Value="False">
+                <Setter Property="Opacity" Value="0" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>-->
+
+    <Style x:Key="MyTextBlockLimeSiloRefillFrequency" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyValue}" >
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSiloSystem}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionStoichiometric}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Opacity" Value="1" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSiloSystem}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonChemicalConsumptionStoichiometric}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Opacity" Value="0" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockFoundationArea" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyValue}" >
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSystem}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSystem}" Value="False">
+                <Setter Property="Opacity" Value="0" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockFoundationDepth" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyValue}" >
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSystem}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSystem}" Value="False">
+                <Setter Property="Opacity" Value="0" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockFoundationVolume" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyValue}" >
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSystem}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxSiloSystem}" Value="False">
+                <Setter Property="Opacity" Value="0" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="MyTextBlockFoundationLoadBearingQuantity" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyValue}" >
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationEstimated}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationUserSpecified}" Value="True">
+                <Setter Property="Opacity" Value="0" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockFoundationLoadBearingRating" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyValue}" >
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationEstimated}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationUserSpecified}" Value="True">
+                <Setter Property="Opacity" Value="0" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockFoundationLoadBearingMultiplier" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyValue}" >
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationEstimated}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationUserSpecified}" Value="True">
+                <Setter Property="Opacity" Value="0" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <!-- #endregion -->
+    
+
+    
+    <!--#region Capital Costs -->
+
+    <Style x:Key="MyNumericUpDownSystemInstallCostMultiplier" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSystemInstallCostMultiplier}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSystemInstallCostUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSystemInstallCostMultiplierUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSystemInstallCostMultiplier}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSystemInstallCostUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownSystemInstallCostUserSpecified" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSystemInstallCostMultiplier}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSystemInstallCostUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSystemInstallUserSpecifiedCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSystemInstallCostMultiplier}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonSystemInstallCostUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--#endregion-->
+
+    <!--#region Annual Costs -->
+    <Style x:Key="MyLabelAnnualCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="60" />
+        <Setter Property="Margin" Value="1" />
+    </Style>
+
+    <Style x:Key="MyLabelAnnualCostChemicalEstimate" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyValue}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalEstimate}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalUserSpecified}" Value="True">
+                <Setter Property="Opacity" Value="0.5" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownAnnualCostChemicalUserSpecified" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostChemicalUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownAnnualCostOperationAndMaintanenceMultiplier" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostOperationAndMaintanenceMultiplier}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostOperationAndMaintanenceUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownAnnualCostOperationAndMaintanenceUserSpecified" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostOperationAndMaintanenceMultiplier}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostOperationAndMaintanenceUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelAnnualCostElectricEstimate" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyValue}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostElectricEstimate}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostElectricUserSpecified}" Value="True">
+                <Setter Property="Opacity" Value="0.5" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownAnnualCostElectricUserSpecified" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostElectricEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostElectricUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--#endregion-->
+
+
+    <!--#region Expander Styles -->
+    <Style x:Key="MyExpander" TargetType="Expander">
+        <Setter Property="Padding" Value="3" />
+        <Setter Property="Margin" Value="3" />
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+
+    <Style x:Key="MyExpanderStorageAndDispensingSystem" TargetType="Expander" BasedOn="{StaticResource MyExpander}">
+        <Setter Property="BorderBrush" Value="LightGray" />
+        <Setter Property="Header" Value="Storage and Dispensing System" />
+    </Style>
+
+    <Style x:Key="MyExpanderFoundation" TargetType="Expander" BasedOn="{StaticResource MyExpander}">
+        <Setter Property="BorderBrush" Value="Gray" />
+        <Setter Property="Header" Value="Foundation" />
+    </Style>
+
+    <!--#endregion-->
+
+</ResourceDictionary>

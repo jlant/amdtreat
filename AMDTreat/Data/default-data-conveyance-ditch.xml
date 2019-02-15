@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module type="Conveyance Ditch">
+  <items>
+      <item>
+        <name>Ditch Length Aggregate</name>
+        <value>100</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Ditch Length Grass</name>
+        <value>100</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Ditch Bottom Width</name>
+        <value>3</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Ditch Bottom Slope</name>
+        <value>0.02</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Ditch Depth</name>
+        <value>3</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Aggregate Depth</name>
+        <value>1.5</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Aggregate Porosity</name>
+        <value>43</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Ditch Side Slope</name>
+        <value>2</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Non Woven Geotextile Length</name>
+        <value>100</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Non Woven Geotextile Unit Cost</name>
+        <value>2.5</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Aggregate Unit Cost</name>
+        <value>25</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Aggregate Placement Unit Cost</name>
+        <value>10</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Grass Lining Unit Cost</name>
+        <value>2.5</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Excavation Unit Cost</name>
+        <value>6</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Revegetation Unit Cost</name>
+        <value>2000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silt Fence Length</name>
+        <value>20</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Silt Fence Unit Cost</name>
+        <value>1.5</value>
+        <units></units>
+        <description></description>
+      </item>   
+      <item>
+        <name>Annual Cost Multiplier</name>
+        <value>3</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+          <item>
+        <name>Recapitalization Cost Life Cycle Aggregate</name>
+        <value>30</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Non Woven Geotextile</name>
+        <value>25</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Grass Lining</name>
+        <value>10</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Aggregate</name>
+        <value>50</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Non Woven Geotextile</name>
+        <value>50</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Grass Lining</name>
+        <value>25</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+  </items>
+</module>

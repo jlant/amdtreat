@@ -1,0 +1,1656 @@
+﻿<Controls:MetroWindow 
+    x:Class="AMDTreat.Views.DryLimeWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:local="clr-namespace:AMDTreat.Views"
+    xmlns:models="clr-namespace:AMDTreat.Models"
+    xmlns:converters="clr-namespace:AMDTreat.Converters"
+    xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+    Dialog:DialogParticipation.Register="{Binding}"
+    mc:Ignorable="d"
+    WindowStartupLocation="CenterScreen"
+    ResizeMode="CanResizeWithGrip"
+    Title="" 
+    TextOptions.TextFormattingMode="Display"
+    Width="{Binding Source={x:Static SystemParameters.PrimaryScreenWidth}, Converter={converters:ScreenResolutionRatioConverter}, ConverterParameter='0.9' }"
+    Height="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}, Converter={converters:ScreenResolutionRatioConverter}, ConverterParameter='0.9' }"
+    MinWidth="1024"
+    MinHeight="768"
+    BorderBrush="{DynamicResource AccentColorBrush}"
+    BorderThickness="1">
+
+    <Controls:MetroWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/AMDTreat;component/Styles/TreatmentModuleGeneralStyles.xaml" />
+                <ResourceDictionary Source="/AMDTreat;component/Styles/DryLimeStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <converters:BoolToBrushBackground x:Key="BoolToBrushBackground" />
+            <converters:BoolToBrushBorder x:Key="BoolToBrushBorder" />
+            <converters:BoolToBrushSeparater x:Key="BoolToBrushSeparater" />
+            <converters:BoolToBrushIcon x:Key="BoolToBrushIcon" />
+            <converters:BoolToBrushText x:Key="BoolToBrushText" />
+            <converters:BoolToExpanded x:Key="BoolToExpanded" />
+            <converters:BoolToVisibility x:Key="BoolToVisibility" />
+            <converters:BoolToBrushDataGridForeground x:Key="BoolToBrushDataGridForeground" />
+
+        </ResourceDictionary>
+    </Controls:MetroWindow.Resources>
+
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <!--<Button ToolTip="Open XML" Content="{iconPacks:Modern PageXml, Width=22, Height=22}" Command="{Binding OpenCommand}" />
+            <Button ToolTip="Save XML" Content="{iconPacks:Modern Save, Width=22, Height=22}" Command="{Binding SaveCommand}" />
+            <Button ToolTip="Create Report" Content="{iconPacks:Modern PageFilePdf, Width=22, Height=22}" Command="{Binding ShowMessageDialogCommandTbd}" />-->
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+
+    <Controls:MetroWindow.LeftWindowCommands>
+        <Controls:WindowCommands>
+            <ToggleButton ToolTip="Module Information" IsChecked="{Binding ElementName=flyoutModuleInformation, Path=IsOpen}">
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconModern Kind="BoxLayered" Width="22" Height="22" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="{Binding Path=ModuleType}" Margin="5,0,0,0" />
+                    <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="{Binding Path=ModuleName, StringFormat={} {0:S}}" Margin="5,0,0,0" FontWeight="Bold" FontStyle="Italic" />
+                </StackPanel>
+            </ToggleButton>
+            <ToggleButton ToolTip="Water Quality Information" IsChecked="{Binding ElementName=flyoutWaterQuality, Path=IsOpen}">
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconModern Kind="WaterDropletAlert" Width="24" Height="22" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Water Quality" Margin="5,0,0,0" />
+                </StackPanel>
+            </ToggleButton>
+
+            <ToggleButton ToolTip="Error Information" IsChecked="{Binding ElementName=flyoutErrorInformation, Path=IsOpen}" >
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconModern Kind="WarningCircle" Width="24" Height="22" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{Binding IsError, Converter={StaticResource BoolToBrushIcon}}" />
+                    <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Errors" Margin="5,0,0,0" />
+                </StackPanel>
+            </ToggleButton>
+
+            <Button ToolTip="Sync with Main User Interface" Command="{Binding SyncCommand}">
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconMaterial Kind="Sync" Width="24" Height="22" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Sync" Margin="5,0,0,0" />
+                </StackPanel>
+            </Button>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.LeftWindowCommands>
+
+    <Controls:MetroWindow.Flyouts>
+        <Controls:FlyoutsControl>
+            <Controls:Flyout x:Name="flyoutModuleInformation" Header="Module Information" Position="Left" Width="350" IsOpen="False" Theme="Dark">
+                <StackPanel Orientation="Vertical">
+
+                    <Button Style="{StaticResource MyButtonModuleInformation}" ToolTip="Open Module" Command="{Binding OpenCommand}">
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconModern Kind="PageXml" Style="{StaticResource MyIconPackModernAmdtreatInformationButton}"/>
+                            <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Open" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button Style="{StaticResource MyButtonModuleInformation}" ToolTip="Save Module" Command="{Binding SaveCommand}">
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconModern Kind="Save" Style="{StaticResource MyIconPackModernAmdtreatInformationButton}" />
+                            <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Save" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button Style="{StaticResource MyButtonModuleInformation}" ToolTip="Create Module Report" Command="{Binding ShowMessageDialogCommandTbd}">
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconModern Kind="PagePdf" Style="{StaticResource MyIconPackModernAmdtreatInformationButton}" />
+                            <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Report" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button Style="{StaticResource MyButtonModuleInformation}" ToolTip="About Module" Command="{Binding ShowMessageDialogCommandAbout}">
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconModern Kind="InformationCircle" Style="{StaticResource MyIconPackModernAmdtreatInformationButton}" />
+                            <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="About" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button Style="{StaticResource MyButtonModuleInformation}" ToolTip="Open Help" Command="{Binding HelpCommand}">
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconModern Kind="Question" Style="{StaticResource MyIconPackModernAmdtreatInformationButton}" />
+                            <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Help" />
+                        </StackPanel>
+                    </Button>
+
+                    <Separator Style="{StaticResource MySeparatorFlyout}" />
+
+                    <TextBlock Style="{StaticResource MyTextBlockHeaderFlyout}" Text="Module Name" />
+                    <TextBox Margin="10,2,10,10" TextWrapping="Wrap" Text="{Binding Path=ModuleName, Mode=TwoWay}" KeyUp="TextBox_KeyEnterUpdate" FontSize="14" />
+                    <TextBlock Style="{StaticResource MyTextBlockHeaderFlyout}"  Text="Notes" />
+                    <RichTextBox Margin="10,2,10,10" Controls:TextBoxHelper.Watermark="Enter your notes" Height="200" FontSize="14" 
+                                 SpellCheck.IsEnabled="True" VerticalScrollBarVisibility="Auto" />
+                </StackPanel>
+            </Controls:Flyout>
+
+            <Controls:Flyout x:Name="flyoutWaterQuality" Header="Input Water Quality" Position="Left" Width="350" IsOpen="False" Theme="Dark">
+                <StackPanel Orientation="Vertical">
+                    <Grid Margin="10,0,0,0" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Button Grid.Row="0" Grid.Column="1" Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="About Water Quality" 
+                                Content="{iconPacks:Modern InformationCircle, Width=20, Height=20}"  
+                                Command="{Binding ShowMessageDialogCommandWaterQuality}" 
+                                Opacity="0.6" BorderThickness="1" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10,5" />
+
+                        <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource MyLabelDesignFlowName}" Content="Typical Flow" />
+                        <StackPanel Grid.Row="1" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownDesignFlow}" Minimum="1" Maximum="5000" Interval="1"
+                                                    Value="{Binding DesignFlow, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                    ToolTip="min = 1, max = 5000"/>
+                            <Label Style="{StaticResource MyLabelDesignFlowUnits}" Content="gpm" />
+                        </StackPanel>
+
+                        <Label Grid.Row="2" Grid.Column="0" Style="{StaticResource MyLabelHotAcidityName}" Content="Net Acidity" />
+                        <StackPanel Grid.Row="2" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownHotAcidity}" Minimum="1" Maximum="10000" Interval="1" 
+                                                    Value="{Binding HotAcidity, Mode=TwoWay}"
+                                                    ToolTip="min = 1, max = 10,000"/>
+                            <Label Style="{StaticResource MyLabelHotAcidityUnits}" Content="mg/L" />
+                        </StackPanel>
+
+                    </Grid>
+                </StackPanel>
+            </Controls:Flyout>
+
+            <Controls:Flyout x:Name="flyoutErrorInformation" Header="Error Information" Position="Left" Width="350" IsOpen="{Binding IsOpenFlyoutError}" Theme="Dark">
+                <StackPanel Orientation="Vertical">
+                    <Grid Margin="10,0,0,0" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <!--<TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Maximum Pond Depth" />
+                        <StackPanel Grid.Row="0" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyValue}" Text="{Binding CalcMaxPondDepth, Mode=Twoway, StringFormat=F2}" />
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="ft" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Current Pond Depth" />
+                        <StackPanel Grid.Row="1" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyValue}" Text="{Binding CalcPondDepth, Mode=Twoway, StringFormat=F2}" />
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="ft" />
+                        </StackPanel>
+
+                        <Separator Grid.Row="2" Style="{StaticResource MySeparatorFlyout}" />
+                        <TextBlock Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource MyTextBlockHeader}" Text="{Binding ErrorMessageShort}" TextWrapping="Wrap"/>
+                        <TextBlock Name="ErrorMessageTextBlock" Grid.Row="4" Grid.ColumnSpan="2" Style="{StaticResource MyTextBlockPropertyName}" Text="{Binding Path=ErrorMessage, Mode=TwoWay}" TextWrapping="Wrap"/>-->
+
+                    </Grid>
+                </StackPanel>
+            </Controls:Flyout>
+
+        </Controls:FlyoutsControl>
+    </Controls:MetroWindow.Flyouts>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Grid.Column="0" MinHeight="700" CanContentScroll="False">
+            <StackPanel Grid.Column="0" Margin="10">
+
+                <!-- System Properties -->
+                <Grid Style="{StaticResource MyGridHeader}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition ></ColumnDefinition>
+                        <ColumnDefinition Width=".1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconModern Kind="Information" Style="{StaticResource MyIconPackModernHeaders}" />
+                        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource MyTextBlockHeader}" Text="Dry Lime Products" />
+                    </StackPanel>
+                    <Button Grid.Row="0" Grid.Column="1" Style="{StaticResource MyButtonSectionInformation}" ToolTip="About Dry Lime Products" 
+                                Content="{iconPacks:Modern InformationCircle, Width=12, Height=12}"  
+                                Command="{Binding ShowMessageDialogCommandChemicalSolution}" />
+                    <Separator Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorHeader}" Background="{Binding IsError, Converter={StaticResource BoolToBrushSeparater}}" />
+                </Grid>
+
+                <ScrollViewer Style="{StaticResource MyScrollViewerForEachSection}" Height="200" HorizontalScrollBarVisibility="Auto">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>                            
+                        </Grid.RowDefinitions>
+
+                        <Grid.Resources>
+                            <converters:RadioButtonCheckedConverter x:Key="RadioButtonCheckedConverter" />
+                        </Grid.Resources>
+                        
+                        <RadioButton x:Name="radioButtonHydratedLime" Grid.Row="0" Grid.Column="0" Margin="5" FontSize="14" GroupName="LimeProducts" Content="Hydrated Lime" 
+                                 IsChecked="{Binding LimeOptionsProperty, Mode=TwoWay, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter=OptionHydratedLime}"
+                                 Command="{Binding SetSiloSystemCostCommand}" CommandParameter="{Binding ElementName=dropDownSiloSystemEstimated, Path=Content}"/>
+
+                        <StackPanel Grid.Row="0" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Label Style="{StaticResource MyLabelHydratedLimePurityName}" Content="Purity" />
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownHydratedLimePurity}" Minimum="80" Maximum="100" Interval="1"
+                                            Value="{Binding HydratedLimePurity, Mode=TwoWay}"
+                                            ToolTip="min = 80, max = 100"
+                                            StringFormat="F2"/>
+                            <Label Style="{StaticResource MyLabelHydratedLimePurityUnits}" Content="%" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="1" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Label Style="{StaticResource MyLabelHydratedLimeDissolutionEfficiencyName}" Content="Dissolution Efficiency" />
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownHydratedLimeDissolutionEfficiency}" Minimum="1" Maximum="100" Interval="1"
+                                            Value="{Binding HydratedLimeDissolutionEfficiency, Mode=TwoWay}"
+                                            ToolTip="min = 1, max = 100"
+                                            StringFormat="F2"/>
+                            <Label Style="{StaticResource MyLabelHydratedLimeDissolutionEfficiencyUnits}" Content="%" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="2" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Label Style="{StaticResource MyLabelHydratedLimeUnitCostName}" Content="Unit Cost Delivered" />
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownHydratedLimeUnitCost}" Minimum="0" Maximum="1000" Interval="1"
+                                            Value="{Binding HydratedLimeUnitCost, Mode=TwoWay}"
+                                            ToolTip="min = 0, max = 1000"
+                                            StringFormat="C2"/>
+                            <Label Style="{StaticResource MyLabelHydratedLimeUnitCostUnits}" Content="$/ton" />
+                        </StackPanel>
+
+                        <RadioButton x:Name="radioButtonDryLime" Grid.Row="3" Grid.Column="0" Margin="5" FontSize="14" GroupName="LimeProducts" Content="Dry Lime" 
+                                 IsChecked="{Binding LimeOptionsProperty, Mode=TwoWay, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter=OptionDryLime}" 
+                                 Command="{Binding SetSiloSystemCostCommand}" CommandParameter="{Binding ElementName=dropDownSiloSystemEstimated, Path=Content}"/>
+
+                        <StackPanel Grid.Row="3" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Label Style="{StaticResource MyLabelDryLimePurityName}" Content="Purity" />
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownDryLimePurity}" Minimum="80" Maximum="100" Interval="1"
+                                            Value="{Binding DryLimePurity, Mode=TwoWay}"
+                                            ToolTip="min = 80, max = 100"
+                                            StringFormat="F2"/>
+                            <Label Style="{StaticResource MyLabelDryLimePurityUnits}" Content="%" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="4" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Label Style="{StaticResource MyLabelDryLimeDissolutionEfficiencyName}" Content="Dissolution Efficiency" />
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownDryLimeDissolutionEfficiency}" Minimum="1" Maximum="100" Interval="1"
+                                            Value="{Binding DryLimeDissolutionEfficiency, Mode=TwoWay}"
+                                            ToolTip="min = 1, max = 100"
+                                            StringFormat="F2"/>
+                            <Label Style="{StaticResource MyLabelDryLimeDissolutionEfficiencyUnits}" Content="%" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="5" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Label Style="{StaticResource MyLabelDryLimeUnitCostName}" Content="Unit Cost Delivered" />
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownDryLimeUnitCost}" Minimum="0" Maximum="1000" Interval="1"
+                                            Value="{Binding DryLimeUnitCost, Mode=TwoWay}"
+                                            ToolTip="min = 0, max = 1000"
+                                            StringFormat="C2"/>
+                            <Label Style="{StaticResource MyLabelDryLimeUnitCostUnits}" Content="$/ton" />
+                        </StackPanel>
+
+                    </Grid>
+                </ScrollViewer>
+
+                <!-- Sizing Methods -->
+                <Grid Style="{StaticResource MyGridHeader}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition ></ColumnDefinition>
+                        <ColumnDefinition Width=".1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconModern Kind="Potion" Style="{StaticResource MyIconPackModernHeaders}" />
+                        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource MyTextBlockHeader}" Text="Chemical Consumption" />
+                    </StackPanel>
+                    <Button Grid.Row="0" Grid.Column="2" Style="{StaticResource MyButtonSectionInformation}" ToolTip="About Chemical Consumption" 
+                                Content="{iconPacks:Modern InformationCircle, Width=12, Height=12}"  
+                                Command="{Binding ShowMessageDialogCommandChemicalConsumption}"/>
+                    <Separator Grid.Row="0" Grid.ColumnSpan="3" Style="{StaticResource MySeparatorHeader}" Background="{Binding IsError, Converter={StaticResource BoolToBrushSeparater}}" />
+                </Grid>
+
+                <!-- Note: added a Margin to the Grid to match the ScrollViewer style for each section -->
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" >
+                    <Grid Margin="0,0,0,10"  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition ></ColumnDefinition>
+                            <ColumnDefinition ></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Grid.Resources>
+                            <converters:RadioButtonCheckedConverter x:Key="RadioButtonCheckedConverter" />
+                        </Grid.Resources>
+                        
+                        <RadioButton x:Name="radioButtonChemicalConsumptionStoichiometric" Grid.Row="1" Grid.Column="0" Margin="5" FontSize="14" GroupName="ChemicalConsumption" Content="Stoichiometric" 
+                                 IsChecked="{Binding ChemicalConsumptionOptionsProperty, Mode=TwoWay, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter=OptionStoichiometric}" />
+
+                        <RadioButton x:Name="radioButtonChemicalConsumptionTitration" Grid.Row="2" Grid.Column="0" Margin="5" FontSize="14" GroupName="ChemicalConsumption" Content="Titration" 
+                                 IsChecked="{Binding ChemicalConsumptionOptionsProperty, Mode=TwoWay, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter=OptionTitration}" />
+
+                        <RadioButton x:Name="radioButtonChemicalConsumptionUserSpecifiedQuantity" Grid.Row="3" Grid.Column="0" Margin="5" FontSize="14" GroupName="ChemicalConsumption" Content="User-Specified Quantity" 
+                                 IsChecked="{Binding ChemicalConsumptionOptionsProperty, Mode=TwoWay, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter=OptionUserSpecifiedQuantity}" />
+
+                        <StackPanel Grid.Row="2" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Label Style="{StaticResource MyLabelTitrationName}" Content="Titration Quantity" />
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownTitration}" Minimum="0.000001" Maximum="0.1" Interval="0.001"
+                                                Value="{Binding TitrationQuantity, Mode=TwoWay}"
+                                                ToolTip="min = 0.000001, max = 0.01"
+                                                StringFormat="N6"/>
+                            <Label Style="{StaticResource MyLabelTitrationUnits}" Content="lbs/gal" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="3" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Label Style="{StaticResource MyLabelUserSpecifiedQuantityName}" Content="Quantity" />
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownUserSpecifiedQuantity}" Minimum="0" Maximum="20000" Interval="1000"
+                                                Value="{Binding LimeUserSpecifiedQuantity, Mode=TwoWay, StringFormat=F2}"
+                                                ToolTip="min = 0, max = 20,000"/>
+                            <Label Style="{StaticResource MyLabelUserSpecifiedQuantityUnits}" Content="tons/yr" />
+                        </StackPanel>
+
+                    </Grid>
+                </ScrollViewer>
+
+                <!-- Equipment -->
+                <Grid Style="{StaticResource MyGridHeader}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition ></ColumnDefinition>
+                        <ColumnDefinition Width=".1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconMaterial Kind="WaterPump" Style="{StaticResource MyIconPackMaterialHeaders}"/>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource MyTextBlockHeader}" Text="Equipment" />
+                    </StackPanel>
+                    <Button Grid.Row="0" Grid.Column="1" Style="{StaticResource MyButtonSectionInformation}" ToolTip="Equipment" 
+                                Content="{iconPacks:Modern InformationCircle, Width=12, Height=12}"  
+                                Command="{Binding ShowMessageDialogCommandEquipment}"/>
+                    <Separator Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorHeader}" Background="{Binding IsError, Converter={StaticResource BoolToBrushSeparater}}" />
+                </Grid>
+
+                <!-- Note: added a Margin to the StackPanel to match the ScrollViewer style for each section -->
+                <StackPanel Margin="0,0,0,10">
+
+                    <Expander Style="{StaticResource MyExpanderStorageAndDispensingSystem}">
+                        <ScrollViewer CanContentScroll="True" HorizontalScrollBarVisibility="Auto" Height="500">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <Grid.Resources>
+                                    <converters:RadioButtonCheckedConverter x:Key="RadioButtonCheckedConverter" />
+                                </Grid.Resources>
+
+                                <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource MyLabelPropertyName}" Content="Electric Rate" />
+                                <StackPanel Grid.Row="0" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="1" Interval="0.1" StringFormat="C2" 
+                                                            Value="{Binding ElectricRateCost, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 1"/>
+                                    <Label Style="{StaticResource MyLabelPropertyUnits}" Content="$/kWh" />
+                                </StackPanel>
+
+                                <CheckBox x:Name="checkBoxSiloSystem" Grid.Row="1" Grid.Column="0" Margin="5" FontSize="14" Content="Silo System"
+                                          IsChecked="{Binding IsSiloSystem, Mode=TwoWay}"/>
+                                <Separator Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                                <RadioButton x:Name="radioButtonSiloSystemEstimated" Grid.Row="2" Grid.Column="0" Margin="50,2,2,2" FontSize="14" GroupName="SiloSystem" Content="Estimated" 
+                                 IsChecked="{Binding SiloSystemOptionsProperty, Mode=TwoWay, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter=OptionEstimated}" />
+
+                                <Label Grid.Row="3" Grid.Column="0" Style="{StaticResource MyLabelSiloSystemTypeName}" Content="Weight" Margin="100,2,2,2"  />
+                                <StackPanel Grid.Row="3" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:DropDownButton 
+                                        x:Name="dropDownSiloSystemEstimated"
+                                        VerticalContentAlignment="Center"
+                                        Width="80"
+                                        Margin="4"
+                                        Content="{Binding SiloSystemNameEstimated}"
+                                        ItemsSource="{Binding SiloSystems}"
+                                        Style="{StaticResource MyControlButtonSiloSystemType}">
+                                        <Controls:DropDownButton.Resources>
+                                            <models:BindingProxy x:Key="Proxy" Data="{Binding}" />
+                                        </Controls:DropDownButton.Resources>
+                                        <Controls:DropDownButton.ItemContainerStyle>
+                                            <Style TargetType="MenuItem" BasedOn="{StaticResource {x:Type MenuItem}}">
+                                                <Setter Property="Header" Value="{Binding Name}"/>
+                                                <Setter Property="Command" Value="{Binding Source={StaticResource Proxy}, Path=Data.SetSiloSystemCommand}"/>
+                                                <Setter Property="CommandParameter" Value="{Binding }"/>
+                                            </Style>
+                                        </Controls:DropDownButton.ItemContainerStyle>
+                                    </Controls:DropDownButton>
+                                    <Label Style="{StaticResource MyLabelPropertyUnits}" Content="" />
+                                </StackPanel>
+
+                                <Label Grid.Row="4" Grid.Column="0" Style="{StaticResource MyLabelSiloSystemQuantityEstimatedName}" Content="Quantity" Margin="100,2,2,2"  />
+                                <StackPanel Grid.Row="4" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownSiloSystemQuantityEstimated}" Minimum="0" Maximum="10" Interval="1"
+                                                            Value="{Binding SiloSystemQuantityEstimated, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 10"/>
+                                    <Label Style="{StaticResource MyLabelSiloSystemQuantityEstimatedUnits}" Content="" />
+                                </StackPanel>
+
+                                <RadioButton x:Name="radioButtonSiloSystemUserSpecified" Grid.Row="5" Grid.Column="0" Margin="50,2,2,2" FontSize="14" GroupName="SiloSystem" Content="User-Specified" 
+                                 IsChecked="{Binding SiloSystemOptionsProperty, Mode=TwoWay, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter=OptionUserSpecified}" />
+
+                                <Label Grid.Row="6" Grid.Column="0" Style="{StaticResource MyLabelSiloSystemWeightUserSpecifiedName}" Content="Weight" Margin="100,2,2,2"  />
+                                <StackPanel Grid.Row="6" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownSiloSystemWeightUserSpecified}" Minimum="0" Maximum="10" Interval="1"
+                                                            Value="{Binding SiloSystemWeightUserSpecified, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 10"/>
+                                    <Label Style="{StaticResource MyLabelSiloSystemWeightUserSpecifiedUnits}" Content="tons" />
+                                </StackPanel>
+                                
+                                <Label Grid.Row="7" Grid.Column="0" Style="{StaticResource MyLabelSiloSystemQuantityUserSpecifiedName}" Content="Quantity" Margin="100,2,2,2"  />
+                                <StackPanel Grid.Row="7" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownSiloSystemQuantityUserSpecified}" Minimum="0" Maximum="10" Interval="1"  
+                                                            Value="{Binding SiloSystemQuantityUserSpecified, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 10"/>
+                                    <Label Style="{StaticResource MyLabelSiloSystemQuantityUserSpecifiedUnits}" Content="" />
+                                </StackPanel>
+
+                                <Label Grid.Row="8" Grid.Column="0" Style="{StaticResource MyLabelSiloSystemUnitCostUserSpecifiedName}" Content="Unit Cost" Margin="100,2,2,2"  />
+                                <StackPanel Grid.Row="8" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownSiloSystemUnitCostUserSpecified}" Minimum="0" Maximum="5000000" Interval="50000" StringFormat="C2" 
+                                                            Value="{Binding SiloSystemUnitCostUserSpecified, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 5,000,000"/>
+                                    <Label Style="{StaticResource MyLabelSiloSystemUnitCostUserSpecifiedUnits}" Content="$/each" />
+                                </StackPanel>
+
+
+                                <CheckBox x:Name="checkBoxDustCollectorBlower" Grid.Row="9" Grid.Column="0" Margin="5" FontSize="14" Content="Dust Collector Blower"
+                                          IsChecked="{Binding IsDustCollectorBlower, Mode=TwoWay}"/>
+                                <Separator Grid.Row="9" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                                <Label Grid.Row="10" Grid.Column="0" Style="{StaticResource MyLabelDustCollectorBlowerTimeName}" Content="Time to Fill Silo" Margin="50,2,2,2"  />
+                                <StackPanel Grid.Row="10" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownDustCollectorBlowerTime}" Minimum="1" Maximum="180" Interval="1"
+                                                            Value="{Binding DustCollectorBlowerTime, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 180"/>
+                                    <Label Style="{StaticResource MyLabelDustCollectorBlowerTimeUnits}" Content="min" />
+                                </StackPanel>
+
+                                <Label Grid.Row="11" Grid.Column="0" Style="{StaticResource MyLabelDustCollectorBlowerPowerRequirementName}" Content="Power Requirement" Margin="50,2,2,2"  />
+                                <StackPanel Grid.Row="11" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownDustCollectorBlowerPowerRequirement}" Minimum="0.5" Maximum="10" Interval="1"
+                                                            Value="{Binding DustCollectorBlowerPowerRequirement, Mode=TwoWay}"
+                                                            ToolTip="min = 0.5, max = 10"/>
+                                    <Label Style="{StaticResource MyLabelDustCollectorBlowerPowerRequirementUnits}" Content="hp" />
+                                </StackPanel>
+
+
+                                <CheckBox x:Name="checkBoxBinActivator" Grid.Row="12" Grid.Column="0" Margin="5" FontSize="14" Content="Bin Activator/Vibrator"
+                                          IsChecked="{Binding IsBinActivator, Mode=TwoWay}"/>
+                                <Separator Grid.Row="12" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                                <Label Grid.Row="13" Grid.Column="0" Style="{StaticResource MyLabelBinActivatorPowerRequirementName}" Content="Power Requirement" Margin="50,2,2,2"  />
+                                <StackPanel Grid.Row="13" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownBinActivatorPowerRequirement}" Minimum="0.5" Maximum="10" Interval="1"
+                                                            Value="{Binding BinActivatorPowerRequirement, Mode=TwoWay}"
+                                                            ToolTip="min = 0.5, max = 10"/>
+                                    <Label Style="{StaticResource MyLabelBinActivatorPowerRequirementUnits}" Content="hp" />
+                                </StackPanel>
+                                                                                            
+                                <Label Grid.Row="14" Grid.Column="0" Style="{StaticResource MyLabelBinActivatorCycleFrequencyName}" Content="Cycle Frequency" Margin="50,2,2,2"  />
+                                <StackPanel Grid.Row="14" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownBinActivatorCycleFrequency}" Minimum="0" Maximum="60" Interval="1"
+                                                            Value="{Binding BinActivatorCycleFrequency, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 60"/>
+                                    <Label Style="{StaticResource MyLabelBinActivatorCycleFrequencyUnits}" Content="secs/5 min" />
+                                </StackPanel>
+
+                                <Label Grid.Row="15" Grid.Column="0" Style="{StaticResource MyLabelBinActivatorDaysPerYearName}" Content="Annual Operational Period" Margin="50,2,2,2"  />
+                                <StackPanel Grid.Row="15" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownBinActivatorDaysPerYear}" Minimum="0" Maximum="365" Interval="1"
+                                                            Value="{Binding BinActivatorDaysPerYear, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 365"/>
+                                    <Label Style="{StaticResource MyLabelBinActivatorDaysPerYearUnits}" Content="days/yr" />
+                                </StackPanel>
+
+                                <CheckBox x:Name="checkBoxScrewFeeder" Grid.Row="16" Grid.Column="0" Margin="5" FontSize="14" Content="Screw Feeder"
+                                          IsChecked="{Binding IsScrewFeeder, Mode=TwoWay}"/>
+                                <Separator Grid.Row="16" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                                <Label Grid.Row="17" Grid.Column="0" Style="{StaticResource MyLabelScrewFeederPowerRequirementName}" Content="Power Requirement" Margin="50,2,2,2"  />
+                                <StackPanel Grid.Row="17" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownScrewFeederPowerRequirement}" Minimum="0.5" Maximum="10" Interval="1"
+                                                            Value="{Binding ScrewFeederPowerRequirement, Mode=TwoWay}"
+                                                            ToolTip="min = 0.5, max = 10"/>
+                                    <Label Style="{StaticResource MyLabelScrewFeederPowerRequirementUnits}" Content="hp" />
+                                </StackPanel>
+
+                                <Label Grid.Row="18" Grid.Column="0" Style="{StaticResource MyLabelScrewFeederHoursPerDayName}" Content="Daily Operational Period" Margin="50,2,2,2"  />
+                                <StackPanel Grid.Row="18" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownScrewFeederHoursPerDay}" Minimum="0" Maximum="24" Interval="1"
+                                                            Value="{Binding ScrewFeederHoursPerDay, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 60"/>
+                                    <Label Style="{StaticResource MyLabelScrewFeederHoursPerDayUnits}" Content="hrs/day" />
+                                </StackPanel>
+
+                                <Label Grid.Row="19" Grid.Column="0" Style="{StaticResource MyLabelScrewFeederDaysPerYearName}" Content="Annual Operational Period" Margin="50,2,2,2"  />
+                                <StackPanel Grid.Row="19" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownScrewFeederDaysPerYear}" Minimum="0" Maximum="365" Interval="1"
+                                                            Value="{Binding ScrewFeederDaysPerYear, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 365"/>
+                                    <Label Style="{StaticResource MyLabelScrewFeederDaysPerYearUnits}" Content="days/yr" />
+                                </StackPanel>
+
+                                <CheckBox x:Name="checkBoxSlurryMixerAndPump" Grid.Row="20" Grid.Column="0" Margin="5" FontSize="14" Content="Slurry Mixer and Pump"
+                                          IsChecked="{Binding IsSlurryMixerAndPump, Mode=TwoWay}"/>
+                                <Separator Grid.Row="20" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                                <Label Grid.Row="21" Grid.Column="0" Style="{StaticResource MyLabelSlurryMixerPowerRequirementName}" Content="Mixer Power Requirement" Margin="50,2,2,2"  />
+                                <StackPanel Grid.Row="21" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownSlurryMixerPowerRequirement}" Minimum="0.25" Maximum="10" Interval="0.5"
+                                                            Value="{Binding SlurryMixerPowerRequirement, Mode=TwoWay}"
+                                                            ToolTip="min = 0.25, max = 10"/>
+                                    <Label Style="{StaticResource MyLabelSlurryMixerPowerRequirementUnits}" Content="hp" />
+                                </StackPanel>
+
+                                <Label Grid.Row="22" Grid.Column="0" Style="{StaticResource MyLabelSlurryPumpPowerRequirementName}" Content="Pump Power Requirement" Margin="50,2,2,2"  />
+                                <StackPanel Grid.Row="22" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownSlurryPumpPowerRequirement}" Minimum="0.5" Maximum="10" Interval="1"
+                                                            Value="{Binding SlurryPumpPowerRequirement, Mode=TwoWay}"
+                                                            ToolTip="min = 0.5, max = 10"/>
+                                    <Label Style="{StaticResource MyLabelSlurryPumpPowerRequirementUnits}" Content="hp" />
+                                </StackPanel>
+                                
+                                <Label Grid.Row="23" Grid.Column="0" Style="{StaticResource MyLabelSlurryMixerAndPumpHoursPerDayName}" Content="Daily Operational Period" Margin="50,2,2,2"  />
+                                <StackPanel Grid.Row="23" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownSlurryMixerAndPumpHoursPerDay}" Minimum="0" Maximum="24" Interval="1"
+                                                            Value="{Binding SlurryMixerAndPumpHoursPerDay, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 60"/>
+                                    <Label Style="{StaticResource MyLabelSlurryMixerAndPumpHoursPerDayUnits}" Content="hrs/day" />
+                                </StackPanel>
+
+                                <Label Grid.Row="24" Grid.Column="0" Style="{StaticResource MyLabelSlurryMixerAndPumpDaysPerYearName}" Content="Annual Operational Period" Margin="50,2,2,2"  />
+                                <StackPanel Grid.Row="24" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownSlurryMixerAndPumpDaysPerYear}" Minimum="0" Maximum="365" Interval="1"
+                                                            Value="{Binding SlurryMixerAndPumpDaysPerYear, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 365"/>
+                                    <Label Style="{StaticResource MyLabelSlurryMixerAndPumpDaysPerYearUnits}" Content="days/yr" />
+                                </StackPanel>
+
+                                <CheckBox x:Name="checkBoxSiloExhaustFan" Grid.Row="25" Grid.Column="0" Margin="5" FontSize="14" Content="Silo Exhaust Fan"
+                                          IsChecked="{Binding IsSiloExhaustFan, Mode=TwoWay}"/>
+                                <Separator Grid.Row="25" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                                <Label Grid.Row="26" Grid.Column="0" Style="{StaticResource MyLabelSiloExhaustFanPowerRequirementName}" Content="Mixer Power Requirement" Margin="50,2,2,2"  />
+                                <StackPanel Grid.Row="26" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownSiloExhaustFanPowerRequirement}" Minimum="0.5" Maximum="10" Interval="1"
+                                                            Value="{Binding SiloExhaustFanPowerRequirement, Mode=TwoWay}"
+                                                            ToolTip="min = 0.5, max = 10"/>
+                                    <Label Style="{StaticResource MyLabelSiloExhaustFanPowerRequirementUnits}" Content="hp" />
+                                </StackPanel>
+
+                                <Label Grid.Row="27" Grid.Column="0" Style="{StaticResource MyLabelSiloExhaustFanHoursPerDayName}" Content="Daily Operational Period" Margin="50,2,2,2"  />
+                                <StackPanel Grid.Row="27" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownSiloExhaustFanHoursPerDay}" Minimum="0" Maximum="24" Interval="1"
+                                                            Value="{Binding SiloExhaustFanHoursPerDay, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 60"/>
+                                    <Label Style="{StaticResource MyLabelSiloExhaustFanHoursPerDayUnits}" Content="hrs/day" />
+                                </StackPanel>
+
+                                <Label Grid.Row="28" Grid.Column="0" Style="{StaticResource MyLabelSiloExhaustFanDaysPerYearName}" Content="Annual Operational Period" Margin="50,2,2,2"  />
+                                <StackPanel Grid.Row="28" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownSiloExhaustFanDaysPerYear}" Minimum="0" Maximum="365" Interval="1"
+                                                            Value="{Binding SiloExhaustFanDaysPerYear, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 365"/>
+                                    <Label Style="{StaticResource MyLabelSiloExhaustFanDaysPerYearUnits}" Content="days/yr" />
+                                </StackPanel>
+
+                                <CheckBox x:Name="checkBoxSiloSpaceHeater" Grid.Row="29" Grid.Column="0" Margin="5" FontSize="14" Content="Silo Exhaust Fan"
+                                          IsChecked="{Binding IsSiloSpaceHeater, Mode=TwoWay}"/>
+                                <Separator Grid.Row="29" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                                <Label Grid.Row="30" Grid.Column="0" Style="{StaticResource MyLabelSiloSpaceHeaterPowerRequirementName}" Content="Mixer Power Requirement" Margin="50,2,2,2"  />
+                                <StackPanel Grid.Row="30" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownSiloSpaceHeaterPowerRequirement}" Minimum="0.5" Maximum="10" Interval="1"
+                                                            Value="{Binding SiloSpaceHeaterPowerRequirement, Mode=TwoWay}"
+                                                            ToolTip="min = 0.5, max = 10"/>
+                                    <Label Style="{StaticResource MyLabelSiloSpaceHeaterPowerRequirementUnits}" Content="hp" />
+                                </StackPanel>
+
+                                <Label Grid.Row="31" Grid.Column="0" Style="{StaticResource MyLabelSiloSpaceHeaterHoursPerDayName}" Content="Daily Operational Period" Margin="50,2,2,2"  />
+                                <StackPanel Grid.Row="31" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownSiloSpaceHeaterHoursPerDay}" Minimum="0" Maximum="24" Interval="1"
+                                                            Value="{Binding SiloSpaceHeaterHoursPerDay, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 60"/>
+                                    <Label Style="{StaticResource MyLabelSiloSpaceHeaterHoursPerDayUnits}" Content="hrs/day" />
+                                </StackPanel>
+
+                                <Label Grid.Row="32" Grid.Column="0" Style="{StaticResource MyLabelSiloSpaceHeaterDaysPerYearName}" Content="Annual Operational Period" Margin="50,2,2,2"  />
+                                <StackPanel Grid.Row="32" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownSiloSpaceHeaterDaysPerYear}" Minimum="0" Maximum="365" Interval="1"
+                                                            Value="{Binding SiloSpaceHeaterDaysPerYear, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 365"/>
+                                    <Label Style="{StaticResource MyLabelSiloSpaceHeaterDaysPerYearUnits}" Content="days/yr" />
+                                </StackPanel>
+
+                            </Grid>
+
+                        </ScrollViewer>
+                    </Expander>
+
+                    <Expander Style="{StaticResource MyExpanderFoundation}">
+                        <ScrollViewer CanContentScroll="True" HorizontalScrollBarVisibility="Auto" Height="150">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <Grid.Resources>
+                                    <converters:RadioButtonCheckedConverter x:Key="RadioButtonCheckedConverter" />
+                                </Grid.Resources>
+
+                                <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource MyLabelPropertyName}" Content="Concrete and Material Placement" />
+                                <StackPanel Grid.Row="0" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0.25" Maximum="7" Interval="1" StringFormat="C2" 
+                                                            Value="{Binding FoundationConcreteMaterialAndPlacementCost, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 7"/>
+                                    <Label Style="{StaticResource MyLabelPropertyUnits}">
+                                        <Run Typography.Variants="Superscript">$/ft&#x00B3;</Run>
+                                    </Label>
+                                </StackPanel>
+
+                                <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource MyLabelPropertyName}" Content="Volume" />
+                                <Separator Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                                <RadioButton x:Name="radioButtonFoundationEstimated" Grid.Row="2" Grid.Column="0" Margin="50,2,2,2" FontSize="14" GroupName="Foundation" Content="Estimate" 
+                                 IsChecked="{Binding FoundationOptionsProperty, Mode=TwoWay, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter=OptionEstimated}" />
+                                
+                                <!-- FIXME - fix the style -->
+                                <StackPanel Grid.Row="2" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Label Style="{StaticResource MyLabelFoundationSiteSoilsLoadBearingName}" Content="Site Soils Load Bearing"/>
+                                    <Controls:DropDownButton 
+                                        VerticalContentAlignment="Center"
+                                        Width="150"
+                                        Margin="4"
+                                        Content="{Binding FoundationSiteSoilLoadBearingName}"
+                                        ItemsSource="{Binding FoundationSiteSoils}"
+                                        Style="{StaticResource MyControlButtonFoundationSiteSoilsLoadBearing}">
+                                        <Controls:DropDownButton.Resources>
+                                            <models:BindingProxy x:Key="Proxy" Data="{Binding}" />
+                                        </Controls:DropDownButton.Resources>
+                                        <Controls:DropDownButton.ItemContainerStyle>
+                                            <Style TargetType="MenuItem" BasedOn="{StaticResource {x:Type MenuItem}}">
+                                                <Setter Property="Header" Value="{Binding Name}"/>
+                                                <Setter Property="Command" Value="{Binding Source={StaticResource Proxy}, Path=Data.SetFoundationSiteSoilCommand}"/>
+                                                <Setter Property="CommandParameter" Value="{Binding }"/>
+                                            </Style>
+                                        </Controls:DropDownButton.ItemContainerStyle>
+                                    </Controls:DropDownButton>
+                                    <Label Style="{StaticResource MyLabelPropertyUnits}" Content="" />
+                                </StackPanel>
+
+                                <RadioButton x:Name="radioButtonFoundationUserSpecified" Grid.Row="3" Grid.Column="0" Margin="50,2,2,2" FontSize="14" GroupName="Foundation" Content="User-Specified" 
+                                 IsChecked="{Binding FoundationOptionsProperty, Mode=TwoWay, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter=OptionUserSpecified}" />
+
+                                <StackPanel Grid.Row="3" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                                    <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownFoundationVolumeUserSpecified}" Minimum="0" Maximum="70000" Interval="10" 
+                                                            Value="{Binding FoundationVolumeUserSpecified, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 70,000"/>
+                                    <Label Style="{StaticResource MyLabelFoundationVolumeUserSpecifiedUnits}">
+                                        <Run Typography.Variants="Superscript">yd&#x00B3;</Run>
+                                    </Label>
+                                </StackPanel>
+
+                            </Grid>
+
+                        </ScrollViewer>
+                    </Expander>
+                </StackPanel>
+
+                <!-- Other Capital Items -->
+                <Grid Style="{StaticResource MyGridHeader}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition ></ColumnDefinition>
+                        <ColumnDefinition Width=".1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconModern Kind="AppPlus" Style="{StaticResource MyIconPackModernHeaders}" />
+                        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource MyTextBlockHeader}" Text="Other Capital Items" />
+                    </StackPanel>
+                    <Button Grid.Row="0" Grid.Column="1" Style="{StaticResource MyButtonSectionInformation}" ToolTip="About Other Capital Items" 
+                                Content="{iconPacks:Modern InformationCircle, Width=12, Height=12}"  
+                                Command="{Binding ShowMessageDialogCommandOtherCapitalItems}"/>
+                    <Separator Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorHeader}" />
+                </Grid>
+
+                <ScrollViewer Style="{StaticResource MyScrollViewerForEachSection}" HorizontalScrollBarVisibility="Auto" Height="200">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #1 Description" />
+                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding OtherAnnualItemDescription1, Mode=TwoWay}" Controls:TextBoxHelper.Watermark="Enter a description" Width="400" Height="25" MinWidth="250" MinHeight="25" MaxWidth="400" MaxHeight="25" HorizontalAlignment="Left" Margin="2" FontSize="14" BorderThickness="0,0,0,1"/>
+
+                        <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #1 Quantity" />
+                        <StackPanel Grid.Row="1" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="50" Interval="1" 
+                                                    Value="{Binding OtherCapitalItemQuantity1, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 50"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="each" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #1 Unit Cost" />
+                        <StackPanel Grid.Row="2" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="1000000" Interval="1000" StringFormat="C2" 
+                                                    Value="{Binding OtherCapitalItemUnitCost1, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 1,000,000"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="$/each" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #2 Description" />
+                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding OtherCapitalItemDescription2, Mode=TwoWay}" Controls:TextBoxHelper.Watermark="Enter a description" Width="400" Height="25" MinWidth="250" MinHeight="25" MaxWidth="400" MaxHeight="25" HorizontalAlignment="Left" Margin="2" FontSize="14" BorderThickness="0,0,0,1"/>
+
+                        <TextBlock Grid.Row="4" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #2 Quantity" />
+                        <StackPanel Grid.Row="4" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="50" Interval="1" 
+                                                    Value="{Binding OtherCapitalItemQuantity2, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 50"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="each" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="5" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #2 Unit Cost" />
+                        <StackPanel Grid.Row="5" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="1000000" Interval="1000" StringFormat="C2" 
+                                                    Value="{Binding OtherCapitalItemUnitCost2, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 1,000,000"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="$/each" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="6" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #3 Description" />
+                        <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding OtherCapitalItemDescription3, Mode=TwoWay}" Controls:TextBoxHelper.Watermark="Enter a description" Width="400" Height="25" MinWidth="250" MinHeight="25" MaxWidth="400" MaxHeight="25" HorizontalAlignment="Left" Margin="2" FontSize="14" BorderThickness="0,0,0,1"/>
+
+                        <TextBlock Grid.Row="7" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #3 Quantity" />
+                        <StackPanel Grid.Row="7" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="50" Interval="1" 
+                                                    Value="{Binding OtherCapitalItemQuantity3, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 50"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="each" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="8" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #3 Unit Cost" />
+                        <StackPanel Grid.Row="8" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="1000000" Interval="1000" StringFormat="C2" 
+                                                    Value="{Binding OtherCapitalItemUnitCost3, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 1,000,000"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="$/each" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="9" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #4 Description" />
+                        <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding OtherCapitalItemDescription4, Mode=TwoWay}" Controls:TextBoxHelper.Watermark="Enter a description" Width="400" Height="25" MinWidth="250" MinHeight="25" MaxWidth="400" MaxHeight="25" HorizontalAlignment="Left" Margin="2" FontSize="14" BorderThickness="0,0,0,1"/>
+
+                        <TextBlock Grid.Row="10" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #4 Quantity" />
+                        <StackPanel Grid.Row="10" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="50" Interval="1" 
+                                                    Value="{Binding OtherCapitalItemQuantity4, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 50"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="each" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="11" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #4 Unit Cost" />
+                        <StackPanel Grid.Row="11" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="1000000" Interval="1000" StringFormat="C2" 
+                                                    Value="{Binding OtherCapitalItemUnitCost4, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 1,000,000"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="$/each" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="12" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #5 Description" />
+                        <TextBox Grid.Row="12" Grid.Column="1" Text="{Binding OtherCapitalItemDescription5, Mode=TwoWay}" Controls:TextBoxHelper.Watermark="Enter a description" Width="400" Height="25" MinWidth="250" MinHeight="25" MaxWidth="400" MaxHeight="25" HorizontalAlignment="Left" Margin="2" FontSize="14" BorderThickness="0,0,0,1"/>
+
+                        <TextBlock Grid.Row="13" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #5 Quantity" />
+                        <StackPanel Grid.Row="13" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="50" Interval="1" 
+                                                    Value="{Binding OtherCapitalItemQuantity5, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 50"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="each" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="14" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #5 Unit Cost" />
+                        <StackPanel Grid.Row="14" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="1000000" Interval="1000" StringFormat="C2" 
+                                                    Value="{Binding OtherCapitalItemUnitCost5, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 1,000,000"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="$/each" />
+                        </StackPanel>
+
+                    </Grid>
+                </ScrollViewer>
+
+                <!-- Other Annual Items -->
+                <Grid Style="{StaticResource MyGridHeader}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition ></ColumnDefinition>
+                        <ColumnDefinition Width=".1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconModern Kind="AppPlus" Style="{StaticResource MyIconPackModernHeaders}" />
+                        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource MyTextBlockHeader}" Text="Other Annual Items" />
+                    </StackPanel>
+                    <Button Grid.Row="0" Grid.Column="1" Style="{StaticResource MyButtonSectionInformation}" ToolTip="About Other Annual Items" 
+                                Content="{iconPacks:Modern InformationCircle, Width=12, Height=12}"  
+                                Command="{Binding ShowMessageDialogCommandOtherAnnualItems}"/>
+                    <Separator Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorHeader}" />
+                </Grid>
+
+                <ScrollViewer Style="{StaticResource MyScrollViewerForEachSection}" HorizontalScrollBarVisibility="Auto" Height="200">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #1 Description" />
+                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding OtherAnnualItemDescription1, Mode=TwoWay}" Controls:TextBoxHelper.Watermark="Enter a description" Width="400" Height="25" MinWidth="250" MinHeight="25" MaxWidth="400" MaxHeight="25" HorizontalAlignment="Left" Margin="2" FontSize="14" BorderThickness="0,0,0,1"/>
+
+                        <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #1 Quantity" />
+                        <StackPanel Grid.Row="1" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="50" Interval="1" 
+                                                    Value="{Binding OtherAnnualItemQuantity1, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 50"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="each" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #1 Unit Cost" />
+                        <StackPanel Grid.Row="2" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="1000000" Interval="1000" StringFormat="C2" 
+                                                    Value="{Binding OtherAnnualItemUnitCost1, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 1,000,000"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="$/each" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #2 Description" />
+                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding OtherAnnualItemDescription2, Mode=TwoWay}" Controls:TextBoxHelper.Watermark="Enter a description" Width="400" Height="25" MinWidth="250" MinHeight="25" MaxWidth="400" MaxHeight="25" HorizontalAlignment="Left" Margin="2" FontSize="14" BorderThickness="0,0,0,1"/>
+
+                        <TextBlock Grid.Row="4" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #2 Quantity" />
+                        <StackPanel Grid.Row="4" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="50" Interval="1" 
+                                                    Value="{Binding OtherAnnualItemQuantity2, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 50"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="each" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="5" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #2 Unit Cost" />
+                        <StackPanel Grid.Row="5" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="1000000" Interval="1000" StringFormat="C2" 
+                                                    Value="{Binding OtherAnnualItemUnitCost2, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 1,000,000"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="$/each" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="6" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #3 Description" />
+                        <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding OtherAnnualItemDescription3, Mode=TwoWay}" Controls:TextBoxHelper.Watermark="Enter a description" Width="400" Height="25" MinWidth="250" MinHeight="25" MaxWidth="400" MaxHeight="25" HorizontalAlignment="Left" Margin="2" FontSize="14" BorderThickness="0,0,0,1"/>
+
+                        <TextBlock Grid.Row="7" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #3 Quantity" />
+                        <StackPanel Grid.Row="7" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="50" Interval="1" 
+                                                    Value="{Binding OtherAnnualItemQuantity3, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 50"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="each" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="8" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #3 Unit Cost" />
+                        <StackPanel Grid.Row="8" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="1000000" Interval="1000" StringFormat="C2" 
+                                                    Value="{Binding OtherAnnualItemUnitCost3, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 1,000,000"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="$/each" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="9" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #4 Description" />
+                        <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding OtherAnnualItemDescription4, Mode=TwoWay}" Controls:TextBoxHelper.Watermark="Enter a description" Width="400" Height="25" MinWidth="250" MinHeight="25" MaxWidth="400" MaxHeight="25" HorizontalAlignment="Left" Margin="2" FontSize="14" BorderThickness="0,0,0,1"/>
+
+                        <TextBlock Grid.Row="10" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #4 Quantity" />
+                        <StackPanel Grid.Row="10" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="50" Interval="1" 
+                                                    Value="{Binding OtherAnnualItemQuantity4, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 50"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="each" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="11" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #4 Unit Cost" />
+                        <StackPanel Grid.Row="11" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="1000000" Interval="1000" StringFormat="C2" 
+                                                    Value="{Binding OtherAnnualItemUnitCost4, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 1,000,000"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="$/each" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="12" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #5 Description" />
+                        <TextBox Grid.Row="12" Grid.Column="1" Text="{Binding OtherAnnualItemDescription5, Mode=TwoWay}" Controls:TextBoxHelper.Watermark="Enter a description" Width="400" Height="25" MinWidth="250" MinHeight="25" MaxWidth="400" MaxHeight="25" HorizontalAlignment="Left" Margin="2" FontSize="14" BorderThickness="0,0,0,1"/>
+
+                        <TextBlock Grid.Row="13" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #5 Quantity" />
+                        <StackPanel Grid.Row="13" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="50" Interval="1" 
+                                                    Value="{Binding OtherAnnualItemQuantity5, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 50"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="each" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="14" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Item #5 Unit Cost" />
+                        <StackPanel Grid.Row="14" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="1000000" Interval="1000" StringFormat="C2" 
+                                                    Value="{Binding OtherAnnualItemUnitCost5, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 1,000,000"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="$/each" />
+                        </StackPanel>
+
+                    </Grid>
+                </ScrollViewer>                
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer Grid.Column="1" MinHeight="700" CanContentScroll="False" >
+            <StackPanel Grid.Column="1" Margin="10">
+                <!-- Sizing Summary -->
+                <Grid Style="{StaticResource MyGridHeader}" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition ></ColumnDefinition>
+                        <ColumnDefinition ></ColumnDefinition>
+                        <ColumnDefinition Width=".1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconModern Kind="Paper" Style="{StaticResource MyIconPackModernHeaders}" />
+                        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource MyTextBlockHeader}" Text="Sizing Summary" />
+                    </StackPanel>
+
+                    <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource MyTextBlockHeaderValue}" 
+                               Text=""
+                               TextWrapping="Wrap"
+                               Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                               Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}" 
+                               HorizontalAlignment="Right"
+                               ToolTip=""/>
+                    <Button Grid.Row="0" Grid.Column="2" Style="{StaticResource MyButtonSectionInformation}" ToolTip="About Sizing Summary" 
+                                Content="{iconPacks:Modern InformationCircle, Width=12, Height=12}"  
+                                Command="{Binding ShowMessageDialogCommandSizingSummary}"/>
+                    <Separator Grid.Row="0" Grid.ColumnSpan="3" Style="{StaticResource MySeparatorHeader}" Background="{Binding IsError, Converter={StaticResource BoolToBrushSeparater}}" />
+                </Grid>
+
+
+                <ScrollViewer Style="{StaticResource MyScrollViewerForEachSection}" CanContentScroll="True" HorizontalScrollBarVisibility="Auto" Height="300" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Daily Consumption" Margin="5,5,0,5" />
+                        <StackPanel Grid.Row="0" Grid.Column="1" Style="{StaticResource MyStackPanel}">
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyValue}" Text="{Binding CalcLimeDailyConsumptionTons, Mode=Twoway, StringFormat=F2}"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="tons" Width="80" />
+                        </StackPanel>
+                        <Separator Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                        <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Monthly Consumption" Margin="5,5,0,5" />
+                        <StackPanel Grid.Row="1" Grid.Column="1" Style="{StaticResource MyStackPanel}">
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyValue}" Text="{Binding CalcLimeMonthlyConsumptionTons, Mode=Twoway, StringFormat=F2}"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="tons" Width="80" />
+                        </StackPanel>
+                        <Separator Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                        <TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Annual Consumption" Margin="5,5,0,5" />
+                        <StackPanel Grid.Row="2" Grid.Column="1" Style="{StaticResource MyStackPanel}">
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyValue}" Text="{Binding CalcLimeAnnualConsumptionTons, Mode=Twoway, StringFormat=F2}"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="tons" Width="80" />
+                        </StackPanel>
+                        <Separator Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                        <TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Lime Silo Refill Frequency" Margin="5,5,0,5" />
+                        <StackPanel Grid.Row="3" Grid.Column="1" Style="{StaticResource MyStackPanel}">
+                            <TextBlock Style="{StaticResource MyTextBlockLimeSiloRefillFrequency}" Text="{Binding CalcLimeSiloRefillFrequency, Mode=Twoway, StringFormat=F2}"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="days" Width="80" />
+                        </StackPanel>
+                        <Separator Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                        <TextBlock Grid.Row="4" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Foundation Area" Margin="5,5,0,5" />
+                        <StackPanel Grid.Row="4" Grid.Column="1" Style="{StaticResource MyStackPanel}">
+                            <TextBlock Style="{StaticResource MyTextBlockFoundationArea}" Text="{Binding CalcSiloFoundationArea, Mode=Twoway, StringFormat=F2}"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Width="80">
+                                <Run Typography.Variants="Superscript">ft&#x00B2;</Run>
+                            </TextBlock>
+                        </StackPanel>
+                        <Separator Grid.Row="4" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                        <TextBlock Grid.Row="5" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Foundation Depth" Margin="5,5,0,5" />
+                        <StackPanel Grid.Row="5" Grid.Column="1" Style="{StaticResource MyStackPanel}">
+                            <TextBlock Style="{StaticResource MyTextBlockFoundationDepth}" Text="{Binding CalcSiloFoundationDepth, Mode=Twoway, StringFormat=F2}"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="ft" Width="80" />
+                        </StackPanel>
+                        <Separator Grid.Row="5" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                        <TextBlock Grid.Row="6" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Foundation Volume" Margin="5,5,0,5" />
+                        <StackPanel Grid.Row="6" Grid.Column="1" Style="{StaticResource MyStackPanel}">
+                            <TextBlock Style="{StaticResource MyTextBlockFoundationVolume}" Text="{Binding CalcSiloFoundationVolume, Mode=Twoway, StringFormat=F2}"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Width="80">
+                                <Run Typography.Variants="Superscript">yd&#x00B3;</Run>
+                            </TextBlock>
+                        </StackPanel>
+                        <Separator Grid.Row="6" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                        <TextBlock Grid.Row="7" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Foundation Load Bearing" Margin="5,5,0,5" />
+                        <StackPanel Grid.Row="7" Grid.Column="1" Style="{StaticResource MyStackPanel}">
+                            <TextBlock Style="{StaticResource MyTextBlockFoundationLoadBearingQuantity}" Text="{Binding FoundationSiteSoilLoadBearingQuantity, Mode=Twoway, StringFormat=F2}"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Width="80">
+                                <Run Typography.Variants="Superscript">lbs/ft&#x00B2;</Run>
+                            </TextBlock>
+                        </StackPanel>
+                        <Separator Grid.Row="7" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                        <TextBlock Grid.Row="8" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Foundation Rating" Margin="5,5,0,5" />
+                        <StackPanel Grid.Row="8" Grid.Column="1" Style="{StaticResource MyStackPanel}">
+                            <TextBlock Style="{StaticResource MyTextBlockFoundationLoadBearingRating}" Text="{Binding FoundationSiteSoilLoadBearingRating, Mode=Twoway}"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="" Width="80" />
+                        </StackPanel>
+                        <Separator Grid.Row="8" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                        <TextBlock Grid.Row="9" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Foundation Multiplier" Margin="5,5,0,5" />
+                        <StackPanel Grid.Row="9" Grid.Column="1" Style="{StaticResource MyStackPanel}">
+                            <TextBlock Style="{StaticResource MyTextBlockFoundationLoadBearingMultiplier}" Text="{Binding FoundationSiteSoilLoadBearingMultiplier, Mode=Twoway, StringFormat=F2}"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="" Width="80" />
+                        </StackPanel>
+                        <Separator Grid.Row="9" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+                        
+                    </Grid>
+
+                </ScrollViewer>
+
+                <!-- Capital Cost Summary -->
+                <Grid Style="{StaticResource MyGridHeader}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition ></ColumnDefinition>
+                        <ColumnDefinition ></ColumnDefinition>
+                        <ColumnDefinition Width=".1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconModern Kind="CurrencyDollar" Style="{StaticResource MyIconPackModernHeadersCost}" />
+                        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource MyTextBlockHeader}" Text="Capital Cost" />
+                    </StackPanel>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource MyTextBlockHeaderValue}" Text="{Binding CalcCapitalCostTotal, Mode=TwoWay, StringFormat=C2}" 
+                               Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                               Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}" 
+                               HorizontalAlignment="Right"
+                               ToolTip="Total Capital Cost"/>
+                    <Button Grid.Row="0" Grid.Column="2" Style="{StaticResource MyButtonSectionInformation}" ToolTip="About Capital Cost" 
+                                Content="{iconPacks:Modern InformationCircle, Width=12, Height=12}"  
+                                Command="{Binding ShowMessageDialogCommandCapitalCost}"/>
+                    <Separator Grid.Row="0" Grid.ColumnSpan="3" Style="{StaticResource MySeparatorHeader}" Background="{Binding IsError, Converter={StaticResource BoolToBrushSeparater}}" />
+                </Grid>
+
+                <ScrollViewer Style="{StaticResource MyScrollViewerForEachSection}" HorizontalScrollBarVisibility="Auto" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Grid.Resources>
+                            <converters:RadioButtonCheckedConverter x:Key="RadioButtonCheckedConverter" />
+                        </Grid.Resources>
+                        
+                        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="System Installation" />
+                        <StackPanel Grid.Row="0" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyValueCosts}" Text="{Binding CalcSystemInstallCost, Mode=TwoWay, StringFormat=C2}"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"/>
+                        </StackPanel>
+                        <Separator Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                        <RadioButton x:Name="radioButtonSystemInstallCostMultiplier" Grid.Row="1" Grid.Column="0" Margin="50,0,0,0" FontSize="14" GroupName="SystemInstall" Content="Cost Multiplier"  
+                                 IsChecked="{Binding SystemInstallCostOptionsProperty, Mode=TwoWay, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter=OptionCostMultiplier}" />
+
+                        <StackPanel Grid.Row="1" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownSystemInstallCostMultiplier}" Minimum="0" Maximum="100" Interval="1" 
+                                                            Value="{Binding SystemInstallCostMultiplier, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 100"/>
+                            <Label Style="{StaticResource MyLabelSystemInstallCostMultiplierUnits}" Content="%" />
+                        </StackPanel>
+
+                        <RadioButton x:Name="radioButtonSystemInstallCostUserSpecified" Grid.Row="2" Grid.Column="0" Margin="50,5,5,5" FontSize="14" GroupName="SystemInstall" Content="User-Specified"  
+                                 IsChecked="{Binding SystemInstallCostOptionsProperty, Mode=TwoWay, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter=OptionUserSpecified}" />
+
+                        <StackPanel Grid.Row="2" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownSystemInstallCostUserSpecified}" Minimum="0" Maximum="1000000" Interval="1000" StringFormat="C2"
+                                                            Value="{Binding SystemInstallCostUserSpecified, Mode=TwoWay}"
+                                                            ToolTip="min = 0, max = 100000"/>
+                            <Label Style="{StaticResource MyLabelPropertyUnits}" Content="" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="6" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Storage and Dispensing System" />
+                        <StackPanel Grid.Row="6" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyValueCosts}" Text="{Binding CalcStorageAndDispensingSystemCost, Mode=TwoWay, StringFormat=C2}"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"/>
+                        </StackPanel>
+                        <Separator Grid.Row="6" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                        <TextBlock Grid.Row="7" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Foundation" />
+                        <StackPanel Grid.Row="7" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyValueCosts}" Text="{Binding CalcFoundationCost, Mode=TwoWay, StringFormat=C2}"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"/>
+                        </StackPanel>
+                        <Separator Grid.Row="7" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                        <TextBlock Grid.Row="8" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Other Items" />
+                        <StackPanel Grid.Row="8" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyValueCosts}" Text="{Binding CalcOtherCapitalItemsCost, Mode=TwoWay, StringFormat=C2}"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"/>
+                        </StackPanel>
+                        <Separator Grid.Row="8" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                    </Grid>
+                </ScrollViewer>
+
+                <!-- Annual Cost Summary -->
+                <Grid Style="{StaticResource MyGridHeader}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition ></ColumnDefinition>
+                        <ColumnDefinition ></ColumnDefinition>
+                        <ColumnDefinition Width=".1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconModern Kind="CurrencyDollar" Style="{StaticResource MyIconPackModernHeadersCost}" />
+                        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource MyTextBlockHeader}" Text="Annual Cost" />
+                    </StackPanel>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource MyTextBlockHeaderValue}" Text="{Binding CalcAnnualCost, Mode=TwoWay, StringFormat=C2}" 
+                               Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                               Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}" 
+                               HorizontalAlignment="Right"
+                               ToolTip="Total Annual Cost"/>
+                    <Button Grid.Row="0" Grid.Column="2" Style="{StaticResource MyButtonSectionInformation}" ToolTip="About Annual Cost" 
+                                Content="{iconPacks:Modern InformationCircle, Width=12, Height=12}"  
+                                Command="{Binding ShowMessageDialogCommandAnnualCost}"/>
+                    <Separator Grid.Row="0" Grid.ColumnSpan="3" Style="{StaticResource MySeparatorHeader}" Background="{Binding IsError, Converter={StaticResource BoolToBrushSeparater}}" />
+                </Grid>
+
+                <ScrollViewer Style="{StaticResource MyScrollViewerForEachSection}" HorizontalScrollBarVisibility="Auto" Height="360">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Grid.Resources>
+                            <converters:RadioButtonCheckedConverter x:Key="RadioButtonCheckedConverter" />
+                        </Grid.Resources>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Chemical" />
+                        <StackPanel Grid.Row="0" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyValueCosts}" Text="{Binding CalcAnnualCostChemical, Mode=TwoWay, StringFormat=C2}"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"/>
+                        </StackPanel>
+                        <Separator Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                        <RadioButton x:Name="radioButtonAnnualCostChemicalEstimate" Grid.Row="1" Grid.Column="0" Margin="50,5,5,5" FontSize="14" GroupName="AnnualCostChemical" Content="Estimated Chemical Cost"  
+                                 IsChecked="{Binding AnnualCostChemicalOptionsProperty, Mode=TwoWay, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter=OptionEstimate}" />
+
+                        <StackPanel Grid.Row="1" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Label Style="{StaticResource MyLabelAnnualCostChemicalEstimate}" Content="{Binding CalcAnnualCostChemicalEstimated, Mode=TwoWay}" ContentStringFormat="C2"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"
+                                       FontSize="12" />
+                            <Label Style="{StaticResource MyLabelPropertyUnits}" Content="" />
+                        </StackPanel>
+
+                        <RadioButton x:Name="radioButtonAnnualCostChemicalUserSpecified" Grid.Row="2" Grid.Column="0" Margin="50,5,5,5" FontSize="14" GroupName="AnnualCostChemical" Content="User-Specified"  
+                                 IsChecked="{Binding AnnualCostChemicalOptionsProperty, Mode=TwoWay, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter=OptionUserSpecified}" />
+
+                        <StackPanel Grid.Row="2" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownAnnualCostChemicalUserSpecified}" Minimum="0" Maximum="1000000" Interval="1000"
+                                                Value="{Binding AnnualCostChemicalUserSpecified, Mode=TwoWay, StringFormat=C2}"
+                                                ToolTip="min = 0, max = 1,000,000"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Operation and Maintanence" />
+                        <StackPanel Grid.Row="3" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyValueCosts}" Text="{Binding CalcAnnualCostOperationAndMaintanence, Mode=TwoWay, StringFormat=C2}"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"/>
+                        </StackPanel>
+                        <Separator Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                        <RadioButton x:Name="radioButtonAnnualCostOperationAndMaintanenceMultiplier" Grid.Row="4" Grid.Column="0" Margin="50,0,0,0" FontSize="14" GroupName="AnnualCostOperationAndMaintanence" Content="Percentage of Capital Cost"  
+                                 IsChecked="{Binding AnnualCostOperationAndMaintanenceOptionsProperty, Mode=TwoWay, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter=OptionCostMultiplier}" />
+
+                        <StackPanel Grid.Row="4" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownAnnualCostOperationAndMaintanenceMultiplier}" Minimum="0" Maximum="50" Interval="0.01" StringFormat="C2" 
+                                                    Value="{Binding AnnualCostOperationAndMaintanenceMultiplier, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 50"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="" />
+                        </StackPanel>
+
+                        <RadioButton x:Name="radioButtonAnnualCostOperationAndMaintanenceUserSpecified" Grid.Row="5" Grid.Column="0" Margin="50,5,5,5" FontSize="14" GroupName="AnnualCostOperationAndMaintanence" Content="User-Specified"  
+                                 IsChecked="{Binding AnnualCostOperationAndMaintanenceOptionsProperty, Mode=TwoWay, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter=OptionUserSpecified}" />
+
+                        <StackPanel Grid.Row="5" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownAnnualCostOperationAndMaintanenceUserSpecified}" Minimum="0" Maximum="1000000" Interval="1000" StringFormat="C2" 
+                                                    Value="{Binding AnnualCostOperationAndMaintanenceUserSpecified, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 1,000,000"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="6" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Electric" />
+                        <StackPanel Grid.Row="6" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyValueCosts}" Text="{Binding CalcAnnualCostElectric, Mode=TwoWay, StringFormat=C2}"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"/>
+                        </StackPanel>
+                        <Separator Grid.Row="6" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                        <RadioButton x:Name="radioButtonAnnualCostElectricEstimate" Grid.Row="7" Grid.Column="0" Margin="50,5,5,5" FontSize="14" GroupName="AnnualCostElectricOptions" Content="Estimated Electrical Cost for Chemical Pump"  
+                                 IsChecked="{Binding AnnualCostElectricOptionsProperty, Mode=TwoWay, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter=OptionAnnualCostElectricEstimate}" />
+
+                        <StackPanel Grid.Row="7" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Label Style="{StaticResource MyLabelAnnualCostElectricEstimate}" Content="{Binding CalcAnnualCostElectricEstimated, Mode=TwoWay}" ContentStringFormat="C2"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"
+                                       FontSize="12" />
+                            <Label Style="{StaticResource MyLabelPropertyUnits}" Content="" />
+                        </StackPanel>
+
+                        <RadioButton x:Name="radioButtonAnnualCostElectricUserSpecified" Grid.Row="8" Grid.Column="0" Margin="50,5,5,5" FontSize="14" GroupName="AnnualCostElectricOptions" Content="User-Specified"  
+                                 IsChecked="{Binding AnnualCostElectricOptionsProperty, Mode=TwoWay, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter=OptionAnnualCostElectricUserSpecified}" />
+
+                        <StackPanel Grid.Row="8" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDownAnnualCostElectricUserSpecified}" Minimum="0" Maximum="1000000" Interval="1000" StringFormat="C2" 
+                                                    Value="{Binding AnnualCostElectricUserSpecified, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 1,000,000"/>
+                            <Label Style="{StaticResource MyLabelPropertyUnits}" Content="" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="9" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Other Items" />
+                        <StackPanel Grid.Row="9" Grid.Column="2" Style="{StaticResource MyStackPanel}" >
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyValueCosts}" Text="{Binding CalcOtherAnnualItemsCost, Mode=TwoWay, StringFormat=C2}"
+                                       Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                       Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}"/>
+                        </StackPanel>
+                        <Separator Grid.Row="9" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+                    </Grid>
+                </ScrollViewer>
+
+                <!-- Recapitalization Cost Summary -->
+                <Grid Style="{StaticResource MyGridHeader}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition ></ColumnDefinition>
+                        <ColumnDefinition ></ColumnDefinition>
+                        <ColumnDefinition Width=".1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconModern Kind="CurrencyDollar" Style="{StaticResource MyIconPackModernHeadersCost}" />
+                        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource MyTextBlockHeader}" Text="Net Present Value" ToolTip="Net Present Value of Replacement and Annual Costs" />
+                    </StackPanel>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource MyTextBlockHeaderValue}" 
+                               Text="{Binding CalcRecapitalizationCostTotal, Mode=TwoWay, StringFormat=C2}" 
+                               Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                               Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}" 
+                               HorizontalAlignment="Right"
+                               ToolTip="Total Net Present Value of Replacement and Annual Costs"/>
+                    <Button Grid.Row="0" Grid.Column="2" Style="{StaticResource MyButtonSectionInformation}" ToolTip="About Net Present Value of Replacement and Annual Costs" 
+                                Content="{iconPacks:Modern InformationCircle, Width=12, Height=12}"  
+                                Command="{Binding ShowMessageDialogCommandRecapitalizationCost}"/>
+                    <Separator Grid.Row="0" Grid.ColumnSpan="3" Style="{StaticResource MySeparatorHeader}" 
+                               Background="{Binding IsError, Converter={StaticResource BoolToBrushSeparater}}" />
+                </Grid>
+
+                <ScrollViewer Style="{StaticResource MyScrollViewerForEachSection}"  >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+
+                        </Grid.RowDefinitions>
+
+                        <Grid.Resources>
+                            <converters:RadioButtonCheckedConverter x:Key="RadioButtonCheckedConverter" />
+                        </Grid.Resources>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Term of Analysis" />
+                        <StackPanel Grid.Row="0" Grid.Column="1" Style="{StaticResource MyStackPanel}">
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyValue}" Text="{Binding RecapitalizationCostCalculationPeriod, Mode=Twoway, StringFormat=F2}"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="years" />
+                        </StackPanel>
+                        <Separator Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                        <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Inflation Rate" />
+                        <StackPanel Grid.Row="1" Grid.Column="1" Style="{StaticResource MyStackPanel}">
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyValue}" Text="{Binding RecapitalizationCostInflationRate, Mode=Twoway, StringFormat=F2}"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="%" />
+                        </StackPanel>
+                        <Separator Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                        <TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Rate of Return" />
+                        <StackPanel Grid.Row="2" Grid.Column="1" Style="{StaticResource MyStackPanel}">
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyValue}" Text="{Binding RecapitalizationCostNetRateOfReturn, Mode=Twoway, StringFormat=F2}"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="%" />
+                        </StackPanel>
+                        <Separator Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                        <TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text=""></TextBlock>
+                        <StackPanel Grid.Row="3" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyValueCosts}" 
+                                       Text="{Binding CalcUpdateRecapMaterialCostDefault, Mode=TwoWay, StringFormat=C2}"
+                                       Visibility="Hidden"/>
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text=""></TextBlock>
+                        <StackPanel Grid.Row="3" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyValueCosts}" 
+                                       Text="{Binding CalcUpdateRecapMaterialCostTotal, Mode=TwoWay, StringFormat=C2}"
+                                       Visibility="Hidden"/>
+                        </StackPanel>
+                        
+                        <DataGrid Grid.Row="4" Grid.ColumnSpan="2" ItemsSource="{Binding RecapMaterials, Mode=TwoWay}" 
+                                  AutoGenerateColumns="False" CanUserAddRows="True" CanUserDeleteRows="False" SelectionUnit="Cell"
+                                  Foreground="{Binding IsError, Converter={StaticResource BoolToBrushText}}"
+                                  Visibility="{Binding IsMajorError, Converter={StaticResource BoolToVisibility}}" >
+                            <DataGrid.Columns>
+                                <DataGridCheckBoxColumn 
+                                        ElementStyle="{DynamicResource MetroDataGridCheckBox}"
+                                        EditingElementStyle="{DynamicResource MetroDataGridCheckBox}"
+                                        Header="Select"
+                                        Binding="{Binding IsSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                                <Controls:DataGridNumericUpDownColumn Header="Life Cycle (yrs)" 
+                                                      Binding="{Binding LifeCycle, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                      Minimum="1" 
+                                                      Maximum="50">
+                                    <Controls:DataGridNumericUpDownColumn.HeaderTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="LIFE CYCLE (YRS)" ToolTip="min = 1, max = 50" />
+                                        </DataTemplate>
+                                    </Controls:DataGridNumericUpDownColumn.HeaderTemplate>
+                                </Controls:DataGridNumericUpDownColumn>
+                                <Controls:DataGridNumericUpDownColumn Header="Replacement %"
+                                                      Binding="{Binding PercentReplacement, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                      Minimum="0" 
+                                                      Maximum="100">
+                                    <Controls:DataGridNumericUpDownColumn.HeaderTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="REPLACEMENT %" ToolTip="min = 0, max = 100" />
+                                        </DataTemplate>
+                                    </Controls:DataGridNumericUpDownColumn.HeaderTemplate>
+                                </Controls:DataGridNumericUpDownColumn>
+                                <Controls:DataGridNumericUpDownColumn Header="Default Cost"
+                                                      Binding="{Binding MaterialCostDefault}"
+                                                      StringFormat="C" 
+                                                      IsReadOnly="True"
+                                                      Foreground="Gray"/>
+                                <Controls:DataGridNumericUpDownColumn Header="Custom Cost"
+                                                      Binding="{Binding MaterialCostCustom, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                      StringFormat="C"
+                                                      Minimum="0" >
+                                    <Controls:DataGridNumericUpDownColumn.HeaderTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="CUSTOM COST" ToolTip="min = 0, max = " />
+                                        </DataTemplate>
+                                    </Controls:DataGridNumericUpDownColumn.HeaderTemplate>
+                                </Controls:DataGridNumericUpDownColumn>
+                                <DataGridCheckBoxColumn 
+                                        ElementStyle="{DynamicResource MetroDataGridCheckBox}"
+                                        EditingElementStyle="{DynamicResource MetroDataGridCheckBox}"
+                                        Header="Use Custom"
+                                        Binding="{Binding UseCustomCost, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                <Controls:DataGridNumericUpDownColumn Header="Total Cost"
+                                                      Binding="{Binding TotalCost}"
+                                                      StringFormat="C"
+                                                      IsReadOnly="True"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <Separator Grid.Row="4" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorSummaries}" />
+
+                    </Grid>
+
+                </ScrollViewer>
+
+            </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+
+</Controls:MetroWindow>

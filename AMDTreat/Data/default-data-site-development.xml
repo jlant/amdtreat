@@ -1,0 +1,779 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module type="Conveyance Ditch">
+  <items>
+     <item>
+        <name>Land Quantity User Specified</name>
+        <value>10</value>
+        <units>acres</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Land Purchase Unit Cost</name>
+        <value>2000</value>
+        <units>$/acre</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Land Purchase Closing Cost</name>
+        <value>5000</value>
+        <units>$</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Land Lease Cost</name>
+        <value>1000</value>
+        <units>$/acre/yr</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mobilization Demobilization Percentage</name>
+        <value>4</value>
+        <units>percent</units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Construction Office Trailer Cost</name>
+        <value>65000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>  
+      <item>
+        <name>Average Site Slope</name>
+        <value>5</value>
+        <units>percent</units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Cut Fill Slope</name>
+        <value>2</value>
+        <units>feet</units>
+        <description></description>
+      </item>        
+      <item>
+        <name>Excavation Unit Cost</name>
+        <value>6</value>
+        <units>dollar per cubic yard</units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Maintenance Repair Labor Rate</name>
+        <value>40</value>
+        <units>dollar per hour</units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Foundation Over Excavation Unit Cost</name>
+        <value>10</value>
+        <units>dollar per cubic yard</units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Foundation Improvement Unit Cost</name>
+        <value>25</value>
+        <units>dollar per cubic yard</units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Road Material Name Aggregate</name>
+        <value>Aggregate</value>
+        <units></units>
+        <description></description>
+      </item>         
+      <item>
+        <name>Road Material Name Asphalt</name>
+        <value>Asphalt</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Road Material Unit Cost Aggregate</name>
+        <value>16</value>
+        <units>dollar per square yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Road Material Unit Cost Subbase</name>
+        <value>10</value>
+        <units>dollar per square yard</units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Road Material Unit Cost Asphalt</name>
+        <value>43.5</value>
+        <units>dollar per square yard</units>
+        <description></description>
+      </item>   
+      <item>
+        <name>Geotextile Unit Cost</name>
+        <value>3.5</value>
+        <units>dollar per square yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Access Road Length</name>
+        <value>500</value>
+        <units>ft</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Access Road Width</name>
+        <value>15</value>
+        <units>ft</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Access Road Geotextile Length</name>
+        <value>500</value>
+        <units>ft</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Parking Area Material Name Asphalt</name>
+        <value>Asphalt</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Parking Area Material Name Aggregate</name>
+        <value>Aggregate</value>
+        <units></units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Parking Spaces Quantity</name>
+        <value>5</value>
+        <units></units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Average Parking Space Area</name>
+        <value>360</value>
+        <units>square feet</units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Delivery Truck Turnaround Area</name>
+        <value>3900</value>
+        <units>square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Parking Lot Accessories Cost</name>
+        <value>3500</value>
+        <units></units>
+        <description></description>
+      </item>      
+      <item>
+        <name>ES Control Name Silt Fence</name>
+        <value>Silt Fence</value>
+        <units></units>
+        <description></description>
+      </item>  
+      <item>
+        <name>ES Control Name Compost Filter Sock</name>
+        <value>Compost Filter Sock</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>ES Control Length</name>
+        <value>500</value>
+        <units>ft</units>
+        <description></description>
+      </item>   
+      <item>
+        <name>ES Control Unit Cost</name>
+        <value>3.5</value>
+        <units>dollar per foot</units>
+        <description></description>
+      </item>  
+      <item>
+        <name>Sediment Basins Quantity</name>
+        <value>0</value>
+        <units></units>
+        <description></description>
+      </item>        
+      <item>
+        <name>Sediment Basins Unit Cost</name>
+        <value>10000</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>ES Control Unit Cost Other</name>
+        <value>0</value>
+        <units></units>
+        <description></description>
+      </item>         
+      <item>
+        <name>ES Control Unit Cost Estimate</name>
+        <value>8000</value>
+        <units></units>
+        <description></description>
+      </item>          
+      <item>
+        <name>Rock Lined Ditch Length</name>
+        <value>250</value>
+        <units>feet</units>
+        <description></description>
+      </item>          
+      <item>
+        <name>Rock Lined Ditch Bottom Width</name>
+        <value>2</value>
+        <units>feet</units>
+        <description></description>
+      </item>          
+      <item>
+        <name>Rock Lined Ditch Depth</name>
+        <value>2</value>
+        <units>feet</units>
+        <description></description>
+      </item>         
+      <item>
+        <name>Rock Lined Ditch Aggregate Thickness</name>
+        <value>1.5</value>
+        <units>feet</units>
+        <description></description>
+      </item>        
+      <item>
+        <name>Rock Lined Ditch Side Slope</name>
+        <value>2</value>
+        <units>feet</units>
+        <description></description>
+      </item>  
+      <item>
+        <name>Rock Lined Ditch Geotextile Length</name>
+        <value>250</value>
+        <units>feet</units>
+        <description></description>
+      </item>        
+      <item>
+        <name>Rock Lined Ditch Aggregate Bulk Density</name>
+        <value>1.3</value>
+        <units>ton per cubic yard</units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Rock Lined Ditch Aggregate Unit Cost</name>
+        <value>25</value>
+        <units>dollar per ton</units>
+        <description></description>
+      </item>         
+      <item>
+        <name>Rock Lined Ditch Aggregate Placement Unit Cost</name>
+        <value>10</value>
+        <units>dollar per cubic yard</units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Vegetated Ditch Length</name>
+        <value>100</value>
+        <units>feet</units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Vegetated Ditch Unit Cost</name>
+        <value>15</value>
+        <units>dollar per foot</units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Culvert Length</name>
+        <value>100</value>
+        <units>feet</units>
+        <description></description>
+      </item>         
+      <item>
+        <name>Culvert Unit Cost</name>
+        <value>30</value>
+        <units>dollar per feet</units>
+        <description></description>
+      </item>          
+      <item>
+        <name>Foundation Site Soil Name Poor</name>
+        <value>Poor</value>
+        <units></units>
+        <description></description>
+      </item>          
+      <item>
+        <name>Foundation Site Soil Name Average</name>
+        <value>Average</value>
+        <units></units>
+        <description></description>
+      </item>         
+      <item>
+        <name>Foundation Site Soil Name Excellent</name>
+        <value>Excellent</value>
+        <units></units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Foundation Site Soil Factor Poor</name>
+        <value>2</value>
+        <units></units>
+        <description></description>
+      </item>          
+      <item>
+        <name>Foundation Site Soil Factor Average</name>
+        <value>1</value>
+        <units></units>
+        <description></description>
+      </item>         
+      <item>
+        <name>Foundation Site Soil Factor Excellent</name>
+        <value>0</value>
+        <units></units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Foundation Depth</name>
+        <value>1.5</value>
+        <units>feet</units>
+        <description></description>
+      </item>          
+      <item>
+        <name>Foundation Slab Volume User Specified</name>
+        <value>0</value>
+        <units>cubic yards</units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Foundation Concrete Unit Cost</name>
+        <value>450</value>
+        <units>dollar per cubic yards</units>
+        <description></description>
+      </item>         
+      <item>
+        <name>Control Building Length</name>
+        <value>30</value>
+        <units>ft</units>
+        <description></description>
+      </item>        
+      <item>
+        <name>Control Building Width</name>
+        <value>20</value>
+        <units>ft</units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Control Building Unit Cost</name>
+        <value>125</value>
+        <units>dollar per square foot</units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Control Building Lab Cost</name>
+        <value>25000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>         
+      <item>
+        <name>Control Building Water Sewer Cost</name>
+        <value>47000</value>
+        <units>dollar</units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Control Building HVAC Cost</name>
+        <value>25000</value>
+        <units>dollar</units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Control Building Cost User Specified</name>
+        <value>0</value>
+        <units>dollar</units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Electric Line Extension Length</name>
+        <value>1000</value>
+        <units>ft</units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Electric Line Extension Unit Cost</name>
+        <value>17</value>
+        <units>dollar per foot</units>
+        <description></description>
+      </item>  
+      <item>
+        <name>Electric Backup Generator Cost</name>
+        <value>220000</value>
+        <units>dollar</units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Electric Stepdown Transformer Cost</name>
+        <value>150000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>         
+      <item>
+        <name>Electric Panel Cost</name>
+        <value>5000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Electric Wiring Percentage</name>
+        <value>5</value>
+        <units>percentage</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Electric Telecommunications Cost</name>
+        <value>8500</value>
+        <units>dollar</units>
+        <description></description>
+      </item>  
+      <item>
+        <name>Electric Plant Automation Cost</name>
+        <value>75000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>          
+      <item>
+        <name>Electric Other Utility Cost</name>
+        <value>0</value>
+        <units>dollar</units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Fencing Length</name>
+        <value>2500</value>
+        <units>foot</units>
+        <description></description>
+      </item> 
+      <item>
+        <name>Fencing Unit Cost</name>
+        <value>25</value>
+        <units>dollar per foot</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Fencing Cost User Specified</name>
+        <value>0</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Access Gate Quantity</name>
+        <value>2</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Access Gate Unit Cost</name>
+        <value>3500</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Clear And Grub Unit Cost</name>
+        <value>2500</value>
+        <units>dollar per acre</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Clear And Grub Revegetation Percentage</name>
+        <value>50</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Revegetation Unit Cost</name>
+        <value>2000</value>
+        <units>dollar per acre</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Engineering Permitting Percentage</name>
+        <value>20</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Engineering Permitting Cost</name>
+        <value>0</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Surveying Percentage</name>
+        <value>5</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Surveying Cost</name>
+        <value>0</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Construction Inspection Percentage</name>
+        <value>5</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Construction Inspection Cost</name>
+        <value>0</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Contingency Percentage</name>
+        <value>15</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Contingency Cost User Specified</name>
+        <value>0</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+            <item>
+        <name>Other Capital Item Description 1</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 2</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 3</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 4</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 5</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Other Capital Item Quantity 1</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 2</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 3</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 4</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 5</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Operation Percentage</name>
+        <value>15</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Operation User Specified</name>
+        <value>0</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Property Tax</name>
+        <value>0</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Utility</name>
+        <value>0</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Operation Other</name>
+        <value>0</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Building Maintenance Hours Per Year</name>
+        <value>80</value>
+        <units>hours per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Parking Area Maintenance Unit Cost</name>
+        <value>11.5</value>
+        <units>dollar per area per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Road Maintenance Hours Per Year</name>
+        <value>80</value>
+        <units>hours per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mowing Hours Per Year</name>
+        <value>192</value>
+        <units>hours per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Snow Removal Hours Per Year</name>
+        <value>80</value>
+        <units>hours per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Ditch Culvert Cleaning Hours Per Year</name>
+        <value>16</value>
+        <units>hours per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Leaf Removal Hours Per Year</name>
+        <value>80</value>
+        <units>hours per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Site Inspections Hours Per Year</name>
+        <value>96</value>
+        <units>hours per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Other Hours Per Year</name>
+        <value>96</value>
+        <units>hours per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Repairs Percentage</name>
+        <value>1.5</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Repairs User Specified</name>
+        <value>0</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Access Roads</name>
+        <value>25</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Parking Area</name>
+        <value>25</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Ditches And Culverts</name>
+        <value>25</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Control Building</name>
+        <value>40</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Fencing</name>
+        <value>25</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Access Gates</name>
+        <value>25</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Other Items</name>
+        <value>25</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Access Roads</name>
+        <value>50</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Parking Area</name>
+        <value>50</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Ditches and Culverts</name>
+        <value>50</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Control Building</name>
+        <value>50</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Fencing</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Access Gates</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Other Items</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+  </items>
+</module>

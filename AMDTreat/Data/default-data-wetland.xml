@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module type="Wetland">
+  <items>
+      <item>
+        <name>Design Flow</name>
+        <value>50</value>
+        <units>gallons per minute</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Dissolved Iron</name>
+        <value>15</value>
+        <units>milligrams per liter</units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Dissolved Manganese</name>
+        <value>10</value>
+        <units>milligrams per liter</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Net Acidity</name>
+        <value>-15</value>
+        <units>milligrams per liter</units>
+        <description></description>
+      </item>    
+      <item>
+        <name>Retention Time</name>
+        <value>24</value>
+        <units>hours</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Iron Removal Rate</name>
+        <value>10</value>
+        <units>g/m2/day</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Manganese Removal Rate</name>
+        <value>0.5</value>
+        <units>g/m2/day</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Freeboard Top Length Dimensions</name>
+        <value>250</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Freeboard Top Width Dimensions</name>
+        <value>50</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pond Inside Slope</name>
+        <value>2</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Bottom Length to Width Ratio</name>
+        <value>5</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Inlet Pool Length</name>
+        <value>30</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Inlet Pool Depth</name>
+        <value>3</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Outlet Pool Length</name>
+        <value>30</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Outlet Pool Depth</name>
+        <value>3</value>
+        <units>feet</units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Freeboard Depth</name>
+        <value>1</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Free Standing Water Depth</name>
+        <value>1</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Compost Mix Depth</name>
+        <value>1</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Limestone Fines Percentage</name>
+        <value>20</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Limestone Fines Void Space</name>
+        <value>43</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Limestone Porosity</name>
+        <value>28</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Rock Baffle Space</name>
+        <value>30</value>
+        <units>ft</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Rock Baffle Height</name>
+        <value>2</value>
+        <units>ft</units>
+        <description></description>
+      </item>      
+      <item>
+        <name>In Out Pipe Length</name>
+        <value>100</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>In Out Pipe Install Rate</name>
+        <value>20</value>
+        <units>foot per hour</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Header Pipe Install Rate</name>
+        <value>40</value>
+        <units>foot per hour</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Header Pipe Segment Length</name>
+        <value>20</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Header Pipe Quantity</name>
+        <value>1</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Clay Liner Thickness</name>
+        <value>0.5</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geosynthetic Clay Liner Soil Cover</name>
+        <value>1</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Flow Distribution Structure Quantity</name>
+        <value>1</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Water Level Control Structure Quantity</name>
+        <value>1</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Outlet Protection Structure Quantity</name>
+        <value>1</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Custom Pipe Name 1</name>
+        <value></value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Custom Pipe Length 1</name>
+        <value>0</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Custom Pipe Name 2</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Custom Pipe Length 2</name>
+        <value>0</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Custom Pipe Name 3</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Custom Pipe Length 3</name>
+        <value>0</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Multiplier</name>
+        <value>5</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Rock Baffle Limestone</name>
+        <value>15</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Compost Mix</name>
+        <value>15</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Liner</name>
+        <value>15</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Pipe</name>
+        <value>25</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle OtherItems</name>
+        <value>40</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Compost Mix</name>
+        <value>50</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Rock Baffle Limestone</name>
+        <value>50</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Liner</name>
+        <value>50</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Pipe</name>
+        <value>50</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Other Items</name>
+        <value>50</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Excavation Unit Cost</name>
+        <value>6</value>
+        <units>dollar per cubic yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Wetland Planting Unit Cost</name>
+        <value>5000</value>
+        <units>dollar per acre</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Compost Mix Unit Cost</name>
+        <value>25</value>
+        <units>dollar per cubic yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Compost Mix Placement Unit Cost</name>
+        <value>10</value>
+        <units>dollar per cubic yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Limestone Fines Unit Cost</name>
+        <value>25</value>
+        <units>dollar per cubic yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Limestone Unit Cost</name>
+        <value>25</value>
+        <units>dollar per ton</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Limestone Placement Unit Cost</name>
+        <value>10</value>
+        <units>dollar per cubic yard</units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Labor Rate</name>
+        <value>40</value>
+        <units>dollar per hour</units>
+        <description></description>
+      </item>
+      <item>
+        <name>In Out Pipe Unit Cost</name>
+        <value>20</value>
+        <units>foot per hour</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Header Pipe Unit Cost</name>
+        <value>15</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Header Pipe Coupler Unit Cost</name>
+        <value>50</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Tee Connector Unit Cost</name>
+        <value>30</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Custom Pipe Unit Cost 1</name>
+        <value>0</value>
+        <units>dollar per foot</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Custom Pipe Unit Cost 2</name>
+        <value>0</value>
+        <units>dollar per foot</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Custom Pipe Unit Cost 3</name>
+        <value>0</value>
+        <units>dollar per foot</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Clay Liner Unit Cost</name>
+        <value>7.5</value>
+        <units>dollar per cubic yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Synthetic Liner Unit Cost</name>
+        <value>10</value>
+        <units>dollar per square yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geosynthetic Clay Liner Unit Cost</name>
+        <value>5.5</value>
+        <units>dollar per square yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geosynthetic Clay Liner Cover Unit Cost</name>
+        <value>10</value>
+        <units>dollar per cubic yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Non Woven Geotextile Unit Cost</name>
+        <value>2.5</value>
+        <units>dollar per square yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Intake Structure Unit Cost</name>
+        <value>10000</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Flow Distribution Structure Unit Cost</name>
+        <value>3500</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Water Level Control Structure Unit Cost</name>
+        <value>3500</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Outlet Protection Structure Unit Cost</name>
+        <value>1000</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Flat Fee</name>
+        <value>0</value>
+        <units>dollars</units>
+        <description></description>
+      </item>
+  </items>
+</module>

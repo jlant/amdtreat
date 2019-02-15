@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0F56EDA9-CF7F-4C49-A67B-3FCD434D4902}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AMDTreat</RootNamespace>
+    <AssemblyName>AMDTreat</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GongSolutions.Wpf.DragDrop, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\gong-wpf-dragdrop.1.1.0\lib\net45\GongSolutions.Wpf.DragDrop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.5.0.23, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.5.0\lib\net45\MahApps.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks, Version=2.0.0.31, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.2.0.0\lib\net45\MahApps.Metro.IconPacks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.5.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Commands\RelayCommandWithParameter.cs" />
+    <Compile Include="Commands\SimpleCommand.cs" />
+    <Compile Include="Converters\BoolToBrushBackground.cs" />
+    <Compile Include="Converters\BoolToBrushBorder.cs" />
+    <Compile Include="Converters\BoolToBrushDataGridForeground.cs" />
+    <Compile Include="Converters\BoolToBrushIcon.cs" />
+    <Compile Include="Converters\BoolToBrushSeparater.cs" />
+    <Compile Include="Converters\BoolToBrushText.cs" />
+    <Compile Include="Converters\BoolToExpanded.cs" />
+    <Compile Include="Converters\BoolToVisibility.cs" />
+    <Compile Include="Converters\RadioButtonCheckedConverter.cs" />
+    <Compile Include="MahApps\Metro\IconPacks\PackIcon.cs" />
+    <Compile Include="Models\Borehole.cs" />
+    <Compile Include="Models\DataHandler.cs" />
+    <Compile Include="Models\IDataHandler.cs" />
+    <Compile Include="Models\ReactionTankCalculations.cs" />
+    <Compile Include="Models\Geotube.cs" />
+    <Compile Include="Models\ClarifierCalculations.cs" />
+    <Compile Include="Models\Polymer.cs" />
+    <Compile Include="Models\SiteDevelopmentCalculations.cs" />
+    <Compile Include="Models\SamplingCalculations.cs" />
+    <Compile Include="Models\GeneralItem.cs" />
+    <Compile Include="Models\FoundationSiteSoil.cs" />
+    <Compile Include="Models\ModuleProjectItem.cs" />
+    <Compile Include="Models\ConveyanceDitchCalculations.cs" />
+    <Compile Include="Models\PumpingCalculations.cs" />
+    <Compile Include="Models\SiloSystem.cs" />
+    <Compile Include="Models\DryLimeCalculations.cs" />
+    <Compile Include="Models\LimeSlurryCalculations.cs" />
+    <Compile Include="Models\CausticSodaCalculations.cs" />
+    <Compile Include="Models\BindingProxy.cs" />
+    <Compile Include="Models\BioReactorCalculations.cs" />
+    <Compile Include="Models\SharedData.cs" />
+    <Compile Include="Models\Helpers.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ManganeseRemovalBedCalculations.cs" />
+    <Compile Include="Models\LimestoneBedCalculations.cs" />
+    <Compile Include="Models\ModuleItem.cs" />
+    <Compile Include="Models\ModuleWindow.cs" />
+    <Compile Include="Models\PropertyChangedBase.cs" />
+    <Compile Include="Models\RecapMaterial.cs" />
+    <Compile Include="Models\CausticSodaSolution.cs" />
+    <Compile Include="Models\StoneGradation.cs" />
+    <Compile Include="Models\AnoxicLimestoneDrainCalculations.cs" />
+    <Compile Include="Models\PondsCalculations.cs" />
+    <Compile Include="Models\GeneralCostItem.cs" />
+    <Compile Include="Models\TankConstructionMaterial.cs" />
+    <Compile Include="Models\WetlandCalculations.cs" />
+    <Compile Include="Models\VerticalFlowPondCalculations.cs" />
+    <Compile Include="Models\WaterQualityItem.cs" />
+    <Compile Include="Models\XmlHelper.cs" />
+    <Compile Include="ViewModels\ReactionTankViewModel.cs" />
+    <Compile Include="ViewModels\ClarifierViewModel.cs" />
+    <Compile Include="ViewModels\SiteDevelopmentViewModel.cs" />
+    <Compile Include="ViewModels\SamplingViewModel.cs" />
+    <Compile Include="ViewModels\DryLimeViewModel.cs" />
+    <Compile Include="ViewModels\ConveyanceDitchViewModel.cs" />
+    <Compile Include="ViewModels\PumpingViewModel.cs" />
+    <Compile Include="ViewModels\LimeSlurryViewModel.cs" />
+    <Compile Include="ViewModels\CausticSodaViewModel.cs" />
+    <Compile Include="ViewModels\BioReactorViewModel.cs" />
+    <Compile Include="ViewModels\ManganeseRemovalBedViewModel.cs" />
+    <Compile Include="ViewModels\PlaceholderViewModel.cs" />
+    <Compile Include="ViewModels\CustomDialogViewModel.cs" />
+    <Compile Include="ViewModels\LimestoneBedViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\TestViewModel.cs" />
+    <Compile Include="ViewModels\AnoxicLimestoneDrainViewModel.cs" />
+    <Compile Include="ViewModels\PondsViewModel.cs" />
+    <Compile Include="ViewModels\WetlandViewModel.cs" />
+    <Compile Include="ViewModels\VerticalFlowPondViewModel.cs" />
+    <Compile Include="Views\SiteDevelopmentWindow.xaml.cs">
+      <DependentUpon>SiteDevelopmentWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReactionTankWindow.xaml.cs">
+      <DependentUpon>ReactionTankWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClarifierWindow.xaml.cs">
+      <DependentUpon>ClarifierWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SamplingWindow.xaml.cs">
+      <DependentUpon>SamplingWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DryLimeWindow.xaml.cs">
+      <DependentUpon>DryLimeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PumpingWindow.xaml.cs">
+      <DependentUpon>PumpingWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LimeSlurryWindow.xaml.cs">
+      <DependentUpon>LimeSlurryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CausticSodaWindow.xaml.cs">
+      <DependentUpon>CausticSodaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomDialogInfo.xaml.cs">
+      <DependentUpon>CustomDialogInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BioReactorWindow.xaml.cs">
+      <DependentUpon>BioReactorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AnoxicLimestoneDrainWindow.xaml.cs">
+      <DependentUpon>AnoxicLimestoneDrainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConveyanceDitchWindow.xaml.cs">
+      <DependentUpon>ConveyanceDitchWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PondsWindow.xaml.cs">
+      <DependentUpon>PondsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WetlandWindow.xaml.cs">
+      <DependentUpon>WetlandWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManganeseRemovalBed.xaml.cs">
+      <DependentUpon>ManganeseRemovalBed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LimestoneBedWindow.xaml.cs">
+      <DependentUpon>LimestoneBedWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TestWindow.xaml.cs">
+      <DependentUpon>TestWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VerticalFlowPondWindow.xaml.cs">
+      <DependentUpon>VerticalFlowPondWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Converters\ScreenResolutionRatioConverter.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Styles\SiteDevelopmentStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ReactionTankStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ClarifierStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\SamplingStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ConveyanceDitchStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\PumpingStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\DryLimeStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\LimeSlurryStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\CausticSodaStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\BioReactorStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\AnoxicLimestoneDrainStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\PondsStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\WetlandStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ManganeseRemovalBedStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\LimestoneBedStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SiteDevelopmentWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ReactionTankWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ClarifierWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SamplingWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DryLimeWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PumpingWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LimeSlurryWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CausticSodaWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CustomDialogInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\CustomDialogInfoStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\IconPacksStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BioReactorWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AnoxicLimestoneDrainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ConveyanceDitchWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PondsWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\WetlandWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ManganeseRemovalBed.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LimestoneBedWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TestWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\TreatmentModuleGeneralStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\VerticalFlowPondStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\VerticalFlowPondWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\limestone-bed-brent-means.png" />
+    <Resource Include="Images\vertical-flow-pond.png" />
+    <Resource Include="Data\default-data-vertical-flow-pond.xml" />
+    <Resource Include="Data\default-data-limestone-bed.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Data\default-data-manganese-removal-bed.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Data\default-data-wetland.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Data\default-data-bioreactor.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Data\default-data-anoxic-limestone-drain.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Data\default-data-caustic-soda.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Data\default-data-lime-slurry.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Data\default-data-dry-lime.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Data\default-data-pumping.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Data\default-data-conveyance-ditch.xml" />
+    <Resource Include="Data\default-data-ponds.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Data\default-data-clarifier.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Data\default-data-reaction-tank.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Data\default-data-site-development.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Data\default-data-sampling.xml" />
+    <Content Include="Help\TestHtmlPage.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

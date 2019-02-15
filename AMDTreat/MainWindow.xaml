@@ -1,0 +1,984 @@
+﻿<Controls:MetroWindow 
+    x:Class="AMDTreat.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:dd="urn:gong-wpf-dragdrop"
+    xmlns:local="clr-namespace:AMDTreat"
+    xmlns:models="clr-namespace:AMDTreat.Models"
+    xmlns:viewModels="clr-namespace:AMDTreat.ViewModels"
+    xmlns:views="clr-namespace:AMDTreat.Views"
+    xmlns:converters="clr-namespace:AMDTreat.Converters"
+    Dialog:DialogParticipation.Register="{Binding}"
+    WindowStartupLocation="CenterScreen"
+    ResizeMode="CanResizeWithGrip"
+    TextOptions.TextFormattingMode="Display"
+    GlowBrush="{DynamicResource AccentColorBrush}"
+    BorderBrush="{DynamicResource AccentColorBrush}"
+    BorderThickness="1"
+    Width="{Binding Source={x:Static SystemParameters.PrimaryScreenWidth}, Converter={converters:ScreenResolutionRatioConverter}, ConverterParameter='0.9' }"
+    Height="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}, Converter={converters:ScreenResolutionRatioConverter}, ConverterParameter='0.9' }"
+    MinWidth="1024"
+    MinHeight="768"
+    Title="">
+
+    <Controls:MetroWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+            </ResourceDictionary.MergedDictionaries>
+
+            <!--#region Button Styles -->
+            <Style TargetType="{x:Type Button}" 
+                   BasedOn="{StaticResource {x:Type Button}}">
+                <Setter Property="Controls:ControlsHelper.ContentCharacterCasing" Value="Normal"/>
+            </Style>
+
+            <!-- AMDTreat Information Flyout - button style for Open, Save, etc. -->
+            <Style x:Key="MyButtonAmdtreatInformation" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+                <Setter Property="Width" Value="100" />
+                <Setter Property="Height" Value="40" />
+                <Setter Property="Background" Value="{x:Null}" />
+                <Setter Property="BorderBrush" Value="{x:Null}" />
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="HorizontalContentAlignment" Value="Left" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="Margin" Value="10,5" />
+            </Style>
+
+            <!-- Tool Flyout - button style -->
+            <Style x:Key="MyButtonTools" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+                <Setter Property="Width" Value="100" />
+                <Setter Property="Height" Value="115" />
+                <Setter Property="Background" Value="{x:Null}" />
+                <Setter Property="BorderBrush" Value="{x:Null}" />
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Setter Property="VerticalContentAlignment" Value="Top" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Top" />
+                <Setter Property="Margin" Value="2" />
+            </Style>
+
+            <!-- Module Buttons - button style -->
+            <Style x:Key="MyButtonModules" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+                <Setter Property="Width" Value="250" />
+                <Setter Property="Height" Value="40" />
+                <Setter Property="Background" Value="{x:Null}" />
+                <Setter Property="BorderBrush" Value="{x:Null}" />
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="HorizontalContentAlignment" Value="Left" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="Margin" Value="2" />
+            </Style>
+
+            <!-- Button Style for Sections -->
+            <Style x:Key="MyButtonSectionInformation" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+                <Setter Property="Opacity" Value="0.6"/>
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="HorizontalAlignment" Value="Right"/>
+                <Setter Property="VerticalAlignment" Value="Top" />
+            </Style>
+
+            <Style x:Key="MyButtonSectionInformationModuleList" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+                <Setter Property="Opacity" Value="1"/>
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="HorizontalAlignment" Value="Right"/>
+                <Setter Property="VerticalAlignment" Value="Top" />
+                <Setter Property="Background" Value="Transparent" />
+            </Style>
+
+
+            <!--#endregion-->
+
+        </ResourceDictionary>
+
+    </Controls:MetroWindow.Resources>
+
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <!--<Button ToolTip="Open Project" Content="{iconPacks:PackIconModern PageXml, Width=22, Height=22}"  />
+            <Button ToolTip="Save Project" Content="{iconPacks:PackIconModern Save, Width=22, Height=22}"  />
+            <Button ToolTip="Create Report" Content="{iconPacks:PackIconModern PageFilePdf, Width=22, Height=22}" />-->
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+
+    <Controls:MetroWindow.LeftWindowCommands>
+        <Controls:WindowCommands>
+            <ToggleButton ToolTip="AMDTreat Information" IsChecked="{Binding ElementName=flyoutAmdtreatInformation, Path=IsOpen}">
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconModern Kind="TreeLeaf" Width="22" Height="22" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="AMDTreat" Margin="5,0,0,0" />
+                    <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="" Margin="5,0,0,0" />
+                </StackPanel>
+            </ToggleButton>
+
+            <ToggleButton ToolTip="Water Quality Information" IsChecked="{Binding ElementName=flyoutWaterQuality, Path=IsOpen}">
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconModern Kind="WaterDropletAlert" Width="24" Height="22" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Water Quality" Margin="5,0,0,0" />
+                </StackPanel>
+            </ToggleButton>
+
+            <ToggleButton ToolTip="Tools" IsChecked="{Binding ElementName=flyoutTools, Path=IsOpen}">
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconModern Kind="Tools" Width="24" Height="22" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Tools" Margin="5,0,0,0" />
+                </StackPanel>
+            </ToggleButton>
+
+            <ToggleButton ToolTip="Net Present Value Variables" IsChecked="{Binding ElementName=flyoutNetPresentValue, Path=IsOpen}">
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconModern Kind="Money" Width="24" Height="22" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Net Present Value" Margin="5,0,0,0" />
+                </StackPanel>
+            </ToggleButton>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.LeftWindowCommands>
+
+    <Controls:MetroWindow.Flyouts>
+        <Controls:FlyoutsControl>
+            <Controls:Flyout x:Name="flyoutAmdtreatInformation" Header="AMDTreat Project Information" Position="Left" Width="425" IsOpen="False" Theme="Dark">
+                <StackPanel Orientation="Vertical">
+
+                    <Button Style="{StaticResource MyButtonAmdtreatInformation}" ToolTip="Open Project" Command="{Binding ShowMessageDialogCommandTbd}">
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconModern Kind="PageXml" Style="{StaticResource MyIconPackModernAmdtreatInformationButton}"/>
+                            <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Open" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button Style="{StaticResource MyButtonAmdtreatInformation}" ToolTip="Save Project" Command="{Binding ShowMessageDialogCommandTbd}">
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconModern Kind="Save" Style="{StaticResource MyIconPackModernAmdtreatInformationButton}" />
+                            <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Save" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button Style="{StaticResource MyButtonAmdtreatInformation}" ToolTip="Create Project Report" Command="{Binding ShowMessageDialogCommandTbd}">
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconModern Kind="PagePdf" Style="{StaticResource MyIconPackModernAmdtreatInformationButton}" />
+                            <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Report" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button Style="{StaticResource MyButtonAmdtreatInformation}" ToolTip="About AMDTreat" Command="{Binding ShowMessageDialogCommandAbout}">
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconModern Kind="InformationCircle" Style="{StaticResource MyIconPackModernAmdtreatInformationButton}" />
+                            <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="About" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button Style="{StaticResource MyButtonAmdtreatInformation}" ToolTip="Open Help" Command="{Binding ShowMessageDialogCommandTbd}">
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconModern Kind="Question" Style="{StaticResource MyIconPackModernAmdtreatInformationButton}" />
+                            <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Help" />
+                        </StackPanel>
+                    </Button>
+
+                    <Separator Style="{StaticResource MySeparatorFlyout}" />
+
+                    <TextBlock Style="{StaticResource MyTextBlockHeaderFlyout}" Text="Project Name" />
+                    <TextBox Margin="10,2,10,10" TextWrapping="Wrap" Text="" KeyUp="TextBox_KeyEnterUpdate" FontSize="14" />
+                    <TextBlock Style="{StaticResource MyTextBlockHeaderFlyout}"  Text="Notes" />
+                    <RichTextBox Margin="10,2,10,10" Controls:TextBoxHelper.Watermark="Enter your notes" Height="200" FontSize="14" 
+                                 SpellCheck.IsEnabled="True" VerticalScrollBarVisibility="Auto" />
+                </StackPanel>
+            </Controls:Flyout>
+
+            <Controls:Flyout x:Name="flyoutWaterQuality" Header="Initial Water Quality" Position="Left" Width="425" IsOpen="False" Theme="Dark" >
+                <StackPanel Orientation="Vertical">
+                    <Grid Margin="10,0,0,0" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Button Grid.Row="0" Grid.Column="1" Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="About Water Quality" 
+                                    Content="{iconPacks:Modern InformationCircle, Width=20, Height=20}"  
+                                    Command="{Binding ShowMessageDialogCommandTbd}" 
+                                    Opacity="0.6" BorderThickness="1" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10,5" />
+
+                        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource MyTextBlockHeaderFlyout}" Text="Required Parameters" HorizontalAlignment="Center" />
+
+                        <TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Design Flow" />
+                        <StackPanel Grid.Row="2" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="1" Maximum="5000" Interval="1" 
+                                                        Value="{Binding Vfp.DesignFlow.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                        ToolTip="min = 1, max = 5000"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="gpm" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Typical Flow" />
+                        <StackPanel Grid.Row="3" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="1" Maximum="10000" Interval="1" 
+                                                        Value="{Binding Vfp.NetAcidity.Value, Mode=TwoWay}"
+                                                        ToolTip="min = 1, max = 10,000"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="gpm" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="4" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Total Iron" />
+                        <StackPanel Grid.Row="4" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="1" Maximum="10000" Interval="1" 
+                                                        Value="{Binding Vfp.NetAcidity.Value, Mode=TwoWay}"
+                                                        ToolTip="min = 1, max = 10,000"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="mg/L" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="5" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Ferrous Iron" />
+                        <StackPanel Grid.Row="5" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="1" Maximum="10000" Interval="1" 
+                                                        Value="{Binding Vfp.NetAcidity.Value, Mode=TwoWay}"
+                                                        ToolTip="min = 1, max = 10,000"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="mg/L" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="6" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Aluminum" />
+                        <StackPanel Grid.Row="6" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="1" Maximum="10000" Interval="1" 
+                                                        Value="{Binding Vfp.NetAcidity.Value, Mode=TwoWay}"
+                                                        ToolTip="min = 1, max = 10,000"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="mg/L" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="7" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Manganese" />
+                        <StackPanel Grid.Row="7" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="1" Maximum="10000" Interval="1" 
+                                                        Value="{Binding Vfp.NetAcidity.Value, Mode=TwoWay}"
+                                                        ToolTip="min = 1, max = 10,000"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="mg/L" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="8" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="pH" />
+                        <StackPanel Grid.Row="8" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="1" Maximum="10000" Interval="1" 
+                                                        Value="{Binding Vfp.NetAcidity.Value, Mode=TwoWay}"
+                                                        ToolTip="min = 1, max = 10,000"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="su" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="9" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="TIC as C" />
+                        <StackPanel Grid.Row="9" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="1" Maximum="10000" Interval="1" 
+                                                        Value="{Binding Vfp.NetAcidity.Value, Mode=TwoWay}"
+                                                        ToolTip="min = 1, max = 10,000"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="mg/L" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="10" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Acidity as CaCO3" />
+                        <StackPanel Grid.Row="10" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="1" Maximum="10000" Interval="1" 
+                                                        Value="{Binding Vfp.NetAcidity.Value, Mode=TwoWay}"
+                                                        ToolTip="min = 1, max = 10,000"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="mg/L" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="11" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Sulfate" />
+                        <StackPanel Grid.Row="11" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="1" Maximum="10000" Interval="1" 
+                                                        Value="{Binding Vfp.NetAcidity.Value, Mode=TwoWay}"
+                                                        ToolTip="min = 1, max = 10,000"/>
+                            <TextBlock Style="{StaticResource MyTextBlockPropertyUnits}" Text="mg/L" />
+                        </StackPanel>
+
+                        <Separator Grid.Row="12" Grid.ColumnSpan="2" Style="{StaticResource MySeparatorFlyout}" />
+
+                        <TextBlock Grid.Row="13" Grid.ColumnSpan="2" Style="{StaticResource MyTextBlockHeaderFlyout}" Text="Optional Parameters" HorizontalAlignment="Center" />
+
+                        <TextBlock Grid.Row="14" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Alkalinity as CaCO3" />
+                        <StackPanel Grid.Row="14" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="1" Maximum="10000" Interval="1" 
+                                                        Value="{Binding Vfp.NetAcidity.Value, Mode=TwoWay}"
+                                                        ToolTip="min = 1, max = 10,000"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="mg/L" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="15" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Chloride" />
+                        <StackPanel Grid.Row="15" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="1" Maximum="10000" Interval="1" 
+                                                        Value="{Binding Vfp.NetAcidity.Value, Mode=TwoWay}"
+                                                        ToolTip="min = 1, max = 10,000"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="mg/L" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="16" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Sodium" />
+                        <StackPanel Grid.Row="16" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="1" Maximum="10000" Interval="1" 
+                                                        Value="{Binding Vfp.NetAcidity.Value, Mode=TwoWay}"
+                                                        ToolTip="min = 1, max = 10,000"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="mg/L" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="17" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Specific Conductivity" />
+                        <StackPanel Grid.Row="17" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="1" Maximum="10000" Interval="1" 
+                                                        Value="{Binding Vfp.NetAcidity.Value, Mode=TwoWay}"
+                                                        ToolTip="min = 1, max = 10,000"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="µS/cm" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="18" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Total Dissolved Solids" />
+                        <StackPanel Grid.Row="18" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="1" Maximum="10000" Interval="1" 
+                                                        Value="{Binding Vfp.NetAcidity.Value, Mode=TwoWay}"
+                                                        ToolTip="min = 1, max = 10,000"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="mg/L" />
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="19" Grid.Column="0" Style="{StaticResource MyTextBlockPropertyName}" Text="Typical Acid Loading" />
+                        <StackPanel Grid.Row="19" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="1" Maximum="10000" Interval="1" 
+                                                        Value="{Binding Vfp.NetAcidity.Value, Mode=TwoWay}"
+                                                        ToolTip="min = 1, max = 10,000"/>
+                            <TextBlock  Style="{StaticResource MyTextBlockPropertyUnits}" Text="mg/L" />
+                        </StackPanel>
+
+                    </Grid>
+                </StackPanel>
+            </Controls:Flyout>
+
+            <Controls:Flyout x:Name="flyoutTools" Header="Tools" Position="Left" Width="425" IsOpen="False" Theme="Dark">
+                <StackPanel Orientation="Vertical">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Button Grid.Row="0" Grid.Column="3" Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="About Tools" 
+                                    Content="{iconPacks:Modern InformationCircle, Width=20, Height=20}"  
+                                    Command="{Binding ShowMessageDialogCommandTbd}" 
+                                    Opacity="0.6" BorderThickness="1" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10,5" />
+
+                        <Button Grid.Row="1" Grid.Column="0"  ToolTip="PHREEQ - Predict Water Quality" Style="{StaticResource MyButtonTools}" Command="{Binding ShowMessageDialogCommandTbd}">
+                            <StackPanel Orientation="Vertical">
+                                <iconPacks:PackIconEntypo Kind="LabFlask" Style="{StaticResource MyIconPackEntypoToolsButton}"/>
+                                <TextBlock Style="{StaticResource MyTextBlockHeaderTools}" Text="PHREEQ" TextWrapping="Wrap" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button Grid.Row="1" Grid.Column="1"  ToolTip="Sludge + PHREEQ - Estimate sludge using PHREEQ" Style="{StaticResource MyButtonTools}" Command="{Binding ShowMessageDialogCommandTbd}">
+                            <StackPanel Orientation="Vertical">
+                                <iconPacks:PackIconEntypo Kind="LabFlask" Style="{StaticResource MyIconPackEntypoToolsButton}"/>
+                                <TextBlock Style="{StaticResource MyTextBlockHeaderTools}" Text="Sludge + PHREEQ" TextWrapping="Wrap" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button Grid.Row="2" Grid.Column="0"  ToolTip="Acidity Calculator - Calculate acidity" Style="{StaticResource MyButtonTools}" Command="{Binding ShowMessageDialogCommandTbd}">
+                            <StackPanel Orientation="Vertical">
+                                <iconPacks:PackIconEntypo Kind="Calculator" Style="{StaticResource MyIconPackEntypoToolsButton}"/>
+                                <TextBlock Style="{StaticResource MyTextBlockHeaderTools}" Text="Acidity Calculator" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button Grid.Row="2" Grid.Column="1"  ToolTip="Ferrous Iron Calculator - Calculate Ferrous Iron" Style="{StaticResource MyButtonTools}" Command="{Binding ShowMessageDialogCommandTbd}">
+                            <StackPanel Orientation="Vertical">
+                                <iconPacks:PackIconEntypo Kind="Calculator" Style="{StaticResource MyIconPackEntypoToolsButton}"/>
+                                <TextBlock Style="{StaticResource MyTextBlockHeaderTools}" Text="Ferrous Iron Calculator" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button Grid.Row="2" Grid.Column="2"  ToolTip="TIC Calculator - Calculate total inorganic carbon" Style="{StaticResource MyButtonTools}" Command="{Binding ShowMessageDialogCommandTbd}">
+                            <StackPanel Orientation="Vertical">
+                                <iconPacks:PackIconEntypo Kind="Calculator" Style="{StaticResource MyIconPackEntypoToolsButton}"/>
+                                <TextBlock Style="{StaticResource MyTextBlockHeaderTools}" Text="TIC Calculator" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button Grid.Row="3" Grid.Column="0"  ToolTip="Mass Balance Calculator - Calculate mass balance" Style="{StaticResource MyButtonTools}" Command="{Binding ShowMessageDialogCommandTbd}">
+                            <StackPanel Orientation="Vertical">
+                                <iconPacks:PackIconEntypo Kind="Calculator" Style="{StaticResource MyIconPackEntypoToolsButton}"/>
+                                <TextBlock Style="{StaticResource MyTextBlockHeaderTools}" Text="Mass Balance Calculator" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Button>
+
+                        <Button Grid.Row="3" Grid.Column="1"  ToolTip="pH Averaging - Calculate average pH" Style="{StaticResource MyButtonTools}" Command="{Binding ShowMessageDialogCommandTbd}">
+                            <StackPanel Orientation="Vertical">
+                                <iconPacks:PackIconEntypo Kind="Water" Style="{StaticResource MyIconPackEntypoToolsButton}"/>
+                                <TextBlock Style="{StaticResource MyTextBlockHeaderTools}" Text="pH Averaging" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Button>
+
+                    </Grid>
+                </StackPanel>
+
+            </Controls:Flyout>
+
+            <Controls:Flyout x:Name="flyoutNetPresentValue" Header="Net Present Value" Position="Left" Width="425" IsOpen="False" Theme="Dark">
+                <StackPanel Orientation="Vertical">
+                    <Grid Margin="10,0,0,0" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Button Grid.Row="0" Grid.Column="1" Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="About Net Present Value" 
+                                Content="{iconPacks:Modern InformationCircle, Width=20, Height=20}"  
+                                Command="{Binding ShowMessageDialogTdb}" 
+                                Opacity="0.6" BorderThickness="1" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10,5" />
+
+                        <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource MyLabelPropertyName}" Content="Term of Analysis" />
+                        <StackPanel Grid.Row="1" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="1" Maximum="100" Interval="1"
+                                                    Value="{Binding RecapitalizationCostCalculationPeriod, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                    ToolTip="min = 1, max = 100"/>
+                            <Label Style="{StaticResource MyLabelPropertyUnits}" Content="years" />
+                        </StackPanel>
+
+                        <Label Grid.Row="2" Grid.Column="0" Style="{StaticResource MyLabelPropertyName}" Content="Inflation Rate" />
+                        <StackPanel Grid.Row="2" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="100" Interval="1" 
+                                                    Value="{Binding RecapitalizationCostInflationRate, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 100"/>
+                            <Label Style="{StaticResource MyLabelPropertyUnits}" Content="%" />
+                        </StackPanel>
+
+                        <Label Grid.Row="3" Grid.Column="0" Style="{StaticResource MyLabelPropertyName}" Content="Net Rate of Return" />
+                        <StackPanel Grid.Row="3" Grid.Column="1" Style="{StaticResource MyStackPanel}" >
+                            <Controls:NumericUpDown Style="{StaticResource MyNumericUpDown}" Minimum="0" Maximum="100" Interval="1" 
+                                                    Value="{Binding RecapitalizationCostNetRateOfReturn, Mode=TwoWay}"
+                                                    ToolTip="min = 0, max = 100"/>
+                            <Label Style="{StaticResource MyLabelPropertyUnits}" Content="%" />
+                        </StackPanel>
+
+                    </Grid>
+                </StackPanel>
+            </Controls:Flyout>
+        </Controls:FlyoutsControl>
+    </Controls:MetroWindow.Flyouts>
+
+    <Grid x:Name="mainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition Width="2.5*"></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height=".05*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!-- First column (list of module and project buttons) -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <ScrollViewer Grid.Row="0" Grid.Column="0" Margin="10" >
+
+                <StackPanel >
+
+                    <!-- Treatment Modules Header -->
+                    <DockPanel>
+                        <TextBlock DockPanel.Dock="Left" Style="{StaticResource MyTextBlockHeader}" Text="Treatment Modules" TextWrapping="Wrap" />
+                        <Button DockPanel.Dock="Right" Style="{StaticResource MyButtonSectionInformationModuleList}" ToolTip="Treatment Options" 
+                        Content="{iconPacks:Modern InformationCircle, Width=12, Height=12}"  
+                        Command="{Binding ShowMessageDialogCommandTbd}" HorizontalContentAlignment="Right" />
+                    </DockPanel>
+
+                    <Separator Style="{StaticResource MySeparatorHeader}" />
+
+                    <!-- Passive Treatment Module List -->
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconOcticons Kind="PrimitiveDot" BorderBrush="#27ae60" Foreground="#27ae60" VerticalAlignment="Center" />
+                        <TextBlock Style="{StaticResource MyTextBlockHeaderModuleList}" Text="Passive" />
+                    </StackPanel>
+
+                    <ListBox Grid.Row="0" Grid.Column="0" x:Name="listBoxPassiveModules" ScrollViewer.CanContentScroll="True"
+                         ItemsSource="{Binding PassiveModuleItems}"
+                         dd:DragDrop.IsDragSource="True"
+                         dd:DragDrop.DragDropCopyKeyState="LeftMouseButton"
+                         dd:DragDrop.DragAdornerTemplate="{StaticResource ModuleDragAdorner}" >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <iconPacks:PackIconModern Kind="{Binding Icon}" Style="{StaticResource MyIconPackModernModulesButton}" />
+                                    <TextBlock Style="{StaticResource MyTextBlockModuleListBox}" Text="{Binding Name}" Margin="10,0,0,0" />
+                                </StackPanel>
+
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <!-- Active Treatments  -->
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconOcticons Kind="PrimitiveDot" BorderBrush="#2980b9" Foreground="#2980b9" VerticalAlignment="Center" />
+                        <TextBlock Style="{StaticResource MyTextBlockHeaderModuleList}" Text="Active" />
+                    </StackPanel>
+
+                    <ListBox Grid.Row="0" Grid.Column="0" x:Name="listBoxActiveModules" ScrollViewer.CanContentScroll="True"
+                         ItemsSource="{Binding ActiveModuleItems}"
+                         dd:DragDrop.IsDragSource="True"
+                         dd:DragDrop.DragDropCopyKeyState="LeftMouseButton"
+                         dd:DragDrop.DragAdornerTemplate="{StaticResource ModuleDragAdorner}" >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <iconPacks:PackIconModern Kind="{Binding Icon}" Style="{StaticResource MyIconPackModernModulesButton}" />
+                                    <TextBlock Style="{StaticResource MyTextBlockModuleListBox}" Text="{Binding Name}" Margin="10,0,0,0" />
+                                </StackPanel>
+
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <!-- Project Modules -->
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconOcticons Kind="PrimitiveDot" BorderBrush="#f39c12" Foreground="#f39c12" VerticalAlignment="Center" />
+                        <TextBlock Style="{StaticResource MyTextBlockHeaderModuleList}" Text="Project" />
+                    </StackPanel>
+
+                    <ListBox Grid.Row="0" Grid.Column="0" x:Name="listBoxProjectModules" ScrollViewer.CanContentScroll="True"
+                         ItemsSource="{Binding ProjectModuleItems}"
+                         dd:DragDrop.IsDragSource="True"
+                         dd:DragDrop.DragDropCopyKeyState="LeftMouseButton"
+                         dd:DragDrop.DragAdornerTemplate="{StaticResource ModuleDragAdorner}" >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <iconPacks:PackIconModern Kind="{Binding Icon}" Style="{StaticResource MyIconPackModernModulesButton}" />
+                                    <TextBlock Style="{StaticResource MyTextBlockModuleListBox}" Text="{Binding Name}" Margin="10,0,0,0" />
+                                </StackPanel>
+
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <!--Placeholder Treatment (space filler)-->
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconOcticons Kind="PrimitiveDot" BorderBrush="Gray" Foreground="Gray" VerticalAlignment="Center" />
+                        <TextBlock Style="{StaticResource MyTextBlockHeaderModuleList}" Text="Placeholder" />
+                    </StackPanel>
+
+                    <ListBox Grid.Row="0" Grid.Column="0" x:Name="listBoxPlaceholderModules" ScrollViewer.CanContentScroll="True"
+                         ItemsSource="{Binding PlaceholderModuleItems}"
+                         dd:DragDrop.IsDragSource="True"
+                         dd:DragDrop.DragDropCopyKeyState="LeftMouseButton"
+                         dd:DragDrop.DragAdornerTemplate="{StaticResource ModuleDragAdorner}" >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <iconPacks:PackIconModern Kind="{Binding Icon}" Style="{StaticResource MyIconPackModernModulesButton}" />
+                                    <TextBlock Style="{StaticResource MyTextBlockModuleListBox}" Text="{Binding Name}" Margin="10,0,0,0" />
+                                </StackPanel>
+
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </ScrollViewer>
+            
+        </Grid>
+
+
+        <!-- Second column - Treatment System Layout -->
+        <ScrollViewer Grid.Row="0" Grid.Column="1" MinHeight="600" Background="#f1f1f1" Margin="5,0">
+            <StackPanel Grid.Row="0" Grid.Column="1" Margin="10" Orientation="Vertical" >
+
+                <DockPanel>
+                    <TextBlock DockPanel.Dock="Left" Style="{StaticResource MyTextBlockHeader}" Text="Treatment Layout" />
+                    <Button DockPanel.Dock="Right" Style="{StaticResource MyButtonSectionInformationModuleList}" ToolTip="Treatment Options" 
+                        Content="{iconPacks:Modern InformationCircle, Width=12, Height=12}"  
+                        Command="{Binding ShowMessageDialogCommandTbd}" HorizontalContentAlignment="Right" />
+                </DockPanel>
+
+                <Separator Style="{StaticResource MySeparatorHeader}" />
+
+                <ScrollViewer Grid.Row="0" Grid.Column="1" Height="770" HorizontalScrollBarVisibility="Visible" >
+                    <Grid x:Name="gridTreatmentSystemLayout" Margin="0,0,0,10" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition  />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition MinWidth="200" MaxWidth="303"></ColumnDefinition>
+                            <ColumnDefinition MinWidth="200" MaxWidth="303"></ColumnDefinition>
+                            <ColumnDefinition MinWidth="200" MaxWidth="303"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <ListBox x:Name="listBoxTreatmentSystemCol0" Grid.Row="0" Grid.Column="0" ItemContainerStyle="{StaticResource ListContainerStyle}"
+                                 ItemsSource="{Binding ModuleTiles}"
+                                 dd:DragDrop.IsDragSource="True"
+                                 dd:DragDrop.IsDropTarget="True" 
+                                 dd:DragDrop.DropHandler="{Binding}" 
+                                 Background="{x:Null}" 
+                                 Height="{Binding ElementName=mainGrid, Path=ActualHeight}"
+                                 BorderThickness="0,0,0,0" 
+                                 Margin="0,10,0,0">
+                            <ListBox.BorderBrush>
+                                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkColorKey}}"/>
+                            </ListBox.BorderBrush>
+                            <ListBox.Resources>
+                                <models:BindingProxy x:Key="Proxy" Data="{Binding}" />
+                            </ListBox.Resources>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Controls:Tile x:Name="TileControl" Click="Tile_Click" Height="190" Width="250" Background="{Binding BackgroundColor}" Tag="{Binding ElementName=listBoxTreatmentSystemCol0}">
+                                        <Controls:Tile.ContextMenu>
+                                            <ContextMenu>
+                                                <MenuItem Header="A menu item" />
+                                                <Separator />
+                                                <MenuItem Header="Remove"
+                                                          Command="{Binding Source={StaticResource Proxy}, Path=Data.RemoveTileCommand}"                                                       
+                                                          CommandParameter="{Binding}"  />
+                                            </ContextMenu>
+                                        </Controls:Tile.ContextMenu>
+                                        <Grid Height="{Binding ActualHeight, ElementName=TileControl}" Width="{Binding ActualWidth, ElementName=TileControl}">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height=".5*"/>
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Row="0" Style="{StaticResource MyTextBlockHeaderSmall}" Text="{Binding Name}" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="20" Margin="2" Opacity="{Binding Opacity}" />
+                                            <iconPacks:PackIconModern Grid.Row="1" Kind="{Binding Icon}" Style="{StaticResource MyIconPackModernModuleTiles}" Opacity="{Binding Opacity}"/>
+                                            <StackPanel Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                                <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Total Capital Cost" HorizontalAlignment="Left" FontSize="20" Margin="5,0" Opacity="{Binding Opacity}" />
+                                                <TextBlock Style="{StaticResource MyTextBlockHeader}" Text="{Binding ViewModel.CalcCapitalCostTotal, StringFormat=C2}" Margin="5,0,0,2" FontSize="24" HorizontalAlignment="Left" Opacity="{Binding Opacity}"/>
+                                            </StackPanel>
+
+                                        </Grid>
+                                    </Controls:Tile>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+
+                        <ListBox x:Name="listBoxTreatmentSystemCol1" Grid.Row="0" Grid.Column="1" ItemContainerStyle="{StaticResource ListContainerStyle}"
+                                 ItemsSource="{Binding ModuleTiles1}"
+                                 dd:DragDrop.IsDragSource="True"
+                                 dd:DragDrop.IsDropTarget="True" 
+                                 dd:DragDrop.DropHandler="{Binding}" 
+                                 Background="{x:Null}" 
+                                 Height="{Binding ElementName=mainGrid, Path=ActualHeight}"
+                                 BorderThickness="1,0,0,0" 
+                                 Margin="0,10,0,0">
+                            <ListBox.BorderBrush>
+                                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkColorKey}}"/>
+                            </ListBox.BorderBrush>
+                            <ListBox.Resources>
+                                <models:BindingProxy x:Key="Proxy" Data="{Binding}" />
+                            </ListBox.Resources>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Controls:Tile x:Name="TileControl" Click="Tile_Click" Height="190" Width="250" Background="{Binding BackgroundColor}" Tag="{Binding ElementName=listBoxTreatmentSystemCol1}">
+                                        <Controls:Tile.ContextMenu>
+                                            <ContextMenu>
+                                                <MenuItem Header="Menu item 1" />
+                                                <MenuItem Header="Menu item 2" />
+                                                <Separator />
+                                                <MenuItem Header="Remove"
+                                                          Command="{Binding Source={StaticResource Proxy}, Path=Data.RemoveTileCommand}"                                                       
+                                                          CommandParameter="{Binding}"  />
+                                            </ContextMenu>
+                                        </Controls:Tile.ContextMenu>
+                                        <Grid Height="{Binding ActualHeight, ElementName=TileControl}" Width="{Binding ActualWidth, ElementName=TileControl}">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height=".5*"/>
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Row="0" Style="{StaticResource MyTextBlockHeaderSmall}" Text="{Binding Name}" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="24" Margin="0" Opacity="{Binding Opacity}" />
+                                            <iconPacks:PackIconModern Grid.Row="1" Kind="{Binding Icon}" Style="{StaticResource MyIconPackModernModuleTiles}" Opacity="{Binding Opacity}"/>
+                                            <StackPanel Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                                <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Total Capital Cost" HorizontalAlignment="Left"  Margin="5,0" FontSize="24" Opacity="{Binding Opacity}" />
+                                                <TextBlock Style="{StaticResource MyTextBlockHeader}" Text="{Binding ViewModel.CalcCapitalCostTotal, StringFormat=C2}" Margin="5,0,0,2" FontSize="24" HorizontalAlignment="Left" Opacity="{Binding Opacity}"/>
+                                            </StackPanel>
+
+                                        </Grid>
+                                    </Controls:Tile>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+
+                        <ListBox x:Name="listBoxTreatmentSystemCol2" Grid.Row="0" Grid.Column="2" ItemContainerStyle="{StaticResource ListContainerStyle}"
+                                 ItemsSource="{Binding ModuleTiles2}"
+                                 dd:DragDrop.IsDragSource="True"
+                                 dd:DragDrop.IsDropTarget="True" 
+                                 dd:DragDrop.DropHandler="{Binding}" 
+                                 Background="{x:Null}" 
+                                 Height="{Binding ElementName=mainGrid, Path=ActualHeight}"
+                                 BorderThickness="1,0,0,0" 
+                                 Margin="0,10,0,0">
+                            <ListBox.BorderBrush>
+                                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkColorKey}}"/>
+                            </ListBox.BorderBrush>
+                            <ListBox.Resources>
+                                <models:BindingProxy x:Key="Proxy" Data="{Binding}" />
+                            </ListBox.Resources>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Controls:Tile x:Name="TileControl" Click="Tile_Click" Height="190" Width="250" Background="{Binding BackgroundColor}">
+                                        <Controls:Tile.ContextMenu>
+                                            <ContextMenu>
+                                                <MenuItem Header="Menu item 1" />
+                                                <MenuItem Header="Menu item 2" />
+                                                <Separator />
+                                                <MenuItem Header="Remove"
+                                                          Command="{Binding Source={StaticResource Proxy}, Path=Data.RemoveTileCommand}"                                                       
+                                                          CommandParameter="{Binding}"  />
+                                            </ContextMenu>
+                                        </Controls:Tile.ContextMenu>
+                                        <Grid Height="{Binding ActualHeight, ElementName=TileControl}" Width="{Binding ActualWidth, ElementName=TileControl}">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height=".5*"/>
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Row="0" Style="{StaticResource MyTextBlockHeaderSmall}" Text="{Binding Name}" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="24" Margin="0" Opacity="{Binding Opacity}"/>
+                                            <iconPacks:PackIconModern Grid.Row="1" Kind="{Binding Icon}" Style="{StaticResource MyIconPackModernModuleTiles}" Opacity="{Binding Opacity}"/>
+                                            <StackPanel Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Opacity="{Binding Opacity}">
+                                                <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Total Capital Cost" HorizontalAlignment="Left"  Margin="5,0" FontSize="24" Opacity="{Binding Opacity}" />
+                                                <TextBlock Style="{StaticResource MyTextBlockHeader}" Text="{Binding ViewModel.CalcCapitalCostTotal, StringFormat=C2}" Margin="5,0,0,2" FontSize="24" HorizontalAlignment="Left" Opacity="{Binding Opacity}"/>
+                                            </StackPanel>
+
+                                        </Grid>
+                                    </Controls:Tile>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+
+                    </Grid>
+                </ScrollViewer>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Third column (summary table) -->
+        <StackPanel Grid.Row="0" Grid.Column="2" Margin="10">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Left" Style="{StaticResource MyTextBlockHeader}" Text="Summary" />
+                <Button DockPanel.Dock="Right" Style="{StaticResource MyButtonSectionInformationModuleList}" ToolTip="Summary" 
+                        Content="{iconPacks:Modern InformationCircle, Width=12, Height=12}"  
+                        Command="{Binding ShowMessageDialogCommandTbd}" HorizontalContentAlignment="Right" />
+            </DockPanel>
+
+            <Separator Style="{StaticResource MySeparatorHeader}" />
+
+            <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Total Capital Cost" HorizontalAlignment="Left" />
+            <TextBlock Style="{StaticResource MyTextBlockHeader}" Text="{Binding CapitalCostDataAll, StringFormat=C2}" FontSize="24" />
+
+            <Expander Style="{StaticResource MyExpanderCaptialCostDetail}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconOcticons Kind="PrimitiveDot" BorderBrush="#27ae60" Foreground="#27ae60" VerticalAlignment="Center" />
+                        <TextBlock Style="{StaticResource MyTextBlockHeaderModuleList}" Text="Passive" />
+                    </StackPanel>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource MyTextBlockHeaderModuleList}" Text="{Binding CapitalCostDataTotalPassive, StringFormat=C2}" HorizontalAlignment="Right" />
+
+                    <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconOcticons Kind="PrimitiveDot" BorderBrush="#2980b9" Foreground="#2980b9" VerticalAlignment="Center" />
+                        <TextBlock Style="{StaticResource MyTextBlockHeaderModuleList}" Text="Active" />
+                    </StackPanel>
+                    <TextBlock Grid.Row="1" Grid.Column="1" Style="{StaticResource MyTextBlockHeaderModuleList}" Text="{Binding CapitalCostDataTotalActive, StringFormat=C2}" HorizontalAlignment="Right" />
+
+                    <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconOcticons Kind="PrimitiveDot" BorderBrush="#f39c12" Foreground="#f39c12" VerticalAlignment="Center" />
+                        <TextBlock Style="{StaticResource MyTextBlockHeaderModuleList}" Text="Other" />
+                    </StackPanel>
+                    <TextBlock Grid.Row="2" Grid.Column="1" Style="{StaticResource MyTextBlockHeaderModuleList}" Text="{Binding CapitalCostDataTotalProject, StringFormat=C2}" HorizontalAlignment="Right" />
+                </Grid>
+            </Expander>
+
+
+            <Separator Style="{StaticResource MySeparatorHeader}" />
+
+            <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Total Annual Cost" HorizontalAlignment="Left" />
+            <TextBlock Style="{StaticResource MyTextBlockHeader}" Text="{Binding AnnualCostDataAll, StringFormat=C2}" FontSize="24" />
+
+            <Expander Style="{StaticResource MyExpanderAnnualCostDetail}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconOcticons Kind="PrimitiveDot" BorderBrush="#27ae60" Foreground="#27ae60" VerticalAlignment="Center" />
+                        <TextBlock Style="{StaticResource MyTextBlockHeaderModuleList}" Text="Passive" />
+                    </StackPanel>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource MyTextBlockHeaderModuleList}" Text="{Binding AnnualCostDataTotalPassive, StringFormat=C2}" HorizontalAlignment="Right" />
+
+                    <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconOcticons Kind="PrimitiveDot" BorderBrush="#2980b9" Foreground="#2980b9" VerticalAlignment="Center" />
+                        <TextBlock Style="{StaticResource MyTextBlockHeaderModuleList}" Text="Active" />
+                    </StackPanel>
+                    <TextBlock Grid.Row="1" Grid.Column="1" Style="{StaticResource MyTextBlockHeaderModuleList}" Text="{Binding AnnualCostDataTotalActive, StringFormat=C2}" HorizontalAlignment="Right" />
+
+                    <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconOcticons Kind="PrimitiveDot" BorderBrush="#f39c12" Foreground="#f39c12" VerticalAlignment="Center" />
+                        <TextBlock Style="{StaticResource MyTextBlockHeaderModuleList}" Text="Other" />
+                    </StackPanel>
+                    <TextBlock Grid.Row="2" Grid.Column="1" Style="{StaticResource MyTextBlockHeaderModuleList}" Text="{Binding AnnualCostDataTotalProject, StringFormat=C2}" HorizontalAlignment="Right" />
+                </Grid>
+            </Expander>
+
+            <Separator Style="{StaticResource MySeparatorHeader}" />
+
+            <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Total Net Present Value Cost" HorizontalAlignment="Left" />
+            <TextBlock Style="{StaticResource MyTextBlockHeader}" Text="{Binding RecapCostDataAll, StringFormat=C2}" FontSize="24" />
+
+            <Expander Style="{StaticResource MyExpanderRecapCostDetail}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconOcticons Kind="PrimitiveDot" BorderBrush="#27ae60" Foreground="#27ae60" VerticalAlignment="Center" />
+                        <TextBlock Style="{StaticResource MyTextBlockHeaderModuleList}" Text="Passive" />
+                    </StackPanel>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource MyTextBlockHeaderModuleList}" Text="{Binding RecapCostDataTotalPassive, StringFormat=C2}" HorizontalAlignment="Right" />
+
+                    <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconOcticons Kind="PrimitiveDot" BorderBrush="#2980b9" Foreground="#2980b9" VerticalAlignment="Center" />
+                        <TextBlock Style="{StaticResource MyTextBlockHeaderModuleList}" Text="Active" />
+                    </StackPanel>
+                    <TextBlock Grid.Row="1" Grid.Column="1" Style="{StaticResource MyTextBlockHeaderModuleList}" Text="{Binding RecapCostDataTotalActive, StringFormat=C2}" HorizontalAlignment="Right" />
+
+                    <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconOcticons Kind="PrimitiveDot" BorderBrush="#f39c12" Foreground="#f39c12" VerticalAlignment="Center" />
+                        <TextBlock Style="{StaticResource MyTextBlockHeaderModuleList}" Text="Other" />
+                    </StackPanel>
+                    <TextBlock Grid.Row="2" Grid.Column="1" Style="{StaticResource MyTextBlockHeaderModuleList}" Text="{Binding RecapCostDataTotalProject, StringFormat=C2}" HorizontalAlignment="Right" />
+                </Grid>
+            </Expander>
+
+            <Separator Style="{StaticResource MySeparatorHeader}" />
+
+            <TextBlock Style="{StaticResource MyTextBlockHeaderSmall}" Text="Other Totals" HorizontalAlignment="Left" />
+
+            <Expander Style="{StaticResource MyExpanderOtherTotalsDetail}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.75*"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconOcticons Kind="PrimitiveDot" BorderBrush="Gray" Foreground="Gray" VerticalAlignment="Center" />
+                        <TextBlock Style="{StaticResource MyTextBlockHeaderModuleList}" Text="Clear and Grub Area" />
+                    </StackPanel>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource MyTextBlockHeaderModuleList}" Text="{Binding ClearAndGrubAreaDataTotalPassive, StringFormat=F2}" HorizontalAlignment="Right" />
+
+                    <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconOcticons Kind="PrimitiveDot" BorderBrush="Gray" Foreground="Gray" VerticalAlignment="Center" />
+                        <TextBlock Style="{StaticResource MyTextBlockHeaderModuleList}" Text="Foundation Area" />
+                    </StackPanel>
+                    <TextBlock Grid.Row="1" Grid.Column="1" Style="{StaticResource MyTextBlockHeaderModuleList}" Text="{Binding FoundationAreaDataTotalPassiveAndActive, StringFormat=F2}" HorizontalAlignment="Right"  />
+
+                    <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
+                        <iconPacks:PackIconOcticons Kind="PrimitiveDot" BorderBrush="Gray" Foreground="Gray" VerticalAlignment="Center" />
+                        <TextBlock Style="{StaticResource MyTextBlockHeaderModuleList}" Text="Foundation Area x Depth" />
+                    </StackPanel>
+                    <TextBlock Grid.Row="2" Grid.Column="1" Style="{StaticResource MyTextBlockHeaderModuleList}" Text="{Binding FoundationAreaTimesDepthDataTotalPassiveAndActive, StringFormat=F2}" HorizontalAlignment="Right" />
+                </Grid>
+            </Expander>
+        </StackPanel>
+
+        <!-- Bottom status bar -->
+        <StatusBar Grid.Row="1" Grid.ColumnSpan="3" >
+            <StatusBarItem>
+                <TextBlock Style="{StaticResource MyTextBlockHeaderStatusBar}" Text="AMDTreat"/>
+            </StatusBarItem>
+            <Separator Style="{StaticResource MetroStatusBarSeparator}" />
+            <StatusBarItem>
+                <TextBlock Style="{StaticResource MyTextBlockHeaderStatusBar}" Text="Total Capital Cost:"/>
+            </StatusBarItem>
+            <StatusBarItem >
+                <TextBlock Style="{StaticResource MyTextBlockHeaderStatusBar}" Text="{Binding CapitalCostDataAll, StringFormat=C2}" />
+            </StatusBarItem>
+        </StatusBar>
+
+    </Grid>
+</Controls:MetroWindow>

@@ -1,0 +1,833 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module type="Ponds">
+  <items>
+      <item>
+        <name>Design Flow</name>
+        <value>75</value>
+        <units>gallons per minute</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Typical Flow</name>
+        <value>2000</value>
+        <units>gallons per minute</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Ferrous Iron</name>
+        <value>40</value>
+        <units>mg/L</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Ferric Iron</name>
+        <value>50</value>
+        <units>mg/L</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Aluminum</name>
+        <value>200</value>
+        <units>mg/L</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Manganese</name>
+        <value>50</value>
+        <units>mg/L</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Freeboard Top Length Dimensions</name>
+        <value>200</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Freeboard Top Width Dimensions</name>
+        <value>100</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pond Inside Slope</name>
+        <value>2</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Bottom Length to Width Ratio</name>
+        <value>2</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Excavation Unit Cost</name>
+        <value>5.5</value>
+        <units>dollar per cubic yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Freeboard Depth</name>
+        <value>2</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Oxidation Depth</name>
+        <value>1</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Settling Retention Time</name>
+        <value>16</value>
+        <units>hours</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Settling Depth</name>
+        <value>2</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Sludge Depth</name>
+        <value>3</value>
+        <units>feet</units>
+        <description></description>
+      </item>      
+      <item>
+        <name>In Out Pipe Length</name>
+        <value>100</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>In Out Pipe Install Rate</name>
+        <value>20</value>
+        <units>foot per hour</units>
+        <description></description>
+      </item>
+      <item>
+        <name>In Out Pipe Unit Cost</name>
+        <value>25</value>
+        <units>dollar per hour</units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Labor Rate</name>
+        <value>25</value>
+        <units>dollar per hour</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Custom Pipe Name 1</name>
+        <value></value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Custom Pipe Length 1</name>
+        <value>0</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Custom Pipe Name 2</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Custom Pipe Unit Cost 1</name>
+        <value>0</value>
+        <units>dollar per foot</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Custom Pipe Length 2</name>
+        <value>0</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Custom Pipe Unit Cost 2</name>
+        <value>0</value>
+        <units>dollar per foot</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Custom Pipe Name 3</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Custom Pipe Length 3</name>
+        <value>0</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Custom Pipe Unit Cost 3</name>
+        <value>0</value>
+        <units>dollar per foot</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pump Quantity</name>
+        <value>1</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pump Unit Cost</name>
+        <value>5000</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Valve Quantity</name>
+        <value>1</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Valve Unit Cost</name>
+        <value>2000</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Intake Structure Quantity</name>
+        <value>1</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Intake Structure Unit Cost</name>
+        <value>3500</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Flow Distribution Structure Quantity</name>
+        <value>1</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Flow Distribution Structure Unit Cost</name>
+        <value>3500</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Water Level Control Structure Quantity</name>
+        <value>1</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Water Level Control Structure Unit Cost</name>
+        <value>1500</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Outlet Protection Structure Quantity</name>
+        <value>1</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Outlet Protection Structure Unit Cost</name>
+        <value>500</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Baffle Unit Cost</name>
+        <value>25</value>
+        <units>dollar per foot</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Baffle Quantity</name>
+        <value>1</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Baffle Length User Specified</name>
+        <value>25</value>
+        <units>foot</units>
+        <description></description>
+      </item>     
+      <item>
+        <name>Clay Liner Thickness</name>
+        <value>1</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Clay Liner Unit Cost</name>
+        <value>10</value>
+        <units>dollar per cubic yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Synthetic Liner Unit Cost</name>
+        <value>10</value>
+        <units>dollar per square yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geosynthetic Clay Liner Thickness</name>
+        <value>0.5</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geosynthetic Clay Liner Soil Cover</name>
+        <value>1.0</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geosynthetic Clay Liner Unit Cost</name>
+        <value>10</value>
+        <units>dollar per square yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geosynthetic Clay Liner Cover Unit Cost</name>
+        <value>10</value>
+        <units>dollar per cubic yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Non Woven Geotextile Unit Cost</name>
+        <value>2.5</value>
+        <units>dollar per square yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 1</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 2</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 3</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 4</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 5</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 1</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 2</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 3</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 4</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 5</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Calcite</name>
+        <value>0</value>
+        <units>mg/L</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Miscellaneous Solids</name>
+        <value>0</value>
+        <units>mg/L</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Miscellaneous Solids Density</name>
+        <value>0</value>
+        <units>lbs/gal</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Percent Solids</name>
+        <value>5</value>
+        <units>percent by weight</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Percent Dewatered Solids</name>
+        <value>40</value>
+        <units>percent by weight</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mobilization Demobilization Cost</name>
+        <value>500</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Sludge Handling Disposal Unit Cost</name>
+        <value>0.1</value>
+        <units>$/gal</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Sludge Handling Vacuum Truck Volume</name>
+        <value>3000</value>
+        <units>gal</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Sludge Handling Vacuum Truck Time To Fill</name>
+        <value>1</value>
+        <units>hr</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Sludge Handling Vacuum Truck Unit Cost</name>
+        <value>150</value>
+        <units>dollar per hour</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pump Rental Cost</name>
+        <value>250</value>
+        <units>dollar per day</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pump Rate</name>
+        <value>200</value>
+        <units>gallons per minute</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Power Requirement</name>
+        <value>200</value>
+        <units>horsepower</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Electric Rate Unit Cost</name>
+        <value>0.2</value>
+        <units>dollar per kilowatt per hour</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Fuel Rate</name>
+        <value>2</value>
+        <units>gallon per hour</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Fuel Unit Cost</name>
+        <value>4</value>
+        <units>dollar per gallon</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mechanical Excavation Unit Cost</name>
+        <value>5.5</value>
+        <units>dollar per cubic yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Landfill Tipping Fee Unit Cost</name>
+        <value>100</value>
+        <units>dollar per ton</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Sludge Disposal Triaxle Truck Volume</name>
+        <value>3000</value>
+        <units>gallons</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Sludge Disposal Triaxle Roundtrip Distance</name>
+        <value>50</value>
+        <units>miles</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Sludge Disposal Triaxle Transportation Unit Cost</name>
+        <value>2.25</value>
+        <units>dollar per mile</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Sludge Disposal Vacuum Truck Volume</name>
+        <value>3000</value>
+        <units>gallons</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Sludge Disposal Vacuum Truck Hours Per Trip</name>
+        <value>3</value>
+        <units>hours</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Sludge Disposal Vacuum Truck Unit Cost</name>
+        <value>150</value>
+        <units>dollar per hour</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Sludge Disposal Borehole Depth</name>
+        <value>200</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Sludge Disposal Borehole Unit Cost</name>
+        <value>125</value>
+        <units>dollar per foot</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Name 25</name>
+        <value>25</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Volume 25</name>
+        <value>25</value>
+        <units>cubic yards</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Unit Cost 25</name>
+        <value>940</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Name 85</name>
+        <value>85</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Volume 85</name>
+        <value>85</value>
+        <units>cubic yards</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Unit Cost 85</name>
+        <value>1020</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Name 175</name>
+        <value>175</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Volume 175</name>
+        <value>175</value>
+        <units>cubic yards</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Unit Cost 175</name>
+        <value>1855</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Name 310</name>
+        <value>310</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Volume 310</name>
+        <value>310</value>
+        <units>cubic yards</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Unit Cost 310</name>
+        <value>3050</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Name 465</name>
+        <value>465</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Volume 465</name>
+        <value>465</value>
+        <units>cubic yards</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Unit Cost 465</name>
+        <value>3855</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Name 950</name>
+        <value>950</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Volume 950</name>
+        <value>950</value>
+        <units>cubic yards</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Unit Cost 950</name>
+        <value>7395</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Name 1185</name>
+        <value>1185</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Volume 1185</name>
+        <value>1185</value>
+        <units>cubic yards</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Unit Cost 1185</name>
+        <value>7075</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Truck Volume</name>
+        <value>16</value>
+        <units>cubic yards</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Time To Load Truck</name>
+        <value>10</value>
+        <units>min</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Excavator Hourly Rate</name>
+        <value>120</value>
+        <units>$/hr</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Truck Roundtrip Distance</name>
+        <value>50</value>
+        <units>mi</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Geotube Truck Transportation Unit Cost</name>
+        <value>2.25</value>
+        <units>$/mi</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 1</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 2</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 3</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 4</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 5</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 1</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 2</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 3</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 4</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 5</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Multiplier</name>
+        <value>15</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Flat Fee</name>
+        <value>0</value>
+        <units>dollars</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Sludge Handling User Specified</name>
+        <value>0</value>
+        <units>dollars</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Sludge Disposal User Specified</name>
+        <value>0</value>
+        <units>dollars</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Pipe</name>
+        <value>10</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Liner</name>
+        <value>20</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Other Items</name>
+        <value>20</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Other Capital Items</name>
+        <value>10</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Borehole</name>
+        <value>10</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Pipe</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Liner</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Other Items</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Other Capital Items</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Recapitalization Cost Percent Replacement Borehole</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+  </items>
+</module>

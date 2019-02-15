@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module type="Lime Slurry">
+  <items>
+      <item>
+        <name>Design Flow</name>
+        <value>75</value>
+        <units>gallons per minute</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Hot Acidity</name>
+        <value>60</value>
+        <units>milligrams per liter</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Lime Slurry Percentage</name>
+        <value>30</value>
+        <units>percent</units>
+        <description></description>
+      </item>         
+      <item>
+        <name>Lime Slurry Purity</name>
+        <value>96</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Lime Slurry Dissolution Efficiency</name>
+        <value>95</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Titration Quantity</name>
+        <value>0.0000341</value>
+        <units>gallons of caustic per gallon water treated</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Lime Slurry Dry Tons User Specified Quantity</name>
+        <value>200</value>
+        <units>tons per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Lime Slurry Tank Volume</name>
+        <value>8800</value>
+        <units>gallons</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Lime Slurry Refill Volume Semi Truck</name>
+        <value>4800</value>
+        <units>gallons</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Lime Slurry Refill Volume Straight Truck</name>
+        <value>3900</value>
+        <units>gallons</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Lime Slurry Refill Volume User Specified</name>
+        <value>0</value>
+        <units>gallons</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Rubber Tubing Length</name>
+        <value>50</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Lime Slurry Agitator Power Requirement</name>
+        <value>3</value>
+        <units>horsepower</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Lime Slurry Agitator Hours Per Day</name>
+        <value>24</value>
+        <units>hours per day</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Lime Slurry Agitator Days Per Year</name>
+        <value>365</value>
+        <units>days per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Chemical Metering Pump Quantity</name>
+        <value>2</value>
+        <units></units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Chemical Metering Pump Power Requirement</name>
+        <value>1</value>
+        <units>horse power</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Chemical Metering Pump Hours Per Day</name>
+        <value>24</value>
+        <units>hours per day</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Chemical Metering Pump Days Per Year</name>
+        <value>365</value>
+        <units>days per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silicone Rubber Heat Blanket Quantity</name>
+        <value>4</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silicone Rubber Heat Blanket Power Requirement</name>
+        <value>1080</value>
+        <units>watts per blanket</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silicone Rubber Heat Blanket Hours Per Day</name>
+        <value>2</value>
+        <units>hours per day</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silicone Rubber Heat Blanket Months Per Year</name>
+        <value>4</value>
+        <units>months per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Tubing Heat Tracing Length</name>
+        <value>50</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Tubing Heat Tracing Power Requirement</name>
+        <value>5</value>
+        <units>watts per foot</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Tubing Heat Tracing Hours Per Day</name>
+        <value>3</value>
+        <units>hours per day</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Tubing Heat Tracing Months Per Year</name>
+        <value>4</value>
+        <units>months per year</units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Lime Slurry Tank Foundation Concrete Slab Thickness</name>
+        <value>1</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Lime Slurry Tank Height</name>
+        <value>15</value>
+        <units>feet</units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Lime Slurry Tank Foundation Area User Specified</name>
+        <value>0</value>
+        <units>square feet</units>
+        <description></description>
+      </item>      
+      <item>
+        <name>System Install Cost Multiplier</name>
+        <value>40</value>
+        <units>percentage</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 1</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 2</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 3</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 4</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 5</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Other Capital Item Quantity 1</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 2</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 3</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 4</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 5</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 1</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 2</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 3</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 4</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 5</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 1</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 2</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 3</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 4</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 5</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Annual Cost Operation And Maintanence Multiplier</name>
+        <value>3.5</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Tank</name>
+        <value>25</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Agitator</name>
+        <value>10</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Chemical Metering Pump</name>
+        <value>10</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle pH Controller</name>
+        <value>10</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle pH Probe</name>
+        <value>3</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Heat Blanket</name>
+        <value>10</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Pump Housing</name>
+        <value>25</value>
+        <units>years</units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Recapitalization Cost Percent Replacement Tank</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Agitator</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Chemical Metering Pump</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement pH Controller</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement pH Probe</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Heat Blanket</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Pump Housing</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Lime Slurry Unit Cost</name>
+        <value>300</value>
+        <units>dollar per ton</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Electric Service Panel Cost</name>
+        <value>2000</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Electric Rate Cost</name>
+        <value>0.2</value>
+        <units>dollar per kilowatt hour</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Lime Slurry Tank Unit Cost</name>
+        <value>9500</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Rubber Tubing Unit Cost</name>
+        <value>1.5</value>
+        <units>dollar per feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Lime Slurry Agitator Unit Cost</name>
+        <value>14000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Chemical Metering Pump Unit Cost</name>
+        <value>7000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>pH Controller Cost</name>
+        <value>3000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>pH Probe Cost</name>
+        <value>1200</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Cellular Telemetry Cost</name>
+        <value>4000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Cellular Monthly Cost</name>
+        <value>35</value>
+        <units>dollar per month</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silicone Rubber Heat Blanket Unit Cost</name>
+        <value>3250</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Tubing Heat Tracing Unit Cost</name>
+        <value>3.52</value>
+        <units>dollar per foot</units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Lime Slurry Tank Foundation Concrete Material And Placement Cost</name>
+        <value>450</value>
+        <units>dollar per cubic yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Pump Housing Cost</name>
+        <value>3000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>System Install User Specified Cost</name>
+        <value>500</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Chemical User Specified</name>
+        <value>0</value>
+        <units>dollar per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Operation And Maintanence User Specified</name>
+        <value>0</value>
+        <units>dollar per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Electric User Specified</name>
+        <value>0</value>
+        <units>dollar per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Unit Cost 1</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+            <item>
+        <name>Other Capital Item Unit Cost 2</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Unit Cost 3</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Unit Cost 4</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Unit Cost 5</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Unit Cost 1</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Unit Cost 2</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Unit Cost 3</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Unit Cost 4</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Unit Cost 5</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>      
+  </items>
+</module>

@@ -1,0 +1,899 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module type="Dry Lime Products">
+  <items>
+      <item>
+        <name>Design Flow</name>
+        <value>75</value>
+        <units>gallons per minute</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Hot Acidity</name>
+        <value>60</value>
+        <units>milligrams per liter</units>
+        <description></description>
+      </item>    
+      <item>
+        <name>Hydrated Lime Purity</name>
+        <value>96</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Dry Lime Purity</name>
+        <value>93</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Hydrated Lime Dissolution Efficiency</name>
+        <value>80</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Dry Lime Dissolution Efficiency</name>
+        <value>80</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Titration Quantity</name>
+        <value>0.034300</value>
+        <units>gallons of caustic per gallon water treated</units>
+        <description></description>
+      </item>     
+      <item>
+        <name>Lime User Specified Quantity</name>
+        <value>677</value>
+        <units>tons per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 30 Ton Name</name>
+        <value>30 Ton</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 60 Ton Name</name>
+        <value>60 Ton</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 90 Ton Name</name>
+        <value>90 Ton</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 120 Ton Name</name>
+        <value>120 Ton</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 30 Ton Quantity</name>
+        <value>1</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 60 Ton Quantity</name>
+        <value>1</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 90 Ton Quantity</name>
+        <value>1</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 120 Ton Quantity</name>
+        <value>1</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 30 Ton Weight</name>
+        <value>30</value>
+        <units>tons</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 60 Ton Weight</name>
+        <value>60</value>
+        <units>tons</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 90 Ton Weight</name>
+        <value>90</value>
+        <units>tons</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 120 Ton Weight</name>
+        <value>120</value>
+        <units>tons</units>
+        <description></description>
+      </item>    
+      <item>
+        <name>Silo System 30 Ton Foundation Area</name>
+        <value>220</value>
+        <units>square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 60 Ton Foundation Area</name>
+        <value>220</value>
+        <units>square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 90 Ton Foundation Area</name>
+        <value>315</value>
+        <units>square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 120 Ton Foundation Area</name>
+        <value>315</value>
+        <units>square feet</units>
+        <description></description>
+      </item>   
+      <item>
+        <name>Silo System 30 Ton Diameter</name>
+        <value>12</value>
+        <units>square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 60 Ton Diameter</name>
+        <value>12</value>
+        <units>square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 90 Ton Diameter</name>
+        <value>16</value>
+        <units>square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 120 Ton Diameter</name>
+        <value>16</value>
+        <units>square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 30 Ton Concrete Thickness</name>
+        <value>3.5</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 60 Ton Concrete Thickness</name>
+        <value>3.5</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 90 Ton Concrete Thickness</name>
+        <value>3.5</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 120 Ton Concrete Thickness</name>
+        <value>3.5</value>
+        <units>feet</units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Silo System 30 Ton Concrete Volume</name>
+        <value>28.5</value>
+        <units>cubic yards</units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Silo System 60 Ton Concrete Volume</name>
+        <value>28.5</value>
+        <units>cubic yards</units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Silo System 90 Ton Concrete Volume</name>
+        <value>40.8</value>
+        <units>cubic yards</units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Silo System 120 Ton Concrete Volume</name>
+        <value>40.8</value>
+        <units>cubic yards</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System Name User Specified</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System Quantity User Specified</name>
+        <value>1</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System Weight User Specified</name>
+        <value>1</value>
+        <units>tons</units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Silo System Foundation Area User Specified</name>
+        <value>1</value>
+        <units>square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System Diameter User Specified</name>
+        <value>1</value>
+        <units>square feet</units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Silo System Concrete Thickness User Specified</name>
+        <value>1</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System Concrete Volume User Specified</name>
+        <value>1</value>
+        <units>cubic yards</units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Dust Collector Blower Time</name>
+        <value>60</value>
+        <units>minutes</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Dust Collector Blower Power Requirement</name>
+        <value>2</value>
+        <units>horsepower</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Bin Activator Power Requirement</name>
+        <value>30</value>
+        <units>horsepower</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Bin Activator Cycle Frequency</name>
+        <value>3</value>
+        <units>seconds per 5 minutes</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Bin Activator Days Per Year</name>
+        <value>365</value>
+        <units>days per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Screw Feeder Power Requirement</name>
+        <value>1.5</value>
+        <units>horsepower</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Screw Feeder Hours Per Day</name>
+        <value>18</value>
+        <units>hours per day</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Screw Feeder Days Per Year</name>
+        <value>365</value>
+        <units>days per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Slurry Mixer Power Requirement</name>
+        <value>1</value>
+        <units>horsepower</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Slurry Pump Power Requirement</name>
+        <value>5</value>
+        <units>horsepower</units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Slurry Mixer And Pump Hours Per Day</name>
+        <value>18</value>
+        <units>seconds per 5 minutes</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Slurry Mixer And Pump Days Per Year</name>
+        <value>365</value>
+        <units>days per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo Exhaust Fan Power Requirement</name>
+        <value>0.25</value>
+        <units>horsepower</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo Exhaust Fan Hours Per Day</name>
+        <value>24</value>
+        <units>hours per day</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo Exhaust Fan Days Per Year</name>
+        <value>365</value>
+        <units>days per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo Space Heater Power Requirement</name>
+        <value>10</value>
+        <units>kilowatts</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo Space Heater Hours Per Day</name>
+        <value>12</value>
+        <units>hours per day</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo Space Heater Days Per Year</name>
+        <value>120</value>
+        <units>days per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 1500 Name</name>
+        <value>Load Bearing 1500</value>
+        <units>pounds per square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 3000 Name</name>
+        <value>Load Bearing 3000</value>
+        <units>pounds per square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 4500 Name</name>
+        <value>Load Bearing 4500</value>
+        <units>pounds per square feet</units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Foundation Site Soil Load Bearing 1500 Multiplier</name>
+        <value>1.5</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 3000 Multiplier</name>
+        <value>1.0</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 4500 Multiplier</name>
+        <value>0.75</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 1500 Quantity</name>
+        <value>1500</value>
+        <units>pounds per square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 3000 Quantity</name>
+        <value>3000</value>
+        <units>pounds per square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 4500 Quantity</name>
+        <value>4500</value>
+        <units>pounds per square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 1500 Rating</name>
+        <value>POOR</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 3000 Rating</name>
+        <value>AVERAGE</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 4500 Rating</name>
+        <value>EXCELLANT</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Area User Specified</name>
+        <value>5</value>
+        <units>cubic yards</units>
+        <description></description>
+      </item>    
+      <item>
+        <name>Other Capital Item Description 1</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 2</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 3</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 4</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 5</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Other Capital Item Quantity 1</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 2</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 3</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 4</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 5</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 1</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 2</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 3</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 4</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 5</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 1</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 2</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 3</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 4</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 5</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>System Install Cost Multiplier</name>
+        <value>5</value>
+        <units>cubic yards</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Operation And Maintanence Multiplier</name>
+        <value>3.5</value>
+        <units>percent</units>
+        <description></description>
+      </item>    
+      <item>
+        <name>Recapitalization Cost Life Cycle Silo</name>
+        <value>45</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Bin Activator</name>
+        <value>30</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Screw Feeder</name>
+        <value>15</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Slurry Mixer</name>
+        <value>10</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Slurry Pump</name>
+        <value>5</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Silo Space Heater</name>
+        <value>10</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Slurry Tank</name>
+        <value>25</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Hardware Software</name>
+        <value>15</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Slaker</name>
+        <value>25</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Silo</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Bin Activator</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Screw Feeder</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Slurry Mixer</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Slurry Pump</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Silo Space Heater</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Slurry Tank</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Hardware Software</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Slaker</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Hydrated Lime Unit Cost</name>
+        <value>150</value>
+        <units>dollar per ton</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Dry Lime Unit Cost</name>
+        <value>140</value>
+        <units>dollar per ton</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 30 Ton Dry Lime Unit Cost</name>
+        <value>685000</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 60 Ton Dry Lime Unit Cost</name>
+        <value>705000</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 90 Ton Dry Lime Unit Cost</name>
+        <value>745000</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 120 Ton Dry Lime Unit Cost</name>
+        <value>765000</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 30 Ton Hydrated Lime Unit Cost</name>
+        <value>425000</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 60 Ton Hydrated Lime Unit Cost</name>
+        <value>450000</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 90 Ton Hydrated Lime Unit Cost</name>
+        <value>485000</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo System 120 Ton Hydrated Lime Unit Cost</name>
+        <value>505000</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Silo System Unit Cost User Specified</name>
+        <value>1</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Electric Rate Cost</name>
+        <value>0.2</value>
+        <units>dollar per kilowatt hour</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Concrete Material And Placement Cost</name>
+        <value>450</value>
+        <units>dollar per cubic yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Chemical User Specified</name>
+        <value>0</value>
+        <units>dollar per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Operation And Maintanence User Specified</name>
+        <value>0</value>
+        <units>dollar per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Electric User Specified</name>
+        <value>0</value>
+        <units>dollar per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo Unit Cost</name>
+        <value>85000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Bin Activator Unit Cost</name>
+        <value>120000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Screw Feeder Unit Cost</name>
+        <value>100000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Slurry Mixer Unit Cost</name>
+        <value>14000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Slurry Pump Unit Cost</name>
+        <value>25000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Silo Space Heater Unit Cost</name>
+        <value>5000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Slurry Tank Unit Cost</name>
+        <value>30000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Hardware Software Unit Cost</name>
+        <value>15000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Slaker Unit Cost</name>
+        <value>170000</value>
+        <units>dollar</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Unit Cost 1</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Unit Cost 2</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Unit Cost 3</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Unit Cost 4</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Unit Cost 5</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Unit Cost 1</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Unit Cost 2</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Unit Cost 3</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Unit Cost 4</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Unit Cost 5</name>
+        <value>0</value>
+        <units>dollar per each</units>
+        <description></description>
+      </item>      
+  </items>
+</module>

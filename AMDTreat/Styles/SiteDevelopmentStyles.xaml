@@ -1,0 +1,3363 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                    xmlns:local="clr-namespace:AMDTreat.Styles">
+  
+    <!--#region NumericUpDown Styles -->
+    <Style x:Key="MyNumericUpDown" TargetType="Controls:NumericUpDown" >
+        <Setter Property="MinWidth" Value="120" />
+        <Setter Property="MaxWidth" Value="150" />
+        <Setter Property="MinHeight" Value="25" />
+        <Setter Property="MaxHeight" Value="25" />
+        <Setter Property="Margin" Value="4" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="StringFormat" Value="F2" />
+    </Style>
+
+    <!--#endregion-->
+
+    <!-- #region Property Acquisition -->
+    <Style x:Key="MyNumericUpDownLandQuantityUserSpecified" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandQuantityEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandQuantityUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelLandQuantityUserSpecifiedName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandQuantityEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandQuantityUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelLandQuantityUserSpecifiedUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandQuantityEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandQuantityUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownLandPurchaseUnitCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandCostPurchase}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandCostLease}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelLandPurchaseUnitCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandCostPurchase}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandCostLease}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelLandPurchaseUnitCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandCostPurchase}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandCostLease}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownLandPurchaseClosingCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandCostPurchase}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandCostLease}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelLandPurchaseClosingCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandCostPurchase}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandCostLease}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelLandPurchaseClosingCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandCostPurchase}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandCostLease}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownLandLeaseCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandCostPurchase}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandCostLease}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelLandLeaseCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandCostPurchase}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandCostLease}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelLandLeaseCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandCostPurchase}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonLandCostLease}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--#endregion -->
+
+    <!--#region Work Site Unit Costs -->
+
+    <Style x:Key="MyNumericUpDownConstructionOfficeTrailerCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxConstructionOfficeTrailer}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxConstructionOfficeTrailer}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelConstructionOfficeTrailerCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxFoundationOverExcavation}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxFoundationOverExcavation}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownFoundationOverExcavationUnitCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxFoundationOverExcavation}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxFoundationOverExcavation}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelFoundationOverExcavationUnitCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxFoundationOverExcavation}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxFoundationOverExcavation}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    
+    <!--#endregion-->
+
+    <!--#region Access Roads -->
+
+    <Style x:Key="MyDropDownAccessRoadMaterials" TargetType="Controls:DropDownButton">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+        
+    <Style x:Key="MyNumericUpDownRoadMaterialUnitCostAggregate" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <!--<Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>-->
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True" />
+                    <Condition Binding="{Binding RoadMaterialName}" Value="Aggregate" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False" />
+                    <Condition Binding="{Binding RoadMaterialName}" Value="Asphalt" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False" />
+                    <Condition Binding="{Binding RoadMaterialName}" Value="Aggregate" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True" />
+                    <Condition Binding="{Binding RoadMaterialName}" Value="Asphalt" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRoadMaterialUnitCostAggregateUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <!--<Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>-->
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True" />
+                    <Condition Binding="{Binding RoadMaterialName}" Value="Aggregate" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False" />
+                    <Condition Binding="{Binding RoadMaterialName}" Value="Asphalt" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False" />
+                    <Condition Binding="{Binding RoadMaterialName}" Value="Aggregate" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True" />
+                    <Condition Binding="{Binding RoadMaterialName}" Value="Asphalt" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownRoadMaterialUnitCostAsphalt" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <!--<Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>-->
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True" />
+                    <Condition Binding="{Binding RoadMaterialName}" Value="Asphalt" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False" />
+                    <Condition Binding="{Binding RoadMaterialName}" Value="Aggregate" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False" />
+                    <Condition Binding="{Binding RoadMaterialName}" Value="Asphalt" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True" />
+                    <Condition Binding="{Binding RoadMaterialName}" Value="Aggregate" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRoadMaterialUnitCostAsphaltUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <!--<Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>-->
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True" />
+                    <Condition Binding="{Binding RoadMaterialName}" Value="Asphalt" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False" />
+                    <Condition Binding="{Binding RoadMaterialName}" Value="Aggregate" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False" />
+                    <Condition Binding="{Binding RoadMaterialName}" Value="Asphalt" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True" />
+                    <Condition Binding="{Binding RoadMaterialName}" Value="Aggregate" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownRoadMaterialUnitCostSubbase" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRoadMaterialUnitCostSubbaseUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownAccessRoadLength" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelAccessRoadLengthUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownAccessRoadWidth" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelAccessRoadWidthUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownAccessRoadGeotextileLength" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoadGeotextileLength}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoadGeotextileLength}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoadGeotextileLength}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoadGeotextileLength}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelAccessRoadGeotextileLengthUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoadGeotextileLength}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoadGeotextileLength}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoadGeotextileLength}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxAccessRoadGeotextileLength}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyDropDownParkingAreaMaterials" TargetType="Controls:DropDownButton">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownParkingSpacesQuantity" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelParkingSpacesQuantityUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownAverageParkingSpaceArea" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelAverageParkingSpaceAreaUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="MyNumericUpDownDeliveryTruckTurnaroundArea" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelDeliveryTruckTurnaroundAreaUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownParkingLotAccessoriesCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelParkingLotAccessoriesCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion-->
+    
+    <!--#region ES Controls -->
+
+    <Style x:Key="MyNumericUpDownESControlUnitCostEstimate" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonESControlEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelESControlUnitCostEstimateName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonESControlEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelESControlUnitCostEstimateUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonESControlEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyDropDownESControlMaterials" TargetType="Controls:DropDownButton">
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownESControlLength" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelESControlLengthName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelESControlLengthUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownESControlUnitCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelESControlUnitCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelESControlUnitCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxControlType}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownSedimentBasinsQuantity" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSedimentBasinsQuantityName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSedimentBasinsQuantityUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownSedimentBasinsUnitCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSedimentBasinsUnitCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSedimentBasinsUnitCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSedimentBasins}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownESControlUnitCostOther" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxESControlOther}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxESControlOther}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxESControlOther}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxESControlOther}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelESControlUnitCostOtherUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxESControlOther}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxESControlOther}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxESControlOther}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonESControlUserSpecified}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxESControlOther}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion-->
+    
+    <!--#region Diversion Ditches and Culverts -->
+
+    <Style x:Key="MyNumericUpDownRockLinedDitchLength" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRockLinedDitchLengthName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRockLinedDitchLengthUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownRockLinedDitchBottomWidth" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRockLinedDitchBottomWidthName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRockLinedDitchBottomWidthUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownRockLinedDitchDepth" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRockLinedDitchDepthName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRockLinedDitchDepthUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownRockLinedDitchAggregateThickness" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRockLinedDitchAggregateThicknessName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRockLinedDitchAggregateThicknessUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownRockLinedDitchSideSlope" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRockLinedDitchSideSlopeName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRockLinedDitchSideSlopeUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownRockLinedDitchGeotextileLength" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRockLinedDitchGeotextileLengthName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRockLinedDitchGeotextileLengthUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownRockLinedDitchAggregateBulkDensity" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRockLinedDitchAggregateBulkDensityName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRockLinedDitchAggregateBulkDensityUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownRockLinedDitchAggregateUnitCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRockLinedDitchAggregateUnitCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRockLinedDitchAggregateUnitCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownRockLinedDitchAggregatePlacementUnitCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRockLinedDitchAggregatePlacementUnitCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelRockLinedDitchAggregatePlacementUnitCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownVegetatedDitchLength" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxVegetatedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxVegetatedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelVegetatedDitchLengthName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxVegetatedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxVegetatedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelVegetatedDitchLengthUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxVegetatedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxVegetatedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownVegetatedDitchUnitCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxVegetatedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxVegetatedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelVegetatedDitchUnitCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxVegetatedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxVegetatedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelVegetatedDitchUnitCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxVegetatedDitch}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxVegetatedDitch}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownCulvertLength" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxCulvert}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxCulvert}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelCulvertLengthName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxCulvert}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxCulvert}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelCulvertLengthUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxCulvert}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxCulvert}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownCulvertUnitCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxCulvert}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxCulvert}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelCulvertUnitCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxCulvert}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxCulvert}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelCulvertUnitCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxCulvert}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxCulvert}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Control Building -->
+
+    <Style x:Key="MyDropDownFoundationSiteSoils" TargetType="Controls:DropDownButton">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelFoundationSiteSoilName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownFoundationDepth" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelFoundationDepthName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelFoundationDepthUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownFoundationConcreteUnitCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelFoundationConcreteUnitCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelFoundationConcreteUnitCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownFoundationSlabVolumeUserSpecified" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelFoundationSlabVolumeUserSpecifiedName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelFoundationSlabVolumeUserSpecifiedUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonFoundationUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownControlBuildingLength" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelControlBuildingLengthName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelControlBuildingLengthUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownControlBuildingWidth" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelControlBuildingWidthName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelControlBuildingWidthUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownControlBuildingUnitCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelControlBuildingUnitCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelControlBuildingUnitCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownControlBuildingLabCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxLab}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxLab}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxLab}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxLab}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelControlBuildingLabCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxLab}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxLab}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxLab}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxLab}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="MyLabelControlBuildingLabCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxLab}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxLab}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxLab}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxLab}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownControlBuildingWaterSewerCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxWaterSewer}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxWaterSewer}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxWaterSewer}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxWaterSewer}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelControlBuildingWaterSewerCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxWaterSewer}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxWaterSewer}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxWaterSewer}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxWaterSewer}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelControlBuildingWaterSewerCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxWaterSewer}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxWaterSewer}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxWaterSewer}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxWaterSewer}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownControlBuildingHVACCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxHVAC}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxHVAC}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxHVAC}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxHVAC}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelControlBuildingHVACCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxHVAC}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxHVAC}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxHVAC}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxHVAC}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelControlBuildingHVACCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxHVAC}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxHVAC}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxHVAC}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxHVAC}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownControlBuildingCostUserSpecified" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelControlBuildingCostUserSpecifiedName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelControlBuildingCostUserSpecifiedUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion -->
+
+    <!--#region Electrical Services -->
+
+    <Style x:Key="MyNumericUpDownElectricStepdownTransformerCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxStepdownTransformer}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxStepdownTransformer}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelElectricStepdownTransformerCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxStepdownTransformer}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxStepdownTransformer}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelElectricStepdownTransformerCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxStepdownTransformer}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxStepdownTransformer}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownElectricTelecommunicationsCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxTelecommunications}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxTelecommunications}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelElectricTelecommunicationsCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxTelecommunications}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxTelecommunications}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelElectricTelecommunicationsCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxTelecommunications}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxTelecommunications}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownElectricPlantAutomationCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxPlantAutomation}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxPlantAutomation}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelElectricPlantAutomationCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxPlantAutomation}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxPlantAutomation}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelElectricPlantAutomationCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxPlantAutomation}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxPlantAutomation}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownElectricOtherUtilityCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxElectricOtherUtility}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxElectricOtherUtility}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelElectricOtherUtilityCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxElectricOtherUtility}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxElectricOtherUtility}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelElectricOtherUtilityCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxElectricOtherUtility}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxElectricOtherUtility}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion-->
+    
+    <!--#region Fencing and Access Gates -->
+
+    <Style x:Key="MyNumericUpDownFencingLength" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionKnown}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelFencingLengthName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionKnown}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelFencingLengthUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionKnown}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownFencingUnitCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionKnown}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelFencingUnitCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionKnown}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelFencingUnitCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionKnown}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownFencingCostUserSpecified" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionKnown}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelFencingCostUserSpecifiedName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionKnown}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelFencingCostUserSpecifiedUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionKnown}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonOptionUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownAccessGateQuantity" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessGate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessGate}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelAccessGateQuantityName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessGate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessGate}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelAccessGateQuantityUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessGate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessGate}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownAccessGateUnitCost" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessGate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessGate}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelAccessGateUnitCostName" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyName}">
+        <Setter Property="Width" Value="200" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessGate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessGate}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelAccessGateUnitCostUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessGate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessGate}" Value="False">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion-->
+    
+    <!--#region Engineering/Permitting, Surveying, Construction Inspection -->
+
+    <Style x:Key="MyNumericUpDownEngineeringPermittingPercentage" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxEngineeringPermitting}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonEngineeringPermittingEstimate}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxEngineeringPermitting}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonEngineeringPermittingEstimate}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxEngineeringPermitting}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonEngineeringPermittingEstimate}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxEngineeringPermitting}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonEngineeringPermittingEstimate}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelEngineeringPermittingPercentageUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxEngineeringPermitting}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonEngineeringPermittingEstimate}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxEngineeringPermitting}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonEngineeringPermittingEstimate}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxEngineeringPermitting}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonEngineeringPermittingEstimate}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxEngineeringPermitting}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonEngineeringPermittingEstimate}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownEngineeringPermittingCostUserSpecified" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxEngineeringPermitting}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonEngineeringPermittingUserSpecified}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxEngineeringPermitting}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonEngineeringPermittingUserSpecified}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxEngineeringPermitting}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonEngineeringPermittingUserSpecified}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxEngineeringPermitting}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonEngineeringPermittingUserSpecified}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelEngineeringPermittingCostUserSpecifiedUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxEngineeringPermitting}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonEngineeringPermittingUserSpecified}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxEngineeringPermitting}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonEngineeringPermittingUserSpecified}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxEngineeringPermitting}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonEngineeringPermittingUserSpecified}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxEngineeringPermitting}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonEngineeringPermittingUserSpecified}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownSurveyingPercentage" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSurveying}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonSurveyingEstimate}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSurveying}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonSurveyingEstimate}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSurveying}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonSurveyingEstimate}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSurveying}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonSurveyingEstimate}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSurveyingPercentageUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSurveying}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonSurveyingEstimate}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSurveying}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonSurveyingEstimate}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSurveying}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonSurveyingEstimate}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSurveying}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonSurveyingEstimate}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownSurveyingCostUserSpecified" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSurveying}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonSurveyingUserSpecified}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSurveying}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonSurveyingUserSpecified}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSurveying}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonSurveyingUserSpecified}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSurveying}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonSurveyingUserSpecified}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelSurveyingCostUserSpecifiedUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSurveying}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonSurveyingUserSpecified}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSurveying}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonSurveyingUserSpecified}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSurveying}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonSurveyingUserSpecified}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxSurveying}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonSurveyingUserSpecified}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownConstructionInspectionPercentage" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxConstructionInspection}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonConstructionInspectionEstimate}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxConstructionInspection}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonConstructionInspectionEstimate}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxConstructionInspection}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonConstructionInspectionEstimate}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxConstructionInspection}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonConstructionInspectionEstimate}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelConstructionInspectionPercentageUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxConstructionInspection}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonConstructionInspectionEstimate}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxConstructionInspection}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonConstructionInspectionEstimate}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxConstructionInspection}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonConstructionInspectionEstimate}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxConstructionInspection}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonConstructionInspectionEstimate}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownConstructionInspectionCostUserSpecified" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}">
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxConstructionInspection}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonConstructionInspectionUserSpecified}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxConstructionInspection}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonConstructionInspectionUserSpecified}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxConstructionInspection}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonConstructionInspectionUserSpecified}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxConstructionInspection}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonConstructionInspectionUserSpecified}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelConstructionInspectionCostUserSpecifiedUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxConstructionInspection}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonConstructionInspectionUserSpecified}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="True" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxConstructionInspection}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonConstructionInspectionUserSpecified}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxConstructionInspection}" Value="False" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonConstructionInspectionUserSpecified}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsChecked, ElementName=checkBoxConstructionInspection}" Value="True" />
+                    <Condition Binding="{Binding IsChecked, ElementName=radioButtonConstructionInspectionUserSpecified}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion-->
+    
+    <!--#region Capital Cost -->
+
+    <Style x:Key="MyNumericUpDownContingencyPercentage" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonCapitalCostContingencyEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonCapitalCostContingencyUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelContingencyPercentageUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonCapitalCostContingencyEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonCapitalCostContingencyUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownContingencyCostUserSpecified" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonCapitalCostContingencyEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonCapitalCostContingencyUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelContingencyCostUserSpecifiedUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonCapitalCostContingencyEstimate}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonCapitalCostContingencyUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--#endregion-->
+    
+    <!--#region Annual Costs -->
+
+    <Style x:Key="MyNumericUpDownAnnualCostOperationPercentage" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostOperationEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostOperationUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelAnnualCostOperationPercentageUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostOperationEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostOperationUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownAnnualCostOperationUserSpecified" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostOperationEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostOperationUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelAnnualCostOperationUserSpecifiedUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostOperationEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostOperationUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownAnnualCostRepairsPercentage" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostRepairsEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostRepairsUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelAnnualCostRepairsPercentageUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostRepairsEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostRepairsUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyNumericUpDownAnnualCostRepairsUserSpecified" TargetType="Controls:NumericUpDown" BasedOn="{StaticResource MyNumericUpDown}" >
+        <Setter Property="Margin" Value="2" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostRepairsEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostRepairsUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyLabelAnnualCostRepairsUserSpecifiedUnits" TargetType="Label" BasedOn="{StaticResource MyLabelPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostRepairsEstimated}" Value="True">
+                <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonAnnualCostRepairsUserSpecified}" Value="True">
+                <Setter Property="IsEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion-->
+    
+    <!--#region Sizing Summary-->
+
+    <Style x:Key="MyTextBlockAccessRoadSurfaceAreaSquareYardsValue" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyValue}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False">
+                <Setter Property="Opacity" Value="0" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockAccessRoadSurfaceAreaSquareYardsUnits" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False">
+                <Setter Property="Opacity" Value="0.5" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockAccessRoadGeotextileAreaValue" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyValue}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False">
+                <Setter Property="Opacity" Value="0" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockAccessRoadGeotextileAreaUnits" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False">
+                <Setter Property="Opacity" Value="0.5" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="MyTextBlockAccessRoadCutFillVolumeCubicYardsValue" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyValue}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False">
+                <Setter Property="Opacity" Value="0" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockAccessRoadCutFillVolumeCubicYardsUnits" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="False">
+                <Setter Property="Opacity" Value="0.5" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxAccessRoad}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockParkingSurfaceAreaSquareYardsValue" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyValue}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="False">
+                <Setter Property="Opacity" Value="0" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockParkingSurfaceAreaSquareYardsUnits" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="False">
+                <Setter Property="Opacity" Value="0.5" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockParkingAreaCutFillVolumeCubicYardsValue" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyValue}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="False">
+                <Setter Property="Opacity" Value="0" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockParkingAreaCutFillVolumeCubicYardsUnits" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="False">
+                <Setter Property="Opacity" Value="0.5" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxParkingArea}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockRockLinedDitchVolumeValue" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyValue}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="Opacity" Value="0" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockRockLinedDitchVolumeUnits" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="Opacity" Value="0.5" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockRockLinedDitchWeightValue" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyValue}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="Opacity" Value="0" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockRockLinedDitchWeightUnits" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="Opacity" Value="0.5" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockRockLinedDitchGeotextileQuantityValue" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyValue}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="Opacity" Value="0" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockRockLinedDitchGeotextileQuantityUnits" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="False">
+                <Setter Property="Opacity" Value="0.5" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=checkBoxRockLinedDitch}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockControlBuildingAreaValue" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyValue}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingUserSpecified}" Value="True">
+                <Setter Property="Opacity" Value="0" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MyTextBlockControlBuildingAreaUnits" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockPropertyUnits}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingUserSpecified}" Value="True">
+                <Setter Property="Opacity" Value="0.5" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsChecked, ElementName=radioButtonControlBuildingEstimate}" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion-->
+    
+    <!-- #region Expanders -->
+    <Style x:Key="MyExpander" TargetType="Expander">
+        <Setter Property="Padding" Value="3" />
+        <Setter Property="Margin" Value="3" />
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+
+    <Style x:Key="MyExpanderPropertyQuantityCost" TargetType="Expander" BasedOn="{StaticResource MyExpander}">
+        <Setter Property="BorderBrush" Value="LightGray" />
+        <Setter Property="Header" Value="Property Acquisition/Access" />
+    </Style>
+
+    <Style x:Key="MyExpanderSiteWork" TargetType="Expander" BasedOn="{StaticResource MyExpander}">
+        <Setter Property="BorderBrush" Value="Gray" />
+        <Setter Property="Header" Value="Site Work Unit Costs and Information" />
+    </Style>
+
+    <Style x:Key="MyExpanderAccessRoads" TargetType="Expander" BasedOn="{StaticResource MyExpander}">
+        <Setter Property="BorderBrush" Value="LightGray" />
+        <Setter Property="Header" Value="Access Roads and Parking" />
+    </Style>
+
+    <Style x:Key="MyExpanderESControls" TargetType="Expander" BasedOn="{StaticResource MyExpander}">
+        <Setter Property="BorderBrush" Value="Gray" />
+        <Setter Property="Header" Value="E&amp;S Controls" />
+    </Style>
+
+    <Style x:Key="MyExpanderDitchCulverts" TargetType="Expander" BasedOn="{StaticResource MyExpander}">
+        <Setter Property="BorderBrush" Value="LightGray" />
+        <Setter Property="Header" Value="Diversion Ditches and Culverts (Stormwater)" />
+    </Style>
+
+    <Style x:Key="MyExpanderControlBuilding" TargetType="Expander" BasedOn="{StaticResource MyExpander}">
+        <Setter Property="BorderBrush" Value="Gray" />
+        <Setter Property="Header" Value="Control Building" />
+    </Style>
+
+    <Style x:Key="MyExpanderElectric" TargetType="Expander" BasedOn="{StaticResource MyExpander}">
+        <Setter Property="BorderBrush" Value="LightGray" />
+        <Setter Property="Header" Value="Electrical Service/Utilities" />
+    </Style>
+
+    <Style x:Key="MyExpanderFencingAccessGates" TargetType="Expander" BasedOn="{StaticResource MyExpander}">
+        <Setter Property="BorderBrush" Value="Gray" />
+        <Setter Property="Header" Value="Fencing and Access Gates" />
+    </Style>
+
+    <Style x:Key="MyExpanderClearing" TargetType="Expander" BasedOn="{StaticResource MyExpander}">
+        <Setter Property="BorderBrush" Value="LightGray" />
+        <Setter Property="Header" Value="Clearing/Grubbing/Revegetation" />
+    </Style>
+
+    <Style x:Key="MyExpanderEngineering" TargetType="Expander" BasedOn="{StaticResource MyExpander}">
+        <Setter Property="BorderBrush" Value="Gray" />
+        <Setter Property="Header" Value="Engineering/Permitting, Surveying, and Construction Inspection" />
+    </Style>
+    <!--#endregion -->
+
+</ResourceDictionary>

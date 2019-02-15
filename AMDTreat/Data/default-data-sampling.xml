@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module type="Sampling">
+  <items>
+    <item>
+      <name>Round Trip Travel Time</name>
+      <value>2</value>
+      <units>hours</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Round Trip Mileage</name>
+      <value>100</value>
+      <units>miles</units>
+      <description></description>
+    </item>
+    <item>
+      <name>NPDES Monitoring Number Of Sample Points</name>
+      <value>2</value>
+      <units>each</units>
+      <description></description>
+    </item>  
+    <item>
+      <name>NPDES Monitoring Collection Time Per Sample</name>
+      <value>0.5</value>
+      <units>hours</units>
+      <description></description>
+    </item>  
+    <item>
+      <name>NPDES Monitoring Sample Frequency</name>
+      <value>1</value>
+      <units>events per month</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Hydrologic Monitoring Number of Sample Points</name>
+      <value>2</value>
+      <units>each</units>
+      <description></description>
+    </item>  
+    <item>
+      <name>Hydrologic Monitoring Collection Time Per Sample</name>
+      <value>0.5</value>
+      <units>hours</units>
+      <description></description>
+    </item>  
+    <item>
+      <name>Hydrologic Monitoring Sample Frequency</name>
+      <value>4</value>
+      <units>events per year</units>
+      <description></description>
+    </item> 
+    <item>
+      <name>Sampling Equipment Cost</name>
+      <value>1</value>
+      <units>dollar</units>
+      <description></description>
+    </item> 
+    <item>
+      <name>Labor Unit Cost</name>
+      <value>40</value>
+      <units>dollar per hour</units>
+      <description></description>
+    </item> 
+    <item>
+      <name>Lab NPDES Sample Unit Cost</name>
+      <value>35</value>
+      <units>dollar per sample</units>
+      <description></description>
+    </item> 
+    <item>
+      <name>Lab Hydrologic Sample Unit Cost</name>
+      <value>50</value>
+      <units>dollar per sample</units>
+      <description></description>
+    </item>       
+    <item>
+      <name>Mileage Rate Unit Cost</name>
+      <value>0.55</value>
+      <units>dollar per mile</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Annual Cost User Specified</name>
+      <value>0</value>
+      <units>dollar</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Life Cycle Sampling Equipment</name>
+      <value>5</value>
+      <units>years</units>
+      <description></description>
+    </item>
+    <item>
+      <name>Recapitalization Cost Percent Replacement Sampling Equipment</name>
+      <value>50</value>
+      <units>percent</units>
+      <description></description>
+    </item>
+  </items>
+</module>

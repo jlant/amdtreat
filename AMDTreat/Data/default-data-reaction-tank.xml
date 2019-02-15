@@ -1,0 +1,864 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module type="Reaction Tank">
+  <items>
+      <item>
+        <name>Design Flow</name>
+        <value>4000</value>
+        <units>gallons per minute</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Fiberglass Volume Name 10000</name>
+        <value>10,000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Fiberglass Volume Name 20000</name>
+        <value>20,000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Fiberglass Volume Name 30000</name>
+        <value>30,000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Fiberglass Volume 10000</name>
+        <value>10000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Fiberglass Volume 20000</name>
+        <value>20000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Fiberglass Volume 30000</name>
+        <value>30000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Fiberglass Cost 10000</name>
+        <value>38000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Fiberglass Cost 20000</name>
+        <value>50000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Fiberglass Cost 30000</name>
+        <value>62000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Fiberglass Diameter 10000</name>
+        <value>12</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Fiberglass Diameter 20000</name>
+        <value>14</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Fiberglass Diameter 30000</name>
+        <value>16</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Fiberglass Height 10000</name>
+        <value>14</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Fiberglass Height 20000</name>
+        <value>18</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Fiberglass Height 30000</name>
+        <value>20.5</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Concrete Steel Name Concrete</name>
+        <value>Concrete</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Concrete Steel Name Bolted Steel</name>
+        <value>Bolted Steel</value>
+        <units></units>
+        <description></description>
+      </item>  
+      <item>
+        <name>Concrete Steel Name Welded Steel</name>
+        <value>Welded Steel</value>
+        <units></units>
+        <description></description>
+      </item>       
+      <item>
+        <name>Concrete Steel Volume Name 30000</name>
+        <value>30,000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Concrete Steel Volume Name 60000</name>
+        <value>60,000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Concrete Steel Volume Name 90000</name>
+        <value>90,000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Concrete Steel Volume 30000</name>
+        <value>30000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Concrete Steel Volume 60000</name>
+        <value>60000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Concrete Steel Volume 90000</name>
+        <value>90000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Concrete Cost 30000</name>
+        <value>77400</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Concrete Cost 60000</name>
+        <value>99600</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Concrete Cost 90000</name>
+        <value>126000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Bolted Steel Cost 30000</name>
+        <value>64500</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Bolted Steel Cost 60000</name>
+        <value>83000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Bolted Steel Cost 90000</name>
+        <value>105000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Welded Steel Cost 30000</name>
+        <value>70305</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Welded Steel Cost 60000</name>
+        <value>90470</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Welded Steel Cost 90000</name>
+        <value>114450</value>
+        <units></units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Concrete Steel Diameter 30000</name>
+        <value>20</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Concrete Steel Diameter 60000</name>
+        <value>28</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Concrete Steel Diameter 90000</name>
+        <value>34</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Concrete Steel Height 30000</name>
+        <value>16</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Concrete Steel Height 60000</name>
+        <value>16</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Concrete Steel Height 90000</name>
+        <value>16</value>
+        <units></units>
+        <description></description>
+      </item>     
+      <item>
+        <name>Tank Protective Coating Name Alkyd</name>
+        <value>Alkyd/Alkyd/Alkyd</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Tank Protective Coating Name Epoxy</name>
+        <value>Epoxy/Epoxy/Epoxy</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Tank Protective Coating Name Zinc Urethane</name>
+        <value>Zinc/Urethane</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Tank Protective Coating Name None</name>
+        <value>None</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Tank Protective Coating Unit Cost Alkyd</name>
+        <value>9.75</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Tank Protective Coating Unit Cost Epoxy</name>
+        <value>10.50</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Tank Protective Coating Unit Cost Zinc Urethane</name>
+        <value>19.25</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Tank Protective Coating Unit Cost None</name>
+        <value>0</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Tank Quantity</name>
+        <value>1</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Tank Freeboard Height</name>
+        <value>1</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Name Surface Aerator</name>
+        <value>Surface Aerator</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Name Mechanical</name>
+        <value>Mechanical</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Power Surface Aerator 10000</name>
+        <value>5</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Power Surface Aerator 20000</name>
+        <value>10</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Power Surface Aerator 30000</name>
+        <value>15</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Power Surface Aerator 60000</name>
+        <value>25</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Power Surface Aerator 90000</name>
+        <value>40</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Cost Surface Aerator 10000</name>
+        <value>9500</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Cost Surface Aerator 20000</name>
+        <value>13500</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Cost Surface Aerator 30000</name>
+        <value>14500</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Cost Surface Aerator 60000</name>
+        <value>19500</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Cost Surface Aerator 90000</name>
+        <value>26500</value>
+        <units></units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Mixer Power Mechanical 10000</name>
+        <value>5</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Power Mechanical 20000</name>
+        <value>15</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Power Mechanical 30000</name>
+        <value>20</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Power Mechanical 60000</name>
+        <value>40</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Power Mechanical 90000</name>
+        <value>50</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Cost Mechanical Mixer 10000</name>
+        <value>7500</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Cost Mechanical 20000</name>
+        <value>16500</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Cost Mechanical 30000</name>
+        <value>24500</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Cost Mechanical 60000</name>
+        <value>45000</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Cost Mechanical 90000</name>
+        <value>57500</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Power User Specified</name>
+        <value>0</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Cost User Specified</name>
+        <value>0</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Operational Time Hours Per Day</name>
+        <value>24</value>
+        <units>hours per day</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Mixer Operational Time Days Per Year</name>
+        <value>365</value>
+        <units>days per year</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Variable Frequency Drive Unit Cost</name>
+        <value>250</value>
+        <units>$/HP</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Stairs Unit Cost</name>
+        <value>550</value>
+        <units>$/12ft section</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Catwalk Unit Cost</name>
+        <value>250</value>
+        <units>$/ft</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Concrete Material And Placement Cost</name>
+        <value>450</value>
+        <units>dollar per cubic yard</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 1500 Name</name>
+        <value>Load Bearing 1500</value>
+        <units>pounds per square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 3000 Name</name>
+        <value>Load Bearing 3000</value>
+        <units>pounds per square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 4500 Name</name>
+        <value>Load Bearing 4500</value>
+        <units>pounds per square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 1500 Multiplier</name>
+        <value>1.5</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 3000 Multiplier</name>
+        <value>1.0</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 4500 Multiplier</name>
+        <value>0.75</value>
+        <units>unitless</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 1500 Quantity</name>
+        <value>1500</value>
+        <units>pounds per square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 3000 Quantity</name>
+        <value>3000</value>
+        <units>pounds per square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 4500 Quantity</name>
+        <value>4500</value>
+        <units>pounds per square feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 1500 Rating</name>
+        <value>Poor</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 3000 Rating</name>
+        <value>Average</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Depth Fiberglass</name>
+        <value>0.75</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Depth Concrete</name>
+        <value>3.5</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Depth Bolted Steel</name>
+        <value>1.5</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Depth Welded Steel</name>
+        <value>1.5</value>
+        <units>feet</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Foundation Site Soil Load Bearing 4500 Rating</name>
+        <value>Excellent</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 1</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 2</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 3</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 4</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Description 5</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Other Capital Item Quantity 1</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 2</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 3</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 4</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Capital Item Quantity 5</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Electric Unit Cost</name>
+        <value>0.15</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 1</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 2</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 3</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 4</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Description 5</name>
+        <value></value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 1</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 2</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 3</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 4</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Other Annual Item Quantity 5</name>
+        <value>0</value>
+        <units>each</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Capital Cost System Installation Multiplier</name>
+        <value>125</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Capital Cost System Installation User Specified</name>
+        <value>0</value>
+        <units></units>
+        <description></description>
+      </item>      
+      <item>
+        <name>Annual Cost Operation And Maintenance Multiplier</name>
+        <value>3.5</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Operation And Maintenance User Specified</name>
+        <value>0</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Annual Cost Electric User Specified</name>
+        <value>0</value>
+        <units></units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Tank Fiberglass</name>
+        <value>25</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Tank Concrete With Coating</name>
+        <value>75</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Tank Concrete Without Coating</name>
+        <value>35</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Tank Steel With Coating</name>
+        <value>35</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Tank Steel Without Coating</name>
+        <value>15</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Tank Protective Coating Alkyd</name>
+        <value>5</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Tank Protective Coating Epoxy</name>
+        <value>14</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Tank Protective Coating Zinc Urethane</name>
+        <value>22</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Tank Protective Coating None</name>
+        <value>1</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Catwalk</name>
+        <value>20</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Stairs</name>
+        <value>20</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Mixer Motor Rebuild</name>
+        <value>5</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Mixer Motor Replacement</name>
+        <value>20</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Life Cycle Variable Frequency Drive</name>
+        <value>20</value>
+        <units>years</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Tank</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Catwalk</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Stairs</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Tank Protective Coating</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Mixer Motor Rebuild</name>
+        <value>17</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Mixer Motor Replacement</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+      <item>
+        <name>Recapitalization Cost Percent Replacement Variable Frequency Drive</name>
+        <value>100</value>
+        <units>percent</units>
+        <description></description>
+      </item>
+  </items>
+</module>
+
