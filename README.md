@@ -54,7 +54,7 @@ This software is provided "AS IS."
 Jeremiah Lant <jlant@usgs.gov>
 
 
-[landingpage]: AMDTreat/Images/mainui.png
+[mainui]: AMDTreat/Images/mainui.png
 [public domain]: https://en.wikipedia.org/wiki/Public_domain
 [CC0 1.0]: http://creativecommons.org/publicdomain/zero/1.0/
 [U.S. Geological Survey (USGS)]: https://www.usgs.gov/
